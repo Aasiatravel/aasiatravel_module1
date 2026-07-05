@@ -16,7 +16,8 @@ export const packages: Package[] = [
     image: '/images/card-1.png',
     limitedSeats: true,
     subtitle: 'Policies & Pilgrim Safety',
-    description: 'From guided budget Umrah to fully private Hajj, every package includes visa handling, flights, and Haram-front accommodation as standard.',
+    description:
+      'From guided budget Umrah to fully private Hajj, every package includes visa handling, flights, and Haram-front accommodation as standard.',
     seatsLeft: 6,
     sharingPrices: {
       Quad: 0,
@@ -28,12 +29,42 @@ export const packages: Package[] = [
       'Airport Fast-Track': 3000,
     },
     steps: [
-      { id: '01', title: 'Visa Processing', description: 'Umrah visa handled end-to-end, documents collected and submitted for you.', iconName: 'ClipboardCheck' },
-      { id: '02', title: 'Return Flight Tickets', description: 'Confirmed round-trip flights between your city and Jeddah/Medina.', iconName: 'Plane' },
-      { id: '03', title: 'Hotel Booking', description: 'Pre-booked stays in Makkah and Medina, walking distance from both Haramain.', iconName: 'Building' },
-      { id: '04', title: 'Daily Buffets', description: 'Fresh and delicious Breakfast, Lunch, and Dinner served daily.', iconName: 'Utensils' },
-      { id: '05', title: 'ZamZam', description: 'Enjoy 5 liters of blessed Zamzam water on your return journey.', iconName: 'Droplets' },
-      { id: '06', title: '24/7 Guest Assistance', description: 'A support line you can call any time during your trip for help or questions.', iconName: 'PhoneCall' },
+      {
+        id: '01',
+        title: 'Visa Processing',
+        description: 'Umrah visa handled end-to-end, documents collected and submitted for you.',
+        iconName: 'ClipboardCheck',
+      },
+      {
+        id: '02',
+        title: 'Return Flight Tickets',
+        description: 'Confirmed round-trip flights between your city and Jeddah/Medina.',
+        iconName: 'Plane',
+      },
+      {
+        id: '03',
+        title: 'Hotel Booking',
+        description: 'Pre-booked stays in Makkah and Medina, walking distance from both Haramain.',
+        iconName: 'Building',
+      },
+      {
+        id: '04',
+        title: 'Daily Buffets',
+        description: 'Fresh and delicious Breakfast, Lunch, and Dinner served daily.',
+        iconName: 'Utensils',
+      },
+      {
+        id: '05',
+        title: 'ZamZam',
+        description: 'Enjoy 5 liters of blessed Zamzam water on your return journey.',
+        iconName: 'Droplets',
+      },
+      {
+        id: '06',
+        title: '24/7 Guest Assistance',
+        description: 'A support line you can call any time during your trip for help or questions.',
+        iconName: 'PhoneCall',
+      },
     ],
     departureFlight: {
       type: 'Departure',
@@ -88,7 +119,8 @@ export const packages: Package[] = [
     image: '/images/card-2.png',
     limitedSeats: true,
     subtitle: 'Policies & Pilgrim Safety',
-    description: 'A comfortable semi-deluxe Umrah experience from Mumbai with premium hotel stays and guided ziyarat tours.',
+    description:
+      'A comfortable semi-deluxe Umrah experience from Mumbai with premium hotel stays and guided ziyarat tours.',
     seatsLeft: 4,
     sharingPrices: {
       Quad: 0,
@@ -100,12 +132,42 @@ export const packages: Package[] = [
       'Airport Fast-Track': 3000,
     },
     steps: [
-      { id: '01', title: 'Visa Processing', description: 'Umrah visa handled end-to-end, documents collected and submitted for you.', iconName: 'ClipboardCheck' },
-      { id: '02', title: 'Return Flight Tickets', description: 'Confirmed round-trip flights between your city and Jeddah/Medina.', iconName: 'Plane' },
-      { id: '03', title: 'Hotel Booking', description: 'Pre-booked stays in Makkah and Medina, walking distance from both Haramain.', iconName: 'Building' },
-      { id: '04', title: 'Daily Buffets', description: 'Fresh and delicious Breakfast, Lunch, and Dinner served daily.', iconName: 'Utensils' },
-      { id: '05', title: 'ZamZam', description: 'Enjoy 5 liters of blessed Zamzam water on your return journey.', iconName: 'Droplets' },
-      { id: '06', title: '24/7 Guest Assistance', description: 'A support line you can call any time during your trip for help or questions.', iconName: 'PhoneCall' },
+      {
+        id: '01',
+        title: 'Visa Processing',
+        description: 'Umrah visa handled end-to-end, documents collected and submitted for you.',
+        iconName: 'ClipboardCheck',
+      },
+      {
+        id: '02',
+        title: 'Return Flight Tickets',
+        description: 'Confirmed round-trip flights between your city and Jeddah/Medina.',
+        iconName: 'Plane',
+      },
+      {
+        id: '03',
+        title: 'Hotel Booking',
+        description: 'Pre-booked stays in Makkah and Medina, walking distance from both Haramain.',
+        iconName: 'Building',
+      },
+      {
+        id: '04',
+        title: 'Daily Buffets',
+        description: 'Fresh and delicious Breakfast, Lunch, and Dinner served daily.',
+        iconName: 'Utensils',
+      },
+      {
+        id: '05',
+        title: 'ZamZam',
+        description: 'Enjoy 5 liters of blessed Zamzam water on your return journey.',
+        iconName: 'Droplets',
+      },
+      {
+        id: '06',
+        title: '24/7 Guest Assistance',
+        description: 'A support line you can call any time during your trip for help or questions.',
+        iconName: 'PhoneCall',
+      },
     ],
     departureFlight: {
       type: 'Departure',
@@ -160,7 +222,8 @@ export const packages: Package[] = [
     image: '/images/card-1.png',
     limitedSeats: false,
     subtitle: 'Budget-Friendly Pilgrim Package',
-    description: 'A budget-special Umrah package from Delhi containing all essential visa, flight, and dining inclusions.',
+    description:
+      'A budget-special Umrah package from Delhi containing all essential visa, flight, and dining inclusions.',
     seatsLeft: 12,
     sharingPrices: {
       Quad: 0,
@@ -171,12 +234,42 @@ export const packages: Package[] = [
       'Ziyarat City Tour': 4500,
     },
     steps: [
-      { id: '01', title: 'Visa Processing', description: 'Umrah visa handled end-to-end, documents collected and submitted for you.', iconName: 'ClipboardCheck' },
-      { id: '02', title: 'Return Flight Tickets', description: 'Confirmed round-trip flights between your city and Jeddah/Medina.', iconName: 'Plane' },
-      { id: '03', title: 'Hotel Booking', description: 'Pre-booked stays in Makkah and Medina, walking distance from both Haramain.', iconName: 'Building' },
-      { id: '04', title: 'Daily Buffets', description: 'Fresh and delicious Breakfast, Lunch, and Dinner served daily.', iconName: 'Utensils' },
-      { id: '05', title: 'ZamZam', description: 'Enjoy 5 liters of blessed Zamzam water on your return journey.', iconName: 'Droplets' },
-      { id: '06', title: '24/7 Guest Assistance', description: 'A support line you can call any time during your trip for help or questions.', iconName: 'PhoneCall' },
+      {
+        id: '01',
+        title: 'Visa Processing',
+        description: 'Umrah visa handled end-to-end, documents collected and submitted for you.',
+        iconName: 'ClipboardCheck',
+      },
+      {
+        id: '02',
+        title: 'Return Flight Tickets',
+        description: 'Confirmed round-trip flights between your city and Jeddah/Medina.',
+        iconName: 'Plane',
+      },
+      {
+        id: '03',
+        title: 'Hotel Booking',
+        description: 'Pre-booked stays in Makkah and Medina, walking distance from both Haramain.',
+        iconName: 'Building',
+      },
+      {
+        id: '04',
+        title: 'Daily Buffets',
+        description: 'Fresh and delicious Breakfast, Lunch, and Dinner served daily.',
+        iconName: 'Utensils',
+      },
+      {
+        id: '05',
+        title: 'ZamZam',
+        description: 'Enjoy 5 liters of blessed Zamzam water on your return journey.',
+        iconName: 'Droplets',
+      },
+      {
+        id: '06',
+        title: '24/7 Guest Assistance',
+        description: 'A support line you can call any time during your trip for help or questions.',
+        iconName: 'PhoneCall',
+      },
     ],
     departureFlight: {
       type: 'Departure',
@@ -243,12 +336,42 @@ export const packages: Package[] = [
       'Airport Fast-Track': 3000,
     },
     steps: [
-      { id: '01', title: 'Visa Processing', description: 'Umrah visa handled end-to-end, documents collected and submitted for you.', iconName: 'ClipboardCheck' },
-      { id: '02', title: 'Return Flight Tickets', description: 'Confirmed round-trip flights between your city and Jeddah/Medina.', iconName: 'Plane' },
-      { id: '03', title: 'Hotel Booking', description: 'Pre-booked stays in Makkah and Medina, walking distance from both Haramain.', iconName: 'Building' },
-      { id: '04', title: 'Daily Buffets', description: 'Fresh and delicious Breakfast, Lunch, and Dinner served daily.', iconName: 'Utensils' },
-      { id: '05', title: 'ZamZam', description: 'Enjoy 5 liters of blessed Zamzam water on your return journey.', iconName: 'Droplets' },
-      { id: '06', title: '24/7 Guest Assistance', description: 'A support line you can call any time during your trip for help or questions.', iconName: 'PhoneCall' },
+      {
+        id: '01',
+        title: 'Visa Processing',
+        description: 'Umrah visa handled end-to-end, documents collected and submitted for you.',
+        iconName: 'ClipboardCheck',
+      },
+      {
+        id: '02',
+        title: 'Return Flight Tickets',
+        description: 'Confirmed round-trip flights between your city and Jeddah/Medina.',
+        iconName: 'Plane',
+      },
+      {
+        id: '03',
+        title: 'Hotel Booking',
+        description: 'Pre-booked stays in Makkah and Medina, walking distance from both Haramain.',
+        iconName: 'Building',
+      },
+      {
+        id: '04',
+        title: 'Daily Buffets',
+        description: 'Fresh and delicious Breakfast, Lunch, and Dinner served daily.',
+        iconName: 'Utensils',
+      },
+      {
+        id: '05',
+        title: 'ZamZam',
+        description: 'Enjoy 5 liters of blessed Zamzam water on your return journey.',
+        iconName: 'Droplets',
+      },
+      {
+        id: '06',
+        title: '24/7 Guest Assistance',
+        description: 'A support line you can call any time during your trip for help or questions.',
+        iconName: 'PhoneCall',
+      },
     ],
     departureFlight: {
       type: 'Departure',
@@ -303,7 +426,8 @@ export const packages: Package[] = [
     image: '/images/card-1.png',
     limitedSeats: false,
     subtitle: 'Short Saver Pilgrimage',
-    description: 'A shorter 10-night saver package ideal for working professionals flying from Hyderabad.',
+    description:
+      'A shorter 10-night saver package ideal for working professionals flying from Hyderabad.',
     seatsLeft: 15,
     sharingPrices: {
       Quad: 0,
@@ -314,12 +438,42 @@ export const packages: Package[] = [
       'Ziyarat City Tour': 4000,
     },
     steps: [
-      { id: '01', title: 'Visa Processing', description: 'Umrah visa handled end-to-end, documents collected and submitted for you.', iconName: 'ClipboardCheck' },
-      { id: '02', title: 'Return Flight Tickets', description: 'Confirmed round-trip flights between your city and Jeddah/Medina.', iconName: 'Plane' },
-      { id: '03', title: 'Hotel Booking', description: 'Pre-booked stays in Makkah and Medina, walking distance from both Haramain.', iconName: 'Building' },
-      { id: '04', title: 'Daily Buffets', description: 'Fresh and delicious Breakfast, Lunch, and Dinner served daily.', iconName: 'Utensils' },
-      { id: '05', title: 'ZamZam', description: 'Enjoy 5 liters of blessed Zamzam water on your return journey.', iconName: 'Droplets' },
-      { id: '06', title: '24/7 Guest Assistance', description: 'A support line you can call any time during your trip for help or questions.', iconName: 'PhoneCall' },
+      {
+        id: '01',
+        title: 'Visa Processing',
+        description: 'Umrah visa handled end-to-end, documents collected and submitted for you.',
+        iconName: 'ClipboardCheck',
+      },
+      {
+        id: '02',
+        title: 'Return Flight Tickets',
+        description: 'Confirmed round-trip flights between your city and Jeddah/Medina.',
+        iconName: 'Plane',
+      },
+      {
+        id: '03',
+        title: 'Hotel Booking',
+        description: 'Pre-booked stays in Makkah and Medina, walking distance from both Haramain.',
+        iconName: 'Building',
+      },
+      {
+        id: '04',
+        title: 'Daily Buffets',
+        description: 'Fresh and delicious Breakfast, Lunch, and Dinner served daily.',
+        iconName: 'Utensils',
+      },
+      {
+        id: '05',
+        title: 'ZamZam',
+        description: 'Enjoy 5 liters of blessed Zamzam water on your return journey.',
+        iconName: 'Droplets',
+      },
+      {
+        id: '06',
+        title: '24/7 Guest Assistance',
+        description: 'A support line you can call any time during your trip for help or questions.',
+        iconName: 'PhoneCall',
+      },
     ],
     departureFlight: {
       type: 'Departure',
@@ -374,7 +528,8 @@ export const packages: Package[] = [
     image: '/images/card-2.png',
     limitedSeats: true,
     subtitle: 'Essential Basic Package',
-    description: 'An essential 14-night basic package with shared rooms and return flight bookings from Kolkata.',
+    description:
+      'An essential 14-night basic package with shared rooms and return flight bookings from Kolkata.',
     seatsLeft: 5,
     sharingPrices: {
       Quad: 0,
@@ -385,12 +540,42 @@ export const packages: Package[] = [
       'Ziyarat City Tour': 5000,
     },
     steps: [
-      { id: '01', title: 'Visa Processing', description: 'Umrah visa handled end-to-end, documents collected and submitted for you.', iconName: 'ClipboardCheck' },
-      { id: '02', title: 'Return Flight Tickets', description: 'Confirmed round-trip flights between your city and Jeddah/Medina.', iconName: 'Plane' },
-      { id: '03', title: 'Hotel Booking', description: 'Pre-booked stays in Makkah and Medina, walking distance from both Haramain.', iconName: 'Building' },
-      { id: '04', title: 'Daily Buffets', description: 'Fresh and delicious Breakfast, Lunch, and Dinner served daily.', iconName: 'Utensils' },
-      { id: '05', title: 'ZamZam', description: 'Enjoy 5 liters of blessed Zamzam water on your return journey.', iconName: 'Droplets' },
-      { id: '06', title: '24/7 Guest Assistance', description: 'A support line you can call any time during your trip for help or questions.', iconName: 'PhoneCall' },
+      {
+        id: '01',
+        title: 'Visa Processing',
+        description: 'Umrah visa handled end-to-end, documents collected and submitted for you.',
+        iconName: 'ClipboardCheck',
+      },
+      {
+        id: '02',
+        title: 'Return Flight Tickets',
+        description: 'Confirmed round-trip flights between your city and Jeddah/Medina.',
+        iconName: 'Plane',
+      },
+      {
+        id: '03',
+        title: 'Hotel Booking',
+        description: 'Pre-booked stays in Makkah and Medina, walking distance from both Haramain.',
+        iconName: 'Building',
+      },
+      {
+        id: '04',
+        title: 'Daily Buffets',
+        description: 'Fresh and delicious Breakfast, Lunch, and Dinner served daily.',
+        iconName: 'Utensils',
+      },
+      {
+        id: '05',
+        title: 'ZamZam',
+        description: 'Enjoy 5 liters of blessed Zamzam water on your return journey.',
+        iconName: 'Droplets',
+      },
+      {
+        id: '06',
+        title: '24/7 Guest Assistance',
+        description: 'A support line you can call any time during your trip for help or questions.',
+        iconName: 'PhoneCall',
+      },
     ],
     departureFlight: {
       type: 'Departure',
@@ -445,7 +630,8 @@ export const packages: Package[] = [
     image: '/images/card-1.png',
     limitedSeats: true,
     subtitle: 'Gujarat Saver Package',
-    description: 'A dedicated, Gujarati-guided economy Umrah package departing from Ahmedabad airport.',
+    description:
+      'A dedicated, Gujarati-guided economy Umrah package departing from Ahmedabad airport.',
     seatsLeft: 9,
     sharingPrices: {
       Quad: 0,
@@ -457,12 +643,42 @@ export const packages: Package[] = [
       'Airport Fast-Track': 3000,
     },
     steps: [
-      { id: '01', title: 'Visa Processing', description: 'Umrah visa handled end-to-end, documents collected and submitted for you.', iconName: 'ClipboardCheck' },
-      { id: '02', title: 'Return Flight Tickets', description: 'Confirmed round-trip flights between your city and Jeddah/Medina.', iconName: 'Plane' },
-      { id: '03', title: 'Hotel Booking', description: 'Pre-booked stays in Makkah and Medina, walking distance from both Haramain.', iconName: 'Building' },
-      { id: '04', title: 'Daily Buffets', description: 'Fresh and delicious Breakfast, Lunch, and Dinner served daily.', iconName: 'Utensils' },
-      { id: '05', title: 'ZamZam', description: 'Enjoy 5 liters of blessed Zamzam water on your return journey.', iconName: 'Droplets' },
-      { id: '06', title: '24/7 Guest Assistance', description: 'A support line you can call any time during your trip for help or questions.', iconName: 'PhoneCall' },
+      {
+        id: '01',
+        title: 'Visa Processing',
+        description: 'Umrah visa handled end-to-end, documents collected and submitted for you.',
+        iconName: 'ClipboardCheck',
+      },
+      {
+        id: '02',
+        title: 'Return Flight Tickets',
+        description: 'Confirmed round-trip flights between your city and Jeddah/Medina.',
+        iconName: 'Plane',
+      },
+      {
+        id: '03',
+        title: 'Hotel Booking',
+        description: 'Pre-booked stays in Makkah and Medina, walking distance from both Haramain.',
+        iconName: 'Building',
+      },
+      {
+        id: '04',
+        title: 'Daily Buffets',
+        description: 'Fresh and delicious Breakfast, Lunch, and Dinner served daily.',
+        iconName: 'Utensils',
+      },
+      {
+        id: '05',
+        title: 'ZamZam',
+        description: 'Enjoy 5 liters of blessed Zamzam water on your return journey.',
+        iconName: 'Droplets',
+      },
+      {
+        id: '06',
+        title: '24/7 Guest Assistance',
+        description: 'A support line you can call any time during your trip for help or questions.',
+        iconName: 'PhoneCall',
+      },
     ],
     departureFlight: {
       type: 'Departure',
@@ -517,7 +733,8 @@ export const packages: Package[] = [
     image: '/images/card-2.png',
     limitedSeats: false,
     subtitle: 'Southern India Special',
-    description: 'Convenient direct departures from Chennai with local guide teams assisting at all points.',
+    description:
+      'Convenient direct departures from Chennai with local guide teams assisting at all points.',
     seatsLeft: 14,
     sharingPrices: {
       Quad: 0,
@@ -528,12 +745,42 @@ export const packages: Package[] = [
       'Ziyarat City Tour': 5000,
     },
     steps: [
-      { id: '01', title: 'Visa Processing', description: 'Umrah visa handled end-to-end, documents collected and submitted for you.', iconName: 'ClipboardCheck' },
-      { id: '02', title: 'Return Flight Tickets', description: 'Confirmed round-trip flights between your city and Jeddah/Medina.', iconName: 'Plane' },
-      { id: '03', title: 'Hotel Booking', description: 'Pre-booked stays in Makkah and Medina, walking distance from both Haramain.', iconName: 'Building' },
-      { id: '04', title: 'Daily Buffets', description: 'Fresh and delicious Breakfast, Lunch, and Dinner served daily.', iconName: 'Utensils' },
-      { id: '05', title: 'ZamZam', description: 'Enjoy 5 liters of blessed Zamzam water on your return journey.', iconName: 'Droplets' },
-      { id: '06', title: '24/7 Guest Assistance', description: 'A support line you can call any time during your trip for help or questions.', iconName: 'PhoneCall' },
+      {
+        id: '01',
+        title: 'Visa Processing',
+        description: 'Umrah visa handled end-to-end, documents collected and submitted for you.',
+        iconName: 'ClipboardCheck',
+      },
+      {
+        id: '02',
+        title: 'Return Flight Tickets',
+        description: 'Confirmed round-trip flights between your city and Jeddah/Medina.',
+        iconName: 'Plane',
+      },
+      {
+        id: '03',
+        title: 'Hotel Booking',
+        description: 'Pre-booked stays in Makkah and Medina, walking distance from both Haramain.',
+        iconName: 'Building',
+      },
+      {
+        id: '04',
+        title: 'Daily Buffets',
+        description: 'Fresh and delicious Breakfast, Lunch, and Dinner served daily.',
+        iconName: 'Utensils',
+      },
+      {
+        id: '05',
+        title: 'ZamZam',
+        description: 'Enjoy 5 liters of blessed Zamzam water on your return journey.',
+        iconName: 'Droplets',
+      },
+      {
+        id: '06',
+        title: '24/7 Guest Assistance',
+        description: 'A support line you can call any time during your trip for help or questions.',
+        iconName: 'PhoneCall',
+      },
     ],
     departureFlight: {
       type: 'Departure',
@@ -590,7 +837,8 @@ export const packages: Package[] = [
     image: '/images/card-1.png',
     limitedSeats: true,
     subtitle: 'VIP Royal Experience',
-    description: 'A premium luxury Umrah experience with 5-star accommodations, private transfers, and dedicated concierge service.',
+    description:
+      'A premium luxury Umrah experience with 5-star accommodations, private transfers, and dedicated concierge service.',
     seatsLeft: 3,
     sharingPrices: {
       Quad: 0,
@@ -602,12 +850,42 @@ export const packages: Package[] = [
       'Airport Fast-Track': 5000,
     },
     steps: [
-      { id: '01', title: 'Visa Processing', description: 'Umrah visa handled end-to-end, documents collected and submitted for you.', iconName: 'ClipboardCheck' },
-      { id: '02', title: 'Return Flight Tickets', description: 'Confirmed round-trip flights between your city and Jeddah/Medina.', iconName: 'Plane' },
-      { id: '03', title: 'Hotel Booking', description: 'Pre-booked stays in Makkah and Medina, walking distance from both Haramain.', iconName: 'Building' },
-      { id: '04', title: 'Daily Buffets', description: 'Fresh and delicious Breakfast, Lunch, and Dinner served daily.', iconName: 'Utensils' },
-      { id: '05', title: 'ZamZam', description: 'Enjoy 5 liters of blessed Zamzam water on your return journey.', iconName: 'Droplets' },
-      { id: '06', title: '24/7 Guest Assistance', description: 'A support line you can call any time during your trip for help or questions.', iconName: 'PhoneCall' },
+      {
+        id: '01',
+        title: 'Visa Processing',
+        description: 'Umrah visa handled end-to-end, documents collected and submitted for you.',
+        iconName: 'ClipboardCheck',
+      },
+      {
+        id: '02',
+        title: 'Return Flight Tickets',
+        description: 'Confirmed round-trip flights between your city and Jeddah/Medina.',
+        iconName: 'Plane',
+      },
+      {
+        id: '03',
+        title: 'Hotel Booking',
+        description: 'Pre-booked stays in Makkah and Medina, walking distance from both Haramain.',
+        iconName: 'Building',
+      },
+      {
+        id: '04',
+        title: 'Daily Buffets',
+        description: 'Fresh and delicious Breakfast, Lunch, and Dinner served daily.',
+        iconName: 'Utensils',
+      },
+      {
+        id: '05',
+        title: 'ZamZam',
+        description: 'Enjoy 5 liters of blessed Zamzam water on your return journey.',
+        iconName: 'Droplets',
+      },
+      {
+        id: '06',
+        title: '24/7 Guest Assistance',
+        description: 'A support line you can call any time during your trip for help or questions.',
+        iconName: 'PhoneCall',
+      },
     ],
     departureFlight: {
       type: 'Departure',
@@ -635,7 +913,11 @@ export const packages: Package[] = [
         name: 'Pullman ZamZam Makkah',
         rating: 5,
         distance: 'Clock Tower, Haram Front',
-        features: ['Luxury buffet breakfast', 'Double/Triple rooms', 'Haram view upgrades available'],
+        features: [
+          'Luxury buffet breakfast',
+          'Double/Triple rooms',
+          'Haram view upgrades available',
+        ],
         image: '/images/card-1.png',
       },
       {
@@ -643,7 +925,11 @@ export const packages: Package[] = [
         name: 'Anwar Al Madinah Mövenpick',
         rating: 5,
         distance: 'Masjid an-Nabawi Courtyard',
-        features: ['Superb buffet choices', 'Direct access to Haram courtyard', 'VIP lounge benefits'],
+        features: [
+          'Superb buffet choices',
+          'Direct access to Haram courtyard',
+          'VIP lounge benefits',
+        ],
         image: '/images/card-2.png',
       },
     ],
@@ -662,7 +948,8 @@ export const packages: Package[] = [
     image: '/images/card-2.png',
     limitedSeats: true,
     subtitle: 'Elite VIP Experience',
-    description: 'A high-end elite Umrah experience starting from Mumbai with Clock Tower Haram-front hotels and VIP fast-track options.',
+    description:
+      'A high-end elite Umrah experience starting from Mumbai with Clock Tower Haram-front hotels and VIP fast-track options.',
     seatsLeft: 5,
     sharingPrices: {
       Quad: 0,
@@ -674,12 +961,42 @@ export const packages: Package[] = [
       'Airport Fast-Track': 5000,
     },
     steps: [
-      { id: '01', title: 'Visa Processing', description: 'Umrah visa handled end-to-end, documents collected and submitted for you.', iconName: 'ClipboardCheck' },
-      { id: '02', title: 'Return Flight Tickets', description: 'Confirmed round-trip flights between your city and Jeddah/Medina.', iconName: 'Plane' },
-      { id: '03', title: 'Hotel Booking', description: 'Pre-booked stays in Makkah and Medina, walking distance from both Haramain.', iconName: 'Building' },
-      { id: '04', title: 'Daily Buffets', description: 'Fresh and delicious Breakfast, Lunch, and Dinner served daily.', iconName: 'Utensils' },
-      { id: '05', title: 'ZamZam', description: 'Enjoy 5 liters of blessed Zamzam water on your return journey.', iconName: 'Droplets' },
-      { id: '06', title: '24/7 Guest Assistance', description: 'A support line you can call any time during your trip for help or questions.', iconName: 'PhoneCall' },
+      {
+        id: '01',
+        title: 'Visa Processing',
+        description: 'Umrah visa handled end-to-end, documents collected and submitted for you.',
+        iconName: 'ClipboardCheck',
+      },
+      {
+        id: '02',
+        title: 'Return Flight Tickets',
+        description: 'Confirmed round-trip flights between your city and Jeddah/Medina.',
+        iconName: 'Plane',
+      },
+      {
+        id: '03',
+        title: 'Hotel Booking',
+        description: 'Pre-booked stays in Makkah and Medina, walking distance from both Haramain.',
+        iconName: 'Building',
+      },
+      {
+        id: '04',
+        title: 'Daily Buffets',
+        description: 'Fresh and delicious Breakfast, Lunch, and Dinner served daily.',
+        iconName: 'Utensils',
+      },
+      {
+        id: '05',
+        title: 'ZamZam',
+        description: 'Enjoy 5 liters of blessed Zamzam water on your return journey.',
+        iconName: 'Droplets',
+      },
+      {
+        id: '06',
+        title: '24/7 Guest Assistance',
+        description: 'A support line you can call any time during your trip for help or questions.',
+        iconName: 'PhoneCall',
+      },
     ],
     departureFlight: {
       type: 'Departure',
@@ -707,7 +1024,11 @@ export const packages: Package[] = [
         name: 'Pullman ZamZam Makkah',
         rating: 5,
         distance: 'Clock Tower, Haram Front',
-        features: ['Luxury buffet breakfast', 'Double/Triple rooms', 'Haram view upgrades available'],
+        features: [
+          'Luxury buffet breakfast',
+          'Double/Triple rooms',
+          'Haram view upgrades available',
+        ],
         image: '/images/card-1.png',
       },
       {
@@ -715,7 +1036,11 @@ export const packages: Package[] = [
         name: 'Anwar Al Madinah Mövenpick',
         rating: 5,
         distance: 'Masjid an-Nabawi Courtyard',
-        features: ['Superb buffet choices', 'Direct access to Haram courtyard', 'VIP lounge benefits'],
+        features: [
+          'Superb buffet choices',
+          'Direct access to Haram courtyard',
+          'VIP lounge benefits',
+        ],
         image: '/images/card-2.png',
       },
     ],
@@ -734,7 +1059,8 @@ export const packages: Package[] = [
     image: '/images/card-1.png',
     limitedSeats: true,
     subtitle: 'Premium Gold Standard',
-    description: 'Our top-tier gold standard package for pilgrims seeking high comfort, premium dining options, and close Haram access.',
+    description:
+      'Our top-tier gold standard package for pilgrims seeking high comfort, premium dining options, and close Haram access.',
     seatsLeft: 4,
     sharingPrices: {
       Quad: 0,
@@ -746,12 +1072,42 @@ export const packages: Package[] = [
       'Airport Fast-Track': 5000,
     },
     steps: [
-      { id: '01', title: 'Visa Processing', description: 'Umrah visa handled end-to-end, documents collected and submitted for you.', iconName: 'ClipboardCheck' },
-      { id: '02', title: 'Return Flight Tickets', description: 'Confirmed round-trip flights between your city and Jeddah/Medina.', iconName: 'Plane' },
-      { id: '03', title: 'Hotel Booking', description: 'Pre-booked stays in Makkah and Medina, walking distance from both Haramain.', iconName: 'Building' },
-      { id: '04', title: 'Daily Buffets', description: 'Fresh and delicious Breakfast, Lunch, and Dinner served daily.', iconName: 'Utensils' },
-      { id: '05', title: 'ZamZam', description: 'Enjoy 5 liters of blessed Zamzam water on your return journey.', iconName: 'Droplets' },
-      { id: '06', title: '24/7 Guest Assistance', description: 'A support line you can call any time during your trip for help or questions.', iconName: 'PhoneCall' },
+      {
+        id: '01',
+        title: 'Visa Processing',
+        description: 'Umrah visa handled end-to-end, documents collected and submitted for you.',
+        iconName: 'ClipboardCheck',
+      },
+      {
+        id: '02',
+        title: 'Return Flight Tickets',
+        description: 'Confirmed round-trip flights between your city and Jeddah/Medina.',
+        iconName: 'Plane',
+      },
+      {
+        id: '03',
+        title: 'Hotel Booking',
+        description: 'Pre-booked stays in Makkah and Medina, walking distance from both Haramain.',
+        iconName: 'Building',
+      },
+      {
+        id: '04',
+        title: 'Daily Buffets',
+        description: 'Fresh and delicious Breakfast, Lunch, and Dinner served daily.',
+        iconName: 'Utensils',
+      },
+      {
+        id: '05',
+        title: 'ZamZam',
+        description: 'Enjoy 5 liters of blessed Zamzam water on your return journey.',
+        iconName: 'Droplets',
+      },
+      {
+        id: '06',
+        title: '24/7 Guest Assistance',
+        description: 'A support line you can call any time during your trip for help or questions.',
+        iconName: 'PhoneCall',
+      },
     ],
     departureFlight: {
       type: 'Departure',
@@ -779,7 +1135,11 @@ export const packages: Package[] = [
         name: 'Pullman ZamZam Makkah',
         rating: 5,
         distance: 'Clock Tower, Haram Front',
-        features: ['Luxury buffet breakfast', 'Double/Triple rooms', 'Haram view upgrades available'],
+        features: [
+          'Luxury buffet breakfast',
+          'Double/Triple rooms',
+          'Haram view upgrades available',
+        ],
         image: '/images/card-1.png',
       },
       {
@@ -787,7 +1147,11 @@ export const packages: Package[] = [
         name: 'Anwar Al Madinah Mövenpick',
         rating: 5,
         distance: 'Masjid an-Nabawi Courtyard',
-        features: ['Superb buffet choices', 'Direct access to Haram courtyard', 'VIP lounge benefits'],
+        features: [
+          'Superb buffet choices',
+          'Direct access to Haram courtyard',
+          'VIP lounge benefits',
+        ],
         image: '/images/card-2.png',
       },
     ],
@@ -806,7 +1170,8 @@ export const packages: Package[] = [
     image: '/images/card-2.png',
     limitedSeats: false,
     subtitle: 'Executive Business Package',
-    description: 'A balanced luxury package featuring executive 5-star lodging options and private ziyarats for families from Delhi.',
+    description:
+      'A balanced luxury package featuring executive 5-star lodging options and private ziyarats for families from Delhi.',
     seatsLeft: 10,
     sharingPrices: {
       Quad: 0,
@@ -818,12 +1183,42 @@ export const packages: Package[] = [
       'Airport Fast-Track': 4000,
     },
     steps: [
-      { id: '01', title: 'Visa Processing', description: 'Umrah visa handled end-to-end, documents collected and submitted for you.', iconName: 'ClipboardCheck' },
-      { id: '02', title: 'Return Flight Tickets', description: 'Confirmed round-trip flights between your city and Jeddah/Medina.', iconName: 'Plane' },
-      { id: '03', title: 'Hotel Booking', description: 'Pre-booked stays in Makkah and Medina, walking distance from both Haramain.', iconName: 'Building' },
-      { id: '04', title: 'Daily Buffets', description: 'Fresh and delicious Breakfast, Lunch, and Dinner served daily.', iconName: 'Utensils' },
-      { id: '05', title: 'ZamZam', description: 'Enjoy 5 liters of blessed Zamzam water on your return journey.', iconName: 'Droplets' },
-      { id: '06', title: '24/7 Guest Assistance', description: 'A support line you can call any time during your trip for help or questions.', iconName: 'PhoneCall' },
+      {
+        id: '01',
+        title: 'Visa Processing',
+        description: 'Umrah visa handled end-to-end, documents collected and submitted for you.',
+        iconName: 'ClipboardCheck',
+      },
+      {
+        id: '02',
+        title: 'Return Flight Tickets',
+        description: 'Confirmed round-trip flights between your city and Jeddah/Medina.',
+        iconName: 'Plane',
+      },
+      {
+        id: '03',
+        title: 'Hotel Booking',
+        description: 'Pre-booked stays in Makkah and Medina, walking distance from both Haramain.',
+        iconName: 'Building',
+      },
+      {
+        id: '04',
+        title: 'Daily Buffets',
+        description: 'Fresh and delicious Breakfast, Lunch, and Dinner served daily.',
+        iconName: 'Utensils',
+      },
+      {
+        id: '05',
+        title: 'ZamZam',
+        description: 'Enjoy 5 liters of blessed Zamzam water on your return journey.',
+        iconName: 'Droplets',
+      },
+      {
+        id: '06',
+        title: '24/7 Guest Assistance',
+        description: 'A support line you can call any time during your trip for help or questions.',
+        iconName: 'PhoneCall',
+      },
     ],
     departureFlight: {
       type: 'Departure',
@@ -851,7 +1246,11 @@ export const packages: Package[] = [
         name: 'Pullman ZamZam Makkah',
         rating: 5,
         distance: 'Clock Tower, Haram Front',
-        features: ['Luxury buffet breakfast', 'Double/Triple rooms', 'Haram view upgrades available'],
+        features: [
+          'Luxury buffet breakfast',
+          'Double/Triple rooms',
+          'Haram view upgrades available',
+        ],
         image: '/images/card-1.png',
       },
       {
@@ -859,7 +1258,11 @@ export const packages: Package[] = [
         name: 'Anwar Al Madinah Mövenpick',
         rating: 5,
         distance: 'Masjid an-Nabawi Courtyard',
-        features: ['Superb buffet choices', 'Direct access to Haram courtyard', 'VIP lounge benefits'],
+        features: [
+          'Superb buffet choices',
+          'Direct access to Haram courtyard',
+          'VIP lounge benefits',
+        ],
         image: '/images/card-2.png',
       },
     ],
@@ -878,7 +1281,8 @@ export const packages: Package[] = [
     image: '/images/card-1.png',
     limitedSeats: true,
     subtitle: 'Special Premium Selection',
-    description: 'A special selection featuring deluxe accommodations and luxury tour escorts for Hyderabad residents.',
+    description:
+      'A special selection featuring deluxe accommodations and luxury tour escorts for Hyderabad residents.',
     seatsLeft: 6,
     sharingPrices: {
       Quad: 0,
@@ -890,12 +1294,42 @@ export const packages: Package[] = [
       'Airport Fast-Track': 5000,
     },
     steps: [
-      { id: '01', title: 'Visa Processing', description: 'Umrah visa handled end-to-end, documents collected and submitted for you.', iconName: 'ClipboardCheck' },
-      { id: '02', title: 'Return Flight Tickets', description: 'Confirmed round-trip flights between your city and Jeddah/Medina.', iconName: 'Plane' },
-      { id: '03', title: 'Hotel Booking', description: 'Pre-booked stays in Makkah and Medina, walking distance from both Haramain.', iconName: 'Building' },
-      { id: '04', title: 'Daily Buffets', description: 'Fresh and delicious Breakfast, Lunch, and Dinner served daily.', iconName: 'Utensils' },
-      { id: '05', title: 'ZamZam', description: 'Enjoy 5 liters of blessed Zamzam water on your return journey.', iconName: 'Droplets' },
-      { id: '06', title: '24/7 Guest Assistance', description: 'A support line you can call any time during your trip for help or questions.', iconName: 'PhoneCall' },
+      {
+        id: '01',
+        title: 'Visa Processing',
+        description: 'Umrah visa handled end-to-end, documents collected and submitted for you.',
+        iconName: 'ClipboardCheck',
+      },
+      {
+        id: '02',
+        title: 'Return Flight Tickets',
+        description: 'Confirmed round-trip flights between your city and Jeddah/Medina.',
+        iconName: 'Plane',
+      },
+      {
+        id: '03',
+        title: 'Hotel Booking',
+        description: 'Pre-booked stays in Makkah and Medina, walking distance from both Haramain.',
+        iconName: 'Building',
+      },
+      {
+        id: '04',
+        title: 'Daily Buffets',
+        description: 'Fresh and delicious Breakfast, Lunch, and Dinner served daily.',
+        iconName: 'Utensils',
+      },
+      {
+        id: '05',
+        title: 'ZamZam',
+        description: 'Enjoy 5 liters of blessed Zamzam water on your return journey.',
+        iconName: 'Droplets',
+      },
+      {
+        id: '06',
+        title: '24/7 Guest Assistance',
+        description: 'A support line you can call any time during your trip for help or questions.',
+        iconName: 'PhoneCall',
+      },
     ],
     departureFlight: {
       type: 'Departure',
@@ -923,7 +1357,11 @@ export const packages: Package[] = [
         name: 'Pullman ZamZam Makkah',
         rating: 5,
         distance: 'Clock Tower, Haram Front',
-        features: ['Luxury buffet breakfast', 'Double/Triple rooms', 'Haram view upgrades available'],
+        features: [
+          'Luxury buffet breakfast',
+          'Double/Triple rooms',
+          'Haram view upgrades available',
+        ],
         image: '/images/card-1.png',
       },
       {
@@ -931,7 +1369,11 @@ export const packages: Package[] = [
         name: 'Anwar Al Madinah Mövenpick',
         rating: 5,
         distance: 'Masjid an-Nabawi Courtyard',
-        features: ['Superb buffet choices', 'Direct access to Haram courtyard', 'VIP lounge benefits'],
+        features: [
+          'Superb buffet choices',
+          'Direct access to Haram courtyard',
+          'VIP lounge benefits',
+        ],
         image: '/images/card-2.png',
       },
     ],
@@ -950,7 +1392,8 @@ export const packages: Package[] = [
     image: '/images/card-2.png',
     limitedSeats: true,
     subtitle: 'Majestic Ultra-Deluxe VIP',
-    description: 'A majestic, top-of-the-line VIP package with unparalleled services, private suites, and direct flight paths from Kolkata.',
+    description:
+      'A majestic, top-of-the-line VIP package with unparalleled services, private suites, and direct flight paths from Kolkata.',
     seatsLeft: 2,
     sharingPrices: {
       Quad: 0,
@@ -962,12 +1405,42 @@ export const packages: Package[] = [
       'Airport Fast-Track': 6000,
     },
     steps: [
-      { id: '01', title: 'Visa Processing', description: 'Umrah visa handled end-to-end, documents collected and submitted for you.', iconName: 'ClipboardCheck' },
-      { id: '02', title: 'Return Flight Tickets', description: 'Confirmed round-trip flights between your city and Jeddah/Medina.', iconName: 'Plane' },
-      { id: '03', title: 'Hotel Booking', description: 'Pre-booked stays in Makkah and Medina, walking distance from both Haramain.', iconName: 'Building' },
-      { id: '04', title: 'Daily Buffets', description: 'Fresh and delicious Breakfast, Lunch, and Dinner served daily.', iconName: 'Utensils' },
-      { id: '05', title: 'ZamZam', description: 'Enjoy 5 liters of blessed Zamzam water on your return journey.', iconName: 'Droplets' },
-      { id: '06', title: '24/7 Guest Assistance', description: 'A support line you can call any time during your trip for help or questions.', iconName: 'PhoneCall' },
+      {
+        id: '01',
+        title: 'Visa Processing',
+        description: 'Umrah visa handled end-to-end, documents collected and submitted for you.',
+        iconName: 'ClipboardCheck',
+      },
+      {
+        id: '02',
+        title: 'Return Flight Tickets',
+        description: 'Confirmed round-trip flights between your city and Jeddah/Medina.',
+        iconName: 'Plane',
+      },
+      {
+        id: '03',
+        title: 'Hotel Booking',
+        description: 'Pre-booked stays in Makkah and Medina, walking distance from both Haramain.',
+        iconName: 'Building',
+      },
+      {
+        id: '04',
+        title: 'Daily Buffets',
+        description: 'Fresh and delicious Breakfast, Lunch, and Dinner served daily.',
+        iconName: 'Utensils',
+      },
+      {
+        id: '05',
+        title: 'ZamZam',
+        description: 'Enjoy 5 liters of blessed Zamzam water on your return journey.',
+        iconName: 'Droplets',
+      },
+      {
+        id: '06',
+        title: '24/7 Guest Assistance',
+        description: 'A support line you can call any time during your trip for help or questions.',
+        iconName: 'PhoneCall',
+      },
     ],
     departureFlight: {
       type: 'Departure',
@@ -995,7 +1468,11 @@ export const packages: Package[] = [
         name: 'Pullman ZamZam Makkah',
         rating: 5,
         distance: 'Clock Tower, Haram Front',
-        features: ['Luxury buffet breakfast', 'Double/Triple rooms', 'Haram view upgrades available'],
+        features: [
+          'Luxury buffet breakfast',
+          'Double/Triple rooms',
+          'Haram view upgrades available',
+        ],
         image: '/images/card-1.png',
       },
       {
@@ -1003,7 +1480,11 @@ export const packages: Package[] = [
         name: 'Anwar Al Madinah Mövenpick',
         rating: 5,
         distance: 'Masjid an-Nabawi Courtyard',
-        features: ['Superb buffet choices', 'Direct access to Haram courtyard', 'VIP lounge benefits'],
+        features: [
+          'Superb buffet choices',
+          'Direct access to Haram courtyard',
+          'VIP lounge benefits',
+        ],
         image: '/images/card-2.png',
       },
     ],
@@ -1022,7 +1503,8 @@ export const packages: Package[] = [
     image: '/images/card-1.png',
     limitedSeats: true,
     subtitle: 'Gujarat Elite Selection',
-    description: 'Ultra comfort VIP pilgrimage from Ahmedabad including direct check-in assistance and premium buffets.',
+    description:
+      'Ultra comfort VIP pilgrimage from Ahmedabad including direct check-in assistance and premium buffets.',
     seatsLeft: 4,
     sharingPrices: {
       Quad: 0,
@@ -1034,12 +1516,42 @@ export const packages: Package[] = [
       'Airport Fast-Track': 5000,
     },
     steps: [
-      { id: '01', title: 'Visa Processing', description: 'Umrah visa handled end-to-end, documents collected and submitted for you.', iconName: 'ClipboardCheck' },
-      { id: '02', title: 'Return Flight Tickets', description: 'Confirmed round-trip flights between your city and Jeddah/Medina.', iconName: 'Plane' },
-      { id: '03', title: 'Hotel Booking', description: 'Pre-booked stays in Makkah and Medina, walking distance from both Haramain.', iconName: 'Building' },
-      { id: '04', title: 'Daily Buffets', description: 'Fresh and delicious Breakfast, Lunch, and Dinner served daily.', iconName: 'Utensils' },
-      { id: '05', title: 'ZamZam', description: 'Enjoy 5 liters of blessed Zamzam water on your return journey.', iconName: 'Droplets' },
-      { id: '06', title: '24/7 Guest Assistance', description: 'A support line you can call any time during your trip for help or questions.', iconName: 'PhoneCall' },
+      {
+        id: '01',
+        title: 'Visa Processing',
+        description: 'Umrah visa handled end-to-end, documents collected and submitted for you.',
+        iconName: 'ClipboardCheck',
+      },
+      {
+        id: '02',
+        title: 'Return Flight Tickets',
+        description: 'Confirmed round-trip flights between your city and Jeddah/Medina.',
+        iconName: 'Plane',
+      },
+      {
+        id: '03',
+        title: 'Hotel Booking',
+        description: 'Pre-booked stays in Makkah and Medina, walking distance from both Haramain.',
+        iconName: 'Building',
+      },
+      {
+        id: '04',
+        title: 'Daily Buffets',
+        description: 'Fresh and delicious Breakfast, Lunch, and Dinner served daily.',
+        iconName: 'Utensils',
+      },
+      {
+        id: '05',
+        title: 'ZamZam',
+        description: 'Enjoy 5 liters of blessed Zamzam water on your return journey.',
+        iconName: 'Droplets',
+      },
+      {
+        id: '06',
+        title: '24/7 Guest Assistance',
+        description: 'A support line you can call any time during your trip for help or questions.',
+        iconName: 'PhoneCall',
+      },
     ],
     departureFlight: {
       type: 'Departure',
@@ -1067,7 +1579,11 @@ export const packages: Package[] = [
         name: 'Pullman ZamZam Makkah',
         rating: 5,
         distance: 'Clock Tower, Haram Front',
-        features: ['Luxury buffet breakfast', 'Double/Triple rooms', 'Haram view upgrades available'],
+        features: [
+          'Luxury buffet breakfast',
+          'Double/Triple rooms',
+          'Haram view upgrades available',
+        ],
         image: '/images/card-1.png',
       },
       {
@@ -1075,7 +1591,11 @@ export const packages: Package[] = [
         name: 'Anwar Al Madinah Mövenpick',
         rating: 5,
         distance: 'Masjid an-Nabawi Courtyard',
-        features: ['Superb buffet choices', 'Direct access to Haram courtyard', 'VIP lounge benefits'],
+        features: [
+          'Superb buffet choices',
+          'Direct access to Haram courtyard',
+          'VIP lounge benefits',
+        ],
         image: '/images/card-2.png',
       },
     ],
@@ -1094,7 +1614,8 @@ export const packages: Package[] = [
     image: '/images/card-2.png',
     limitedSeats: true,
     subtitle: 'Royal Southern Selection',
-    description: 'A luxury, highly customizable VIP package from Chennai with clock-tower Haram view hotels.',
+    description:
+      'A luxury, highly customizable VIP package from Chennai with clock-tower Haram view hotels.',
     seatsLeft: 3,
     sharingPrices: {
       Quad: 0,
@@ -1106,12 +1627,42 @@ export const packages: Package[] = [
       'Airport Fast-Track': 5000,
     },
     steps: [
-      { id: '01', title: 'Visa Processing', description: 'Umrah visa handled end-to-end, documents collected and submitted for you.', iconName: 'ClipboardCheck' },
-      { id: '02', title: 'Return Flight Tickets', description: 'Confirmed round-trip flights between your city and Jeddah/Medina.', iconName: 'Plane' },
-      { id: '03', title: 'Hotel Booking', description: 'Pre-booked stays in Makkah and Medina, walking distance from both Haramain.', iconName: 'Building' },
-      { id: '04', title: 'Daily Buffets', description: 'Fresh and delicious Breakfast, Lunch, and Dinner served daily.', iconName: 'Utensils' },
-      { id: '05', title: 'ZamZam', description: 'Enjoy 5 liters of blessed Zamzam water on your return journey.', iconName: 'Droplets' },
-      { id: '06', title: '24/7 Guest Assistance', description: 'A support line you can call any time during your trip for help or questions.', iconName: 'PhoneCall' },
+      {
+        id: '01',
+        title: 'Visa Processing',
+        description: 'Umrah visa handled end-to-end, documents collected and submitted for you.',
+        iconName: 'ClipboardCheck',
+      },
+      {
+        id: '02',
+        title: 'Return Flight Tickets',
+        description: 'Confirmed round-trip flights between your city and Jeddah/Medina.',
+        iconName: 'Plane',
+      },
+      {
+        id: '03',
+        title: 'Hotel Booking',
+        description: 'Pre-booked stays in Makkah and Medina, walking distance from both Haramain.',
+        iconName: 'Building',
+      },
+      {
+        id: '04',
+        title: 'Daily Buffets',
+        description: 'Fresh and delicious Breakfast, Lunch, and Dinner served daily.',
+        iconName: 'Utensils',
+      },
+      {
+        id: '05',
+        title: 'ZamZam',
+        description: 'Enjoy 5 liters of blessed Zamzam water on your return journey.',
+        iconName: 'Droplets',
+      },
+      {
+        id: '06',
+        title: '24/7 Guest Assistance',
+        description: 'A support line you can call any time during your trip for help or questions.',
+        iconName: 'PhoneCall',
+      },
     ],
     departureFlight: {
       type: 'Departure',
@@ -1139,7 +1690,11 @@ export const packages: Package[] = [
         name: 'Pullman ZamZam Makkah',
         rating: 5,
         distance: 'Clock Tower, Haram Front',
-        features: ['Luxury buffet breakfast', 'Double/Triple rooms', 'Haram view upgrades available'],
+        features: [
+          'Luxury buffet breakfast',
+          'Double/Triple rooms',
+          'Haram view upgrades available',
+        ],
         image: '/images/card-1.png',
       },
       {
@@ -1147,7 +1702,11 @@ export const packages: Package[] = [
         name: 'Anwar Al Madinah Mövenpick',
         rating: 5,
         distance: 'Masjid an-Nabawi Courtyard',
-        features: ['Superb buffet choices', 'Direct access to Haram courtyard', 'VIP lounge benefits'],
+        features: [
+          'Superb buffet choices',
+          'Direct access to Haram courtyard',
+          'VIP lounge benefits',
+        ],
         image: '/images/card-2.png',
       },
     ],
@@ -1155,7 +1714,10 @@ export const packages: Package[] = [
 ];
 
 // Derive packageDetails map dynamically from the unified packages list -----
-export const packageDetails: Record<string, Package> = packages.reduce((acc, pkg) => {
-  acc[pkg.id] = pkg;
-  return acc;
-}, {} as Record<string, Package>);
+export const packageDetails: Record<string, Package> = packages.reduce(
+  (acc, pkg) => {
+    acc[pkg.id] = pkg;
+    return acc;
+  },
+  {} as Record<string, Package>
+);

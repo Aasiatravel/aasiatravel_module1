@@ -10,25 +10,25 @@ Welcome to the Aasia Travel repository! This document contains context, standard
 
 ## File Resolution Maps
 
-| Task Objective | Target File | Description |
-| :--- | :--- | :--- |
-| **Modify Packages** | [packages.ts](file:///c:/SharedData/Projects/Aasia Travel/aasiatravel_module1/src/data/packages.ts) | Core array database containing flight codes, hotel stays, steps, and pricing keys |
-| **Change Recipient** | [site.ts](file:///c:/SharedData/Projects/Aasia Travel/aasiatravel_module1/src/config/site.ts) | Site metadata profile outlining email, phone, and address |
-| **Update Templates** | [whatsapp.ts](file:///c:/SharedData/Projects/Aasia Travel/aasiatravel_module1/src/data/whatsapp.ts) | Static message constants and text formatter layouts |
+| Task Objective       | Target File                                                                                         | Description                                                                       |
+| :------------------- | :-------------------------------------------------------------------------------------------------- | :-------------------------------------------------------------------------------- |
+| **Modify Packages**  | [packages.ts](file:///c:/SharedData/Projects/Aasia Travel/aasiatravel_module1/src/data/packages.ts) | Core array database containing flight codes, hotel stays, steps, and pricing keys |
+| **Change Recipient** | [site.ts](file:///c:/SharedData/Projects/Aasia Travel/aasiatravel_module1/src/config/site.ts)       | Site metadata profile outlining email, phone, and address                         |
+| **Update Templates** | [whatsapp.ts](file:///c:/SharedData/Projects/Aasia Travel/aasiatravel_module1/src/data/whatsapp.ts) | Static message constants and text formatter layouts                               |
 
 ---
 
 ## Key Development Commands
 
-| Command | Action | Output / Behavior |
-| :--- | :--- | :--- |
-| `pnpm dev` | Start development server | Launches Next.js locally on port `3000` |
-| `pnpm dev:turbo` | Start Turbopack dev server | Fast incremental module bundling |
-| `pnpm build` | Compile dynamic pages | Performs static site generation (SSG) to `.next/` |
-| `pnpm check` | Run all validation checks | Sequentially runs linting, formatting, and type checks |
-| `pnpm lint` | Run ESLint checks | Analyzes syntax rules and React hooks boundaries |
-| `pnpm format` | Run Prettier formatter | Formats code in-place |
-| `pnpm typecheck` | Run tsc check | Performs dry-run static type checks without emitting files |
+| Command          | Action                     | Output / Behavior                                          |
+| :--------------- | :------------------------- | :--------------------------------------------------------- |
+| `pnpm dev`       | Start development server   | Launches Next.js locally on port `3000`                    |
+| `pnpm dev:turbo` | Start Turbopack dev server | Fast incremental module bundling                           |
+| `pnpm build`     | Compile dynamic pages      | Performs static site generation (SSG) to `.next/`          |
+| `pnpm check`     | Run all validation checks  | Sequentially runs linting, formatting, and type checks     |
+| `pnpm lint`      | Run ESLint checks          | Analyzes syntax rules and React hooks boundaries           |
+| `pnpm format`    | Run Prettier formatter     | Formats code in-place                                      |
+| `pnpm typecheck` | Run tsc check              | Performs dry-run static type checks without emitting files |
 
 ---
 
@@ -65,21 +65,27 @@ aasiatravel_module1/
 ## Technical Standards to Enforce
 
 ### 1. Ref Render-Access Guard
+
 Never access ref properties (like `ref.current`) inside render bodies or JSX parameters. Doing so causes linting exceptions in the `react-hooks/refs` plugin.
-* **Bad**: `ref={scrollState.containerRef}` (property access inside render loop)
-* **Good**: `const { containerRef } = useScrollContainer(); ... ref={containerRef}`
+
+- **Bad**: `ref={scrollState.containerRef}` (property access inside render loop)
+- **Good**: `const { containerRef } = useScrollContainer(); ... ref={containerRef}`
 
 ### 2. Strict Typings
+
 Never use `any` type annotations. All package structures must strictly adhere to the types declared under [src/types/](file:///c:/SharedData/Projects/Aasia Travel/aasiatravel_module1/src/types).
 
 ### 3. No Scaffolding Noise
+
 Do **NOT** add stub comments (like `// TODO: implement`) inside components or helpers. Out-of-scope roadmaps must be documented in [README.md](file:///c:/SharedData/Projects/Aasia Travel/aasiatravel_module1/README.md) only.
 
 ### 4. WhatsApp Message Architecture
-* **Decoupled Text**: Never write multiline template literals or message text templates inside component JSX or helper logic.
-* **Formatters**: Store all formatters in [data/whatsapp.ts](file:///c:/SharedData/Projects/Aasia Travel/aasiatravel_module1/src/data/whatsapp.ts) and reference them inside [lib/whatsapp.ts](file:///c:/SharedData/Projects/Aasia Travel/aasiatravel_module1/src/lib/whatsapp.ts) to keep the layout layer clean.
-* **Text Formatting**: Format labels (e.g. `*Price:*`) in bold using asterisks and list details using Unicode bullets (`•`) to comply with WhatsApp markdown.
+
+- **Decoupled Text**: Never write multiline template literals or message text templates inside component JSX or helper logic.
+- **Formatters**: Store all formatters in [data/whatsapp.ts](file:///c:/SharedData/Projects/Aasia Travel/aasiatravel_module1/src/data/whatsapp.ts) and reference them inside [lib/whatsapp.ts](file:///c:/SharedData/Projects/Aasia Travel/aasiatravel_module1/src/lib/whatsapp.ts) to keep the layout layer clean.
+- **Text Formatting**: Format labels (e.g. `*Price:*`) in bold using asterisks and list details using Unicode bullets (`•`) to comply with WhatsApp markdown.
 
 ### 5. React Component Boundaries
-* **State & Effects**: Any file using React state (`useState`, `useEffect`) or event handlers (`onClick`, `onChange`) must explicitly start with `'use client';` at the top.
-* **Server Components**: Keep components as Server Components by default unless client-side interactivity is requested.
+
+- **State & Effects**: Any file using React state (`useState`, `useEffect`) or event handlers (`onClick`, `onChange`) must explicitly start with `'use client';` at the top.
+- **Server Components**: Keep components as Server Components by default unless client-side interactivity is requested.

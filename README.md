@@ -36,27 +36,27 @@ A production-grade, consolidated Hajj & Umrah pilgrimage platform built with Nex
 
 ### Core Framework & Runtime
 
-| Technology | Version | Purpose |
-| ---------- | ------- | ------- |
-| Next.js | 16.2.10 | App Router, SSR/SSG, Metadata API, Image Optimization |
-| React | 19.2.4 | UI Component Library with server-side components |
-| TypeScript | 5.x | Strict Type Safety |
-| Node.js | 20+ | Runtime Environment |
+| Technology | Version | Purpose                                               |
+| ---------- | ------- | ----------------------------------------------------- |
+| Next.js    | 16.2.10 | App Router, SSR/SSG, Metadata API, Image Optimization |
+| React      | 19.2.4  | UI Component Library with server-side components      |
+| TypeScript | 5.x     | Strict Type Safety                                    |
+| Node.js    | 20+     | Runtime Environment                                   |
 
 ### Styling & Animation
 
-| Technology | Version | Purpose |
-| ---------- | ------- | ------- |
-| Tailwind CSS | 4.x | Utility-first styling with inline custom `@theme` directives |
-| Framer Motion | 12.42.2 | Micro-interactions, hover offsets, and viewport visibility animations |
-| Lenis | 1.3.25 | Premium smooth scrolling container |
-| clsx | 2.1.1 | Conditional CSS class composer |
-| tailwind-merge | 3.6.0 | Intelligent Tailwind CSS class utility consolidator |
+| Technology     | Version | Purpose                                                               |
+| -------------- | ------- | --------------------------------------------------------------------- |
+| Tailwind CSS   | 4.x     | Utility-first styling with inline custom `@theme` directives          |
+| Framer Motion  | 12.42.2 | Micro-interactions, hover offsets, and viewport visibility animations |
+| Lenis          | 1.3.25  | Premium smooth scrolling container                                    |
+| clsx           | 2.1.1   | Conditional CSS class composer                                        |
+| tailwind-merge | 3.6.0   | Intelligent Tailwind CSS class utility consolidator                   |
 
 ### UI Components & Icons
 
-| Technology | Version | Purpose |
-| ---------- | ------- | ------- |
+| Technology   | Version | Purpose                           |
+| ------------ | ------- | --------------------------------- |
 | Lucide React | 0.475.0 | High-quality visual outline icons |
 
 ### Package Manager
@@ -208,30 +208,30 @@ pnpm start
 
 ### Available Scripts
 
-| Script | Command | Purpose |
-| ------ | ------- | ------- |
-| `dev` | `pnpm dev` | Start development server with hot reload |
-| `dev:turbo` | `pnpm dev:turbo` | Start development server with Turbopack |
-| `build` | `pnpm build` | Create optimized production build |
-| `start` | `pnpm start` | Serve production build locally |
-| `lint` | `pnpm lint` | Run ESLint checks |
+| Script      | Command          | Purpose                                  |
+| ----------- | ---------------- | ---------------------------------------- |
+| `dev`       | `pnpm dev`       | Start development server with hot reload |
+| `dev:turbo` | `pnpm dev:turbo` | Start development server with Turbopack  |
+| `build`     | `pnpm build`     | Create optimized production build        |
+| `start`     | `pnpm start`     | Serve production build locally           |
+| `lint`      | `pnpm lint`      | Run ESLint checks                        |
 
 ---
 
 ## Site Routes
 
-| Route | URL | Description |
-| ----- | --- | ----------- |
-| Home | `/` | Hero section, live Makkah widget, about summary, packages, choose indicators, and customer testimonials. |
-| Package Detail | `/packages/[id]` | Individual package page containing flight logs, timeline progress, hotels, and cost calculators. |
+| Route          | URL              | Description                                                                                              |
+| -------------- | ---------------- | -------------------------------------------------------------------------------------------------------- |
+| Home           | `/`              | Hero section, live Makkah widget, about summary, packages, choose indicators, and customer testimonials. |
+| Package Detail | `/packages/[id]` | Individual package page containing flight logs, timeline progress, hotels, and cost calculators.         |
 
 **Dynamic Package Pages (SSG):**
 
-| Package ID | Package Title | Departure | Category |
-| ---------- | ------------- | --------- | -------- |
-| `e1` | AASIA Tours Asaan Muharram Umrah Package | Delhi | Umrah |
-| `e2` | Mumbai Umrah Semi Deluxe Package | Mumbai | Umrah |
-| `l1` | AASIA Tours Luxury Muharram Umrah Package | Delhi | Umrah |
+| Package ID | Package Title                             | Departure | Category |
+| ---------- | ----------------------------------------- | --------- | -------- |
+| `e1`       | AASIA Tours Asaan Muharram Umrah Package  | Delhi     | Umrah    |
+| `e2`       | Mumbai Umrah Semi Deluxe Package          | Mumbai    | Umrah    |
+| `l1`       | AASIA Tours Luxury Muharram Umrah Package | Delhi     | Umrah    |
 
 ---
 
@@ -359,12 +359,15 @@ Overwrite color hex definitions within the CSS variables of the `@theme` block i
 ## Troubleshooting
 
 **A package detail page loads a 404 error**
+
 - Double check that the ID defined in `src/data/home.ts` matches the key defined in the `packageDetails` record inside `src/data/packages.ts` exactly.
 
 **Next.js Turbopack fails to start in development**
+
 - If your system does not support Next.js Turbopack, launch the dev server with standard configuration using `pnpm dev`.
 
 **Lenis scroll overrides native browser behaviors**
+
 - Ensure that the browser layout height rules matches standard parameters: `html.lenis` and `html.lenis body` should have `height: auto` configured in `src/app/globals.css`.
 
 ---

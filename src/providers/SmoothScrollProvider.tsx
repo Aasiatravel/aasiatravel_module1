@@ -4,11 +4,7 @@ import React, { useEffect, useRef } from 'react';
 import { usePathname } from 'next/navigation';
 import Lenis from 'lenis';
 
-export default function SmoothScrollProvider({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function SmoothScrollProvider({ children }: { children: React.ReactNode }) {
   const lenisRef = useRef<Lenis | null>(null);
   const pathname = usePathname();
 

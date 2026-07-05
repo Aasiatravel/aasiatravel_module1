@@ -6,4 +6,3 @@ declare global {
     // using type assertions on (window as any).lenis instead.
   }
 }
-

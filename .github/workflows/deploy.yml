@@ -43,16 +43,16 @@ jobs:
             # Source bash profile for NVM and Node environment paths
             export NVM_DIR="$HOME/.nvm"
             [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-            
+
             # Navigate to application folder on VPS
             cd /var/www/aasiatravel
-            
+
             # Fetch latest changes
             git pull origin main
-            
+
             # Install and rebuild
             pnpm install
             pnpm build
-            
+
             # Reload PM2 process manager daemon
             pm2 reload aasia-travel || pm2 start npm --name "aasia-travel" -- start

@@ -14,7 +14,8 @@ export function useLockScroll(isLocked: boolean) {
     document.body.style.overflow = 'hidden';
     document.documentElement.classList.add('lenis-stopped');
 
-    const lenisInstance = typeof window !== 'undefined' ? ((window as any).lenis as Lenis | undefined) : undefined;
+    const lenisInstance =
+      typeof window !== 'undefined' ? ((window as any).lenis as Lenis | undefined) : undefined;
     if (lenisInstance) {
       lenisInstance.stop();
     }
@@ -31,7 +32,8 @@ export function useLockScroll(isLocked: boolean) {
       document.body.style.overflow = originalBodyOverflow;
       document.documentElement.classList.remove('lenis-stopped');
 
-      const lenisInstanceCleanup = typeof window !== 'undefined' ? ((window as any).lenis as Lenis | undefined) : undefined;
+      const lenisInstanceCleanup =
+        typeof window !== 'undefined' ? ((window as any).lenis as Lenis | undefined) : undefined;
       if (lenisInstanceCleanup) {
         lenisInstanceCleanup.start();
       }

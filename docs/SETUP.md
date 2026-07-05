@@ -10,10 +10,10 @@ This guide details the step-by-step procedures required to customize, build, and
 
 ## Deployment Configuration Profiles
 
-| Target Platform | Hosting Type | Build Preset | Output Folder |
-| :--- | :--- | :--- | :--- |
-| **Vercel** | Serverless CDN | Next.js Project Preset | `.next` |
-| **Cloudflare Pages** | Edge Network CDN | Next.js (Static Export) | `out` |
+| Target Platform      | Hosting Type     | Build Preset            | Output Folder |
+| :------------------- | :--------------- | :---------------------- | :------------ |
+| **Vercel**           | Serverless CDN   | Next.js Project Preset  | `.next`       |
+| **Cloudflare Pages** | Edge Network CDN | Next.js (Static Export) | `out`         |
 
 ---
 
@@ -22,6 +22,7 @@ This guide details the step-by-step procedures required to customize, build, and
 The destination contact phone number is managed within the global configuration profile.
 
 To update the recipient number:
+
 1. Open the configuration file [site.ts](file:///c:/SharedData/Projects/Aasia Travel/aasiatravel_module1/src/config/site.ts).
 2. Locate the `contact` configuration block:
    ```typescript
@@ -43,6 +44,7 @@ To update the recipient number:
 Vercel detects Next.js configurations automatically and performs static site generation (SSG) in the cloud.
 
 ### Build and Deployment Steps
+
 1. Push your latest code changes to your repository (GitHub/GitLab/Bitbucket).
 2. Log in to the Vercel Dashboard and click **Add New Project**.
 3. Select and import the repository.
@@ -58,6 +60,7 @@ Vercel detects Next.js configurations automatically and performs static site gen
 For maximum edge network caching and fast loading times, deploy the built static output to Cloudflare Pages.
 
 ### Setup Settings
+
 - **Framework Preset**: `Next.js (Static HTML Export)`
 - **Build Command**: `pnpm build`
 - **Build Output Directory**: `out`

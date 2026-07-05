@@ -34,9 +34,7 @@ export default function AboutSection() {
             {aboutData.paragraphs.map((para, idx) => (
               <p key={idx}>{para}</p>
             ))}
-            <p className="text-primary">
-              {aboutData.quote}
-            </p>
+            <p className="text-primary">{aboutData.quote}</p>
           </div>
 
           <div className="grid grid-cols-3 gap-4 sm:gap-8 lg:gap-12">

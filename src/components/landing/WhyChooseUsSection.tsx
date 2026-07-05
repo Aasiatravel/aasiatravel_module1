@@ -25,8 +25,12 @@ export default function WhyChooseUsSection() {
               <span className="text-6xl lg:text-7xl font-serif text-primary-light/20 mb-4 md:mb-6 font-semibold leading-none">
                 {feature.number}
               </span>
-              <h4 className="text-base sm:text-lg font-semibold mb-2 sm:mb-4 text-primary font-sans!">{feature.title}</h4>
-              <p className="text-sm sm:text-base text-primary-light leading-relaxed font-sans">{feature.description}</p>
+              <h4 className="text-base sm:text-lg font-semibold mb-2 sm:mb-4 text-primary font-sans!">
+                {feature.title}
+              </h4>
+              <p className="text-sm sm:text-base text-primary-light leading-relaxed font-sans">
+                {feature.description}
+              </p>
             </ScrollReveal>
           ))}
         </div>

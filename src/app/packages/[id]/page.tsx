@@ -74,7 +74,10 @@ export default async function PackageDetailPage({ params }: PageProps) {
 
       <ExperienceTimeline steps={pkg.steps} />
 
-      <ScrollReveal direction="up" className="container-custom section-padding border-t border-primary-soft/30 font-sans">
+      <ScrollReveal
+        direction="up"
+        className="container-custom section-padding border-t border-primary-soft/30 font-sans"
+      >
         <div className="mb-8 md:mb-12">
           <span className="text-[12px] sm:text-[14px] font-medium tracking-widest text-primary uppercase block mb-3 sm:mb-4">
             WHERE YOU&apos;LL STAY
@@ -90,12 +93,17 @@ export default async function PackageDetailPage({ params }: PageProps) {
         </div>
       </ScrollReveal>
 
-      <ScrollReveal direction="up" className="container-custom section-padding border-t border-primary-soft/30 font-sans">
+      <ScrollReveal
+        direction="up"
+        className="container-custom section-padding border-t border-primary-soft/30 font-sans"
+      >
         <div className="mb-8 md:mb-12">
           <span className="text-[12px] sm:text-[14px] font-medium tracking-widest text-primary uppercase block mb-3 sm:mb-4">
             PLAN YOUR COST
           </span>
-          <h2 className="text-3xl sm:text-4xl font-serif text-primary font-semibold">Price calculator.</h2>
+          <h2 className="text-3xl sm:text-4xl font-serif text-primary font-semibold">
+            Price calculator.
+          </h2>
         </div>
         <PriceCalculator
           basePrice={pkg.price}

@@ -1,21 +1,21 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 @theme {
   --color-primary: #362017;
-  --color-primary-light: #84593D;
-  --color-primary-muted: #9C7B5E;
-  --color-primary-soft: #E8DDD0;
-  --color-primary-accent: #6B3F1F;
+  --color-primary-light: #84593d;
+  --color-primary-muted: #9c7b5e;
+  --color-primary-soft: #e8ddd0;
+  --color-primary-accent: #6b3f1f;
 
-  --color-accent: #FFC452;
-  --color-accent-gold: #C5855C;
+  --color-accent: #ffc452;
+  --color-accent-gold: #c5855c;
 
-  --color-background-cream: #F2EEEB;
-  --color-background-warm: #FAF7F2;
-  --color-background-dark: #1A1008;
+  --color-background-cream: #f2eeeb;
+  --color-background-warm: #faf7f2;
+  --color-background-dark: #1a1008;
 
-  --color-secondary: #2E385B;
-  --color-neutral-gray: #C4C4C4;
+  --color-secondary: #2e385b;
+  --color-neutral-gray: #c4c4c4;
 
   --font-sans: var(--font-inter);
   --font-serif: var(--font-playfair);
@@ -38,7 +38,12 @@ body {
   @apply font-sans text-primary bg-white overflow-x-hidden antialiased;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   @apply font-serif;
 }
 
@@ -97,7 +102,6 @@ h1, h2, h3, h4, h5, h6 {
     transform-origin: bottom left;
   }
 }
-
 
 /* Lenis Smooth Scroll Configuration */
 html.lenis,
@@ -169,12 +173,12 @@ html.lenis body {
   height: 10px;
 }
 ::-webkit-scrollbar-track {
-  background: #FAF7F2;
+  background: #faf7f2;
 }
 ::-webkit-scrollbar-thumb {
-  background: #9C7B5E;
+  background: #9c7b5e;
   border-radius: 10px;
-  border: 2px solid #FAF7F2;
+  border: 2px solid #faf7f2;
 }
 ::-webkit-scrollbar-thumb:hover {
   background: #362017;
@@ -183,7 +187,5 @@ html.lenis body {
 /* For Firefox */
 html {
   scrollbar-width: thin;
-  scrollbar-color: #9C7B5E #FAF7F2;
+  scrollbar-color: #9c7b5e #faf7f2;
 }
-
-

@@ -21,7 +21,9 @@ export default function FlightCard({
       <div className="flex items-center justify-between gap-4">
         <div className="flex flex-col">
           <span className="font-serif text-xl sm:text-2xl font-bold text-primary">{code}</span>
-          <span className="text-[11px] sm:text-[11.8px] font-normal text-primary-muted">{city}</span>
+          <span className="text-[11px] sm:text-[11.8px] font-normal text-primary-muted">
+            {city}
+          </span>
         </div>
 
         <div className="flex-1 flex items-center gap-2">
@@ -32,7 +34,9 @@ export default function FlightCard({
 
         <div className="flex flex-col items-end">
           <span className="font-serif text-xl sm:text-2xl font-bold text-primary">{destCode}</span>
-          <span className="text-[11px] sm:text-[11.8px] font-normal text-primary-muted text-right">{destCity}</span>
+          <span className="text-[11px] sm:text-[11.8px] font-normal text-primary-muted text-right">
+            {destCity}
+          </span>
         </div>
       </div>
 

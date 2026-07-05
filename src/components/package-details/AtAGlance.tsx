@@ -7,12 +7,7 @@ interface AtAGlanceProps {
   seatsLeft: number;
 }
 
-export default function AtAGlance({
-  duration,
-  dates,
-  departureCity,
-  seatsLeft,
-}: AtAGlanceProps) {
+export default function AtAGlance({ duration, dates, departureCity, seatsLeft }: AtAGlanceProps) {
   const items = [
     {
       label: 'Departure Duration',
@@ -42,7 +37,9 @@ export default function AtAGlance({
             <div
               key={idx}
               className={`p-6 md:p-8 hover:bg-background-cream/20 transition-colors group ${
-                idx !== items.length - 1 ? 'border-b md:border-b-0 md:border-r border-primary-soft' : ''
+                idx !== items.length - 1
+                  ? 'border-b md:border-b-0 md:border-r border-primary-soft'
+                  : ''
               }`}
             >
               <span className="text-[10px] font-medium tracking-wider text-primary-light uppercase mb-3 block">
@@ -51,9 +48,7 @@ export default function AtAGlance({
               <h4 className="font-serif text-[18px] font-bold text-primary group-hover:text-primary-light transition-colors">
                 {item.value}
               </h4>
-              <p className="text-[12px] font-normal text-primary-light mt-1">
-                {item.description}
-              </p>
+              <p className="text-[12px] font-normal text-primary-light mt-1">{item.description}</p>
             </div>
           ))}
         </div>

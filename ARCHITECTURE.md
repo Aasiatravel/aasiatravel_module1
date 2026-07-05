@@ -10,13 +10,13 @@ A detailed technical breakdown of the system architecture, component pipelines, 
 
 ## Technical Architecture Summary
 
-| Layer | Component Location | Tech Choice | Purpose |
-| :--- | :--- | :--- | :--- |
-| **Frontend/BFF** | `src/app/`, `src/components/` | Next.js 16.2.10 | Static-site generation, route skeleton loading, dynamic SEO headers |
-| **Styling** | `src/app/globals.css` | Tailwind CSS v4 | Class utilities, custom theme colors, responsive grid structures |
-| **Client Physics** | Component imports | Framer Motion & Lenis | Smooth viewport animations, exponential ease scroll physics |
-| **Checkout API** | `src/lib/whatsapp.ts` | WhatsApp API Link Builder | Serverless order communication via query parameter payloads |
-| **Data Layer** | `src/data/` | TypeScript Static Data | Decoupled local data files without CMS or SQL overhead |
+| Layer              | Component Location            | Tech Choice               | Purpose                                                             |
+| :----------------- | :---------------------------- | :------------------------ | :------------------------------------------------------------------ |
+| **Frontend/BFF**   | `src/app/`, `src/components/` | Next.js 16.2.10           | Static-site generation, route skeleton loading, dynamic SEO headers |
+| **Styling**        | `src/app/globals.css`         | Tailwind CSS v4           | Class utilities, custom theme colors, responsive grid structures    |
+| **Client Physics** | Component imports             | Framer Motion & Lenis     | Smooth viewport animations, exponential ease scroll physics         |
+| **Checkout API**   | `src/lib/whatsapp.ts`         | WhatsApp API Link Builder | Serverless order communication via query parameter payloads         |
+| **Data Layer**     | `src/data/`                   | TypeScript Static Data    | Decoupled local data files without CMS or SQL overhead              |
 
 ---
 

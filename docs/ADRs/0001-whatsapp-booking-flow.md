@@ -10,11 +10,11 @@ An Architectural Decision Record (ADR) detailing the selection, implementation t
 
 ## Architectural Decision Summary
 
-| Criteria | Choice | Justification |
-| :--- | :--- | :--- |
-| **Status** | **Approved** | Merged and verified in production |
+| Criteria       | Choice                              | Justification                                                                       |
+| :------------- | :---------------------------------- | :---------------------------------------------------------------------------------- |
+| **Status**     | **Approved**                        | Merged and verified in production                                                   |
 | **Technology** | WhatsApp Public API Links (`wa.me`) | Eliminates payment processor accounts, login sessions, and credit database overhead |
-| **Format** | Unicode-styled markdown | Preserves visual readability and professionalism in customer chat threads |
+| **Format**     | Unicode-styled markdown             | Preserves visual readability and professionalism in customer chat threads           |
 
 ---
 
@@ -33,9 +33,11 @@ We choose to utilize direct, dynamic redirects to the WhatsApp Public API (`wa.m
 ## Consequences & Trade-Offs
 
 ### Positive Outcomes
-* **Zero Backend Costs**: Eliminates user databases, security credentials, authentication flows, payment gateway connections, and strict PCI/GDPR compliance scans.
-* **Frictionless Sign-Up**: Pilgrims launch a chat immediately from the landing page or detail calculator page without remembering user credentials.
-* **Personalized Support**: Direct coordination aligns with the high-involvement decision-making process common with Hajj & Umrah.
+
+- **Zero Backend Costs**: Eliminates user databases, security credentials, authentication flows, payment gateway connections, and strict PCI/GDPR compliance scans.
+- **Frictionless Sign-Up**: Pilgrims launch a chat immediately from the landing page or detail calculator page without remembering user credentials.
+- **Personalized Support**: Direct coordination aligns with the high-involvement decision-making process common with Hajj & Umrah.
 
 ### Negative Outcomes
-* **Manual Processing**: Booking coordinators must manually record receipt parameters in chat threads to finalize bookings and resolve manual payment steps.
+
+- **Manual Processing**: Booking coordinators must manually record receipt parameters in chat threads to finalize bookings and resolve manual payment steps.

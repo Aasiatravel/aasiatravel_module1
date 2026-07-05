@@ -70,14 +70,20 @@ export default function PackageHero({
           </p>
         </ScrollReveal>
 
-        <ScrollReveal direction="up" delay={0.1} className="bg-background-dark rounded-4px p-6 sm:p-8 text-center space-y-6 shadow-xl w-full">
+        <ScrollReveal
+          direction="up"
+          delay={0.1}
+          className="bg-background-dark rounded-4px p-6 sm:p-8 text-center space-y-6 shadow-xl w-full"
+        >
           <div className="space-y-2">
             <span className="text-[11.2px] sm:text-xs font-semibold tracking-[0.2em] text-primary-light/99 uppercase block">
               CURRENT JOURNEY BUDGET
             </span>
             <h2 className="text-3xl sm:text-[36px] font-serif text-white tracking-wide font-semibold">
               Rs {basePrice.toLocaleString()}{' '}
-              <span className="text-xs sm:text-[15px] font-sans font-normal text-primary-light/99">/ person</span>
+              <span className="text-xs sm:text-[15px] font-sans font-normal text-primary-light/99">
+                / person
+              </span>
             </h2>
             <p className="text-xs sm:text-[13px] text-primary-light/99 tracking-wide font-normal font-sans">
               Visa, flights & accommodation included

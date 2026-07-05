@@ -10,22 +10,23 @@ The Aasia Travel platform is a statically-served client application (SSG) with z
 
 ## Outgoing Request Contracts
 
-| Action | Component | Message Target | Description |
-| :--- | :--- | :--- | :--- |
-| **Get in Touch** | Navbar, MobileMenu, Footer | Generic Inquiry | Requests Hajj & Umrah services consultation and guidance |
-| **Chat Support** | Footer | Support Inquiry | Requests direct assistance regarding travel planning and bookings |
-| **Book Journey** | PackageHero | Dynamic Package details | Initiates seat booking inquiries with target package metadata |
-| **WhatsApp Calc** | PriceCalculator | Interactive Calculator Receipt | Sends receipt payload containing travellers count, sharing room choice, add-ons list, and total price |
+| Action            | Component                  | Message Target                 | Description                                                                                           |
+| :---------------- | :------------------------- | :----------------------------- | :---------------------------------------------------------------------------------------------------- |
+| **Get in Touch**  | Navbar, MobileMenu, Footer | Generic Inquiry                | Requests Hajj & Umrah services consultation and guidance                                              |
+| **Chat Support**  | Footer                     | Support Inquiry                | Requests direct assistance regarding travel planning and bookings                                     |
+| **Book Journey**  | PackageHero                | Dynamic Package details        | Initiates seat booking inquiries with target package metadata                                         |
+| **WhatsApp Calc** | PriceCalculator            | Interactive Calculator Receipt | Sends receipt payload containing travellers count, sharing room choice, add-ons list, and total price |
 
 ---
 
 ## Outgoing Contract Specifications
 
 ### 1. General Get in Touch Redirect
-* **Purpose**: Redirects user to WhatsApp for general services info and planning questions.
-* **Component Location**: `Navbar.tsx` (Desktop CTA), `MobileMenu.tsx` (Mobile CTA), `Footer.tsx` (Phone contact link).
-* **Outgoing Protocol**: `GET https://wa.me/{phone}?text={payload}`
-* **Preferred Template**:
+
+- **Purpose**: Redirects user to WhatsApp for general services info and planning questions.
+- **Component Location**: `Navbar.tsx` (Desktop CTA), `MobileMenu.tsx` (Mobile CTA), `Footer.tsx` (Phone contact link).
+- **Outgoing Protocol**: `GET https://wa.me/{phone}?text={payload}`
+- **Preferred Template**:
   ```text
   Assalamu Alaikum wa Rahmatullahi wa Barakatuh,
 
@@ -39,10 +40,11 @@ The Aasia Travel platform is a statically-served client application (SSG) with z
 ---
 
 ### 2. General Chat Support Redirect
-* **Purpose**: Requests support channels regarding travel details.
-* **Component Location**: `Footer.tsx` ("Chat Support" link).
-* **Outgoing Protocol**: `GET https://wa.me/{phone}?text={payload}`
-* **Preferred Template**:
+
+- **Purpose**: Requests support channels regarding travel details.
+- **Component Location**: `Footer.tsx` ("Chat Support" link).
+- **Outgoing Protocol**: `GET https://wa.me/{phone}?text={payload}`
+- **Preferred Template**:
   ```text
   Assalamu Alaikum wa Rahmatullahi wa Barakatuh,
 
@@ -56,10 +58,11 @@ The Aasia Travel platform is a statically-served client application (SSG) with z
 ---
 
 ### 3. Dynamic Package Booking - "BOOK JOURNEY"
-* **Purpose**: Requests initial booking details and seat availability checks for a specific package.
-* **Component Location**: `PackageHero.tsx` ("BOOK JOURNEY" button).
-* **Outgoing Protocol**: `GET https://wa.me/{phone}?text={payload}`
-* **Preferred Template**:
+
+- **Purpose**: Requests initial booking details and seat availability checks for a specific package.
+- **Component Location**: `PackageHero.tsx` ("BOOK JOURNEY" button).
+- **Outgoing Protocol**: `GET https://wa.me/{phone}?text={payload}`
+- **Preferred Template**:
   ```text
   Assalamu Alaikum wa Rahmatullahi wa Barakatuh,
 
@@ -80,10 +83,11 @@ The Aasia Travel platform is a statically-served client application (SSG) with z
 ---
 
 ### 4. Dynamic Calculator Booking - "BOOK ON WHATSAPP"
-* **Purpose**: Requests custom bookings based on calculations from the pricing widget.
-* **Component Location**: `PriceCalculator.tsx` ("BOOK ON WHATSAPP" button).
-* **Outgoing Protocol**: `GET https://wa.me/{phone}?text={payload}`
-* **Preferred Template**:
+
+- **Purpose**: Requests custom bookings based on calculations from the pricing widget.
+- **Component Location**: `PriceCalculator.tsx` ("BOOK ON WHATSAPP" button).
+- **Outgoing Protocol**: `GET https://wa.me/{phone}?text={payload}`
+- **Preferred Template**:
   ```text
   Assalamu Alaikum wa Rahmatullahi wa Barakatuh,
 

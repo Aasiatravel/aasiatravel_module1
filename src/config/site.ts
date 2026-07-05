@@ -2,8 +2,7 @@ import type { NavLink } from '@/types';
 
 export const siteConfig = {
   name: 'Aasia Travel',
-  description:
-    'Your trusted partner for Hajj, Umrah, and Islamic travel',
+  description: 'Your trusted partner for Hajj, Umrah, and Islamic travel',
   url: process.env.NEXT_PUBLIC_SITE_URL || 'https://aasiatravel.com',
   ogImage: '/images/hero.png',
   logo: '/images/logo.png',

@@ -81,10 +81,11 @@ export default function PriceCalculator({
                 <button
                   key={label}
                   onClick={() => setSharing(label)}
-                  className={`px-4 py-2 rounded-full border text-[12px] font-medium transition-all duration-200 cursor-pointer ${isActive
-                    ? 'bg-primary-light text-white border-primary-light'
-                    : 'bg-background-warm text-primary border-primary-soft hover:border-primary-muted'
-                    }`}
+                  className={`px-4 py-2 rounded-full border text-[12px] font-medium transition-all duration-200 cursor-pointer ${
+                    isActive
+                      ? 'bg-primary-light text-white border-primary-light'
+                      : 'bg-background-warm text-primary border-primary-soft hover:border-primary-muted'
+                  }`}
                 >
                   {label} Sharing
                 </button>
@@ -104,10 +105,11 @@ export default function PriceCalculator({
                 <button
                   key={addon}
                   onClick={() => toggleAddon(addon)}
-                  className={`px-4 py-2 rounded-full border text-[12px] font-medium transition-all duration-200 cursor-pointer ${isActive
-                    ? 'bg-primary-light text-white border-primary-light'
-                    : 'bg-background-warm text-primary border-primary-soft hover:border-primary-muted'
-                    }`}
+                  className={`px-4 py-2 rounded-full border text-[12px] font-medium transition-all duration-200 cursor-pointer ${
+                    isActive
+                      ? 'bg-primary-light text-white border-primary-light'
+                      : 'bg-background-warm text-primary border-primary-soft hover:border-primary-muted'
+                  }`}
                 >
                   {addon}
                 </button>
@@ -121,15 +123,21 @@ export default function PriceCalculator({
         <div className="space-y-4 mb-8">
           <div className="flex justify-between items-center text-xs sm:text-[14px] font-light">
             <span className="text-primary-muted">Base price / person</span>
-            <span className="text-background-cream font-semibold">Rs {basePrice.toLocaleString()}</span>
+            <span className="text-background-cream font-semibold">
+              Rs {basePrice.toLocaleString()}
+            </span>
           </div>
           <div className="flex justify-between items-center text-xs sm:text-[14px] font-light">
             <span className="text-primary-muted">Room sharing adjustment</span>
-            <span className="text-background-cream font-semibold">+{sharingAdjustment.toLocaleString()}</span>
+            <span className="text-background-cream font-semibold">
+              +{sharingAdjustment.toLocaleString()}
+            </span>
           </div>
           <div className="flex justify-between items-center text-xs sm:text-[14px] font-light">
             <span className="text-primary-muted">Add-ons</span>
-            <span className="text-background-cream font-semibold">Rs {addonsTotal.toLocaleString()} / person</span>
+            <span className="text-background-cream font-semibold">
+              Rs {addonsTotal.toLocaleString()} / person
+            </span>
           </div>
           <div className="flex justify-between items-center text-xs sm:text-[14px] font-light">
             <span className="text-primary-muted">Travellers</span>

@@ -14,10 +14,7 @@ export default function Footer() {
   const fontStyle = { fontFamily: 'var(--font-inter), sans-serif' };
 
   return (
-    <footer
-      className="bg-white pt-16 pb-8 border-t border-primary-soft/30"
-      style={fontStyle}
-    >
+    <footer className="bg-white pt-16 pb-8 border-t border-primary-soft/30" style={fontStyle}>
       <div className="container-custom">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12 mb-8">
           <div className="flex flex-col items-start">
@@ -59,7 +56,10 @@ export default function Footer() {
             <ul className="space-y-3">
               {footerCompanyLinks.map((link) => (
                 <li key={link.label}>
-                  <Link href={link.href} className="text-sm text-primary-muted hover:text-primary transition-colors font-normal hover-underline pb-0.5">
+                  <Link
+                    href={link.href}
+                    className="text-sm text-primary-muted hover:text-primary transition-colors font-normal hover-underline pb-0.5"
+                  >
                     {link.label}
                   </Link>
                 </li>
@@ -121,14 +121,20 @@ export default function Footer() {
                   );
                 } else if (isMail) {
                   content = (
-                    <a href={`mailto:${item.text}`} className="hover:text-primary transition-colors">
+                    <a
+                      href={`mailto:${item.text}`}
+                      className="hover:text-primary transition-colors"
+                    >
                       {item.text}
                     </a>
                   );
                 }
 
                 return (
-                  <li key={idx} className="flex items-center gap-3 text-sm text-primary-muted font-normal">
+                  <li
+                    key={idx}
+                    className="flex items-center gap-3 text-sm text-primary-muted font-normal"
+                  >
                     <Icon size={16} className="text-primary-light shrink-0" />
                     {content}
                   </li>

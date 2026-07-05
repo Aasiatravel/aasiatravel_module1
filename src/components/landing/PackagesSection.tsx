@@ -90,10 +90,11 @@ export default function PackagesSection() {
                   <button
                     key={type}
                     onClick={() => setFilter(isActive ? 'ALL' : filterVal)}
-                    className={`px-3.5 sm:px-5 py-1.5 sm:py-2 rounded-full text-[10px] sm:text-xs font-semibold tracking-widest transition-all duration-300 font-sans cursor-pointer ${isActive
-                      ? 'bg-primary text-white border border-primary shadow-sm'
-                      : 'border border-primary-soft/60 text-primary-muted bg-white hover:border-primary-muted/60 hover:text-primary hover:bg-background-warm/30'
-                      }`}
+                    className={`px-3.5 sm:px-5 py-1.5 sm:py-2 rounded-full text-[10px] sm:text-xs font-semibold tracking-widest transition-all duration-300 font-sans cursor-pointer ${
+                      isActive
+                        ? 'bg-primary text-white border border-primary shadow-sm'
+                        : 'border border-primary-soft/60 text-primary-muted bg-white hover:border-primary-muted/60 hover:text-primary hover:bg-background-warm/30'
+                    }`}
                   >
                     {filterVal}
                   </button>
@@ -140,7 +141,9 @@ export default function PackagesSection() {
 
           const visibleTypes = uniqueTypes.filter((t) => {
             const val = t.toUpperCase();
-            return (filter === 'ALL' || filter === val) && filteredPackages.some((p) => p.type === t);
+            return (
+              (filter === 'ALL' || filter === val) && filteredPackages.some((p) => p.type === t)
+            );
           });
           const isLastVisible = visibleTypes[visibleTypes.length - 1] === type;
 

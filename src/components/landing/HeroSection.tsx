@@ -40,14 +40,26 @@ export default function HeroSection() {
         const yearMatch = hijriStr.match(/\b\d{4}\b/);
 
         const months = [
-          'Muharram', 'Safar', "Rabi' al-Awwal", "Rabi' al-Thani",
-          'Jumada al-Awwal', 'Jumada al-Thani', 'Rajab', "Sha'ban",
-          'Ramadan', 'Shawwal', 'Dhu al-Qadah', 'Dhu al-Hijjah'
+          'Muharram',
+          'Safar',
+          "Rabi' al-Awwal",
+          "Rabi' al-Thani",
+          'Jumada al-Awwal',
+          'Jumada al-Thani',
+          'Rajab',
+          "Sha'ban",
+          'Ramadan',
+          'Shawwal',
+          'Dhu al-Qadah',
+          'Dhu al-Hijjah',
         ];
 
         let monthName = 'Muharram';
         for (const m of months) {
-          if (hijriStr.includes(m) || hijriStr.toLowerCase().includes(m.toLowerCase().replace("'", ""))) {
+          if (
+            hijriStr.includes(m) ||
+            hijriStr.toLowerCase().includes(m.toLowerCase().replace("'", ''))
+          ) {
             monthName = m;
             break;
           }
@@ -126,12 +138,12 @@ export default function HeroSection() {
           </p>
 
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[56px] leading-[1.15] font-serif text-primary mb-5 md:mb-6">
-            <span className="italic">Guiding Every Step</span> of Your{' '}
-            Sacred Journey.
+            <span className="italic">Guiding Every Step</span> of Your Sacred Journey.
           </h1>
 
           <p className="text-primary-muted text-sm sm:text-base max-w-md mb-6 md:mb-8 leading-relaxed font-sans">
-            Thoughtfully Guided Pilgrimages For Those Who Seek More Than Just A Trip A Transformation.
+            Thoughtfully Guided Pilgrimages For Those Who Seek More Than Just A Trip A
+            Transformation.
           </p>
 
           <Link href="/#packages">
@@ -169,4 +181,3 @@ export default function HeroSection() {
     </section>
   );
 }
-

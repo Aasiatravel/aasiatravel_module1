@@ -2,14 +2,7 @@ import Image from 'next/image';
 import type { HotelInfo } from '@/types';
 import { getWhatsAppHotelDirectionsLink } from '@/lib/whatsapp';
 
-export default function HotelCard({
-  type,
-  name,
-  rating,
-  distance,
-  features,
-  image,
-}: HotelInfo) {
+export default function HotelCard({ type, name, rating, distance, features, image }: HotelInfo) {
   return (
     <div className="bg-white border border-primary-soft rounded-4px overflow-hidden flex flex-col h-full font-sans">
       <div className="h-[200px] sm:h-[282px] relative overflow-hidden">

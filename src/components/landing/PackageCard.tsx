@@ -14,9 +14,7 @@ interface PackageCardProps {
 
 export default function PackageCard({ pkg }: PackageCardProps) {
   return (
-    <motion.div
-      className="group bg-primary-light/5 border border-primary/5 rounded-sm overflow-hidden flex flex-col h-full"
-    >
+    <motion.div className="group bg-primary-light/5 border border-primary/5 rounded-sm overflow-hidden flex flex-col h-full">
       <div className="relative aspect-4/3 w-full overflow-hidden">
         <Image
           src={pkg.image}
@@ -42,7 +40,9 @@ export default function PackageCard({ pkg }: PackageCardProps) {
           </div>
         </div>
 
-        <h4 className="text-base sm:text-lg font-serif mb-3 sm:mb-4 grow text-primary font-bold">{pkg.title}</h4>
+        <h4 className="text-base sm:text-lg font-serif mb-3 sm:mb-4 grow text-primary font-bold">
+          {pkg.title}
+        </h4>
 
         <div className="flex flex-wrap items-center gap-x-2 gap-y-1.5 text-primary-light text-xs mb-5 sm:mb-6 font-sans">
           <div className="flex items-center gap-1.5">

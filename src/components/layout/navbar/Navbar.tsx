@@ -113,13 +113,9 @@ export default function Navbar() {
             </AnimatePresence>
           </button>
         </div>
-
       </nav>
 
-      <MobileMenu
-        isOpen={isMobileMenuOpen}
-        onClose={() => setIsMobileMenuOpen(false)}
-      />
+      <MobileMenu isOpen={isMobileMenuOpen} onClose={() => setIsMobileMenuOpen(false)} />
     </>
   );
 }

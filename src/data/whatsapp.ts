@@ -66,11 +66,7 @@ Could you please confirm the availability and guide me through the booking proce
 Jazakumullahu Khairan. I look forward to your response.`;
 }
 
-export function formatWhatsAppHotelDirectionsMsg({
-  name,
-  type,
-  distance,
-}: HotelDirectionsDetails) {
+export function formatWhatsAppHotelDirectionsMsg({ name, type, distance }: HotelDirectionsDetails) {
   return `Assalamu Alaikum wa Rahmatullahi wa Barakatuh,
 
 I visited your Aasia Travel website, and I need directions / location details for the following hotel:

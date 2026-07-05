@@ -30,7 +30,8 @@ export function useSmoothScrollTo() {
       const element = document.getElementById(id);
       if (element) {
         e.preventDefault();
-        const lenis = typeof window !== 'undefined' ? ((window as any).lenis as Lenis | undefined) : undefined;
+        const lenis =
+          typeof window !== 'undefined' ? ((window as any).lenis as Lenis | undefined) : undefined;
         const executeScroll = () => {
           if (lenis && typeof lenis.scrollTo === 'function') {
             lenis.scrollTo(element, { offset: -70 });

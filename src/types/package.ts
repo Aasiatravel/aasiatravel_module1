@@ -45,7 +45,7 @@ export interface Package {
   rating: number;
   image: string;
   limitedSeats: boolean;
-  
+
   // Unified Details Page Properties
   subtitle: string;
   description: string;
@@ -62,7 +62,8 @@ export interface StepData {
   id: string;
   title: string;
   description: string;
-  iconName: 'ClipboardCheck' | 'Plane' | 'Building' | 'Utensils' | 'Droplets' | 'PhoneCall' | string;
+  iconName:
+    'ClipboardCheck' | 'Plane' | 'Building' | 'Utensils' | 'Droplets' | 'PhoneCall' | string;
 }
 
 export type PackageDetailData = Package;

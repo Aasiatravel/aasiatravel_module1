@@ -38,8 +38,12 @@ export default function TestimonialCard({ testimonial, className }: TestimonialC
         <div>
           <div className="flex items-start justify-between mb-3">
             <div className="flex flex-col font-sans">
-              <h4 className="text-primary font-bold text-sm md:text-base leading-tight">{testimonial.name}</h4>
-              <p className="text-primary-light/60 text-[10px] md:text-xs mt-0.5">{testimonial.location}</p>
+              <h4 className="text-primary font-bold text-sm md:text-base leading-tight">
+                {testimonial.name}
+              </h4>
+              <p className="text-primary-light/60 text-[10px] md:text-xs mt-0.5">
+                {testimonial.location}
+              </p>
             </div>
             <div className="flex gap-0.5 pt-0.5 shrink-0">
               {[...Array(testimonial.rating)].map((_, i) => (
