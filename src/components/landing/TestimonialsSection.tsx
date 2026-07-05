@@ -1,6 +1,5 @@
 'use client';
 
-import React from 'react';
 import { testimonials } from '@/data/home';
 import { TestimonialCard, ScrollReveal } from '@/components/ui';
 
@@ -20,7 +19,6 @@ export default function TestimonialsSection() {
       </ScrollReveal>
 
       <ScrollReveal className="relative w-full overflow-hidden" delay={0.1}>
-        {/* Gradients */}
         <div className="absolute left-0 top-0 bottom-0 w-12 sm:w-24 md:w-32 lg:w-48 bg-linear-to-r from-background-dark to-transparent z-20 pointer-events-none" />
         <div className="absolute right-0 top-0 bottom-0 w-12 sm:w-24 md:w-32 lg:w-48 bg-linear-to-l from-background-dark to-transparent z-20 pointer-events-none" />
 

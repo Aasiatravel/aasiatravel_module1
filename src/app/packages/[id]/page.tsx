@@ -38,7 +38,6 @@ export default async function PackageDetailPage({ params }: PageProps) {
 
   return (
     <div className="bg-white pb-20">
-      {/* Hero Section */}
       <PackageHero
         title={pkg.title}
         subtitle={pkg.subtitle}
@@ -50,7 +49,6 @@ export default async function PackageDetailPage({ params }: PageProps) {
         category={pkg.category}
       />
 
-      {/* At a Glance */}
       <AtAGlance
         duration={pkg.duration}
         dates={pkg.date}
@@ -58,7 +56,6 @@ export default async function PackageDetailPage({ params }: PageProps) {
         seatsLeft={pkg.seatsLeft}
       />
 
-      {/* Confirmed Flight Details */}
       <ScrollReveal direction="up" className="container-custom section-padding font-sans">
         <div className="mb-8 md:mb-12">
           <span className="text-[12px] sm:text-[14px] font-normal tracking-widest text-primary uppercase block mb-3 sm:mb-4">
@@ -75,10 +72,8 @@ export default async function PackageDetailPage({ params }: PageProps) {
         </div>
       </ScrollReveal>
 
-      {/* Experience Timeline */}
       <ExperienceTimeline steps={pkg.steps} />
 
-      {/* Where You'll Stay */}
       <ScrollReveal direction="up" className="container-custom section-padding border-t border-primary-soft/30 font-sans">
         <div className="mb-8 md:mb-12">
           <span className="text-[12px] sm:text-[14px] font-medium tracking-widest text-primary uppercase block mb-3 sm:mb-4">
@@ -95,7 +90,6 @@ export default async function PackageDetailPage({ params }: PageProps) {
         </div>
       </ScrollReveal>
 
-      {/* Price Calculator */}
       <ScrollReveal direction="up" className="container-custom section-padding border-t border-primary-soft/30 font-sans">
         <div className="mb-8 md:mb-12">
           <span className="text-[12px] sm:text-[14px] font-medium tracking-widest text-primary uppercase block mb-3 sm:mb-4">

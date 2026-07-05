@@ -46,7 +46,6 @@ export default function PriceCalculator({
 
   return (
     <div className="bg-white border border-primary-soft rounded-4px p-4 sm:p-6 lg:p-9 flex flex-col lg:flex-row gap-8 lg:gap-[60px] font-sans">
-      {/* Filters */}
       <div className="flex-1 space-y-8">
         <div>
           <label className="text-[12px] font-semibold tracking-wide text-primary-muted uppercase mb-3 block">
@@ -118,7 +117,6 @@ export default function PriceCalculator({
         </div>
       </div>
 
-      {/* Summary Card */}
       <div className="lg:w-[458px] bg-background-dark rounded-4px p-6 sm:p-8 text-white flex flex-col justify-between shadow-lg">
         <div className="space-y-4 mb-8">
           <div className="flex justify-between items-center text-xs sm:text-[14px] font-light">

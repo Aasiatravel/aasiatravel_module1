@@ -51,10 +51,8 @@ export default function ExperienceTimeline({ steps }: ExperienceTimelineProps) {
       </ScrollReveal>
 
       <div ref={containerRef} className="relative md:pl-[192px]">
-        {/* Background Dashed Line */}
         <div className="absolute left-[25px] md:left-[217px] top-[25px] bottom-[80px] sm:bottom-[100px] w-0 border-l-[3px] border-dashed border-primary-muted/20"></div>
 
-        {/* Animated Active Dashed Progress Line */}
         <motion.div
           className="absolute left-[25px] md:left-[217px] top-[25px] bottom-[80px] sm:bottom-[100px] w-0 border-l-[3px] border-dashed border-primary-accent origin-top"
           style={{ scaleY }}
@@ -72,7 +70,6 @@ export default function ExperienceTimeline({ steps }: ExperienceTimelineProps) {
               delay={index * 0.05}
               className="flex gap-4 md:gap-[58px] group relative"
             >
-              {/* Left Column: Circle */}
               <div className="flex flex-col items-center shrink-0 z-10">
                 <motion.div
                   animate={{
@@ -87,7 +84,6 @@ export default function ExperienceTimeline({ steps }: ExperienceTimelineProps) {
                 </motion.div>
               </div>
 
-              {/* Right Column: Content */}
               <div className="flex flex-col gap-2 pb-12 sm:pb-16">
                 <span className="text-[12px] font-medium tracking-widest text-primary-light uppercase">
                   STEP {step.id}

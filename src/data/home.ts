@@ -1,5 +1,4 @@
 import type {
-  Package,
   Testimonial,
   Feature,
   Stat,
@@ -8,6 +7,7 @@ import type {
   FooterLink,
   FooterSocialLink,
   FooterContactItem,
+  HeroTimeWidgetConfig,
 } from '@/types';
 import { siteConfig } from '@/config/site';
 
@@ -157,3 +157,10 @@ export const footerContactInfo: FooterContactItem[] = [
   { iconName: 'Phone', text: siteConfig.contact.phone },
   { iconName: 'MapPin', text: siteConfig.contact.address },
 ];
+
+export const heroTimeWidgetConfig: HeroTimeWidgetConfig = {
+  label: 'MAKKAH, SAUDI ARABIA',
+  timeZone: 'Asia/Riyadh',
+  fallbackTime: '1:20:35 pm',
+  fallbackDate: '13th Muharram, 1448 AH',
+};

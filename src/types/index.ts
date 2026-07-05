@@ -9,6 +9,7 @@ export type {
   FooterLink,
   FooterSocialLink,
   FooterContactItem,
+  HeroTimeWidgetConfig,
 } from './common';
 
 export type {

@@ -20,7 +20,6 @@ export default function Footer() {
     >
       <div className="container-custom">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12 mb-8">
-          {/* Brand */}
           <div className="flex flex-col items-start">
             <Image
               src={siteConfig.logo}
@@ -50,7 +49,6 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Company */}
           <div>
             <h4
               className="text-xs font-bold mb-3 tracking-[0.2em] text-primary-light uppercase"
@@ -69,7 +67,6 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Support */}
           <div>
             <h4
               className="text-xs font-bold mb-3 tracking-[0.2em] text-primary-light uppercase"
@@ -97,7 +94,6 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Contact */}
           <div>
             <h4
               className="text-xs font-bold mb-3 tracking-[0.2em] text-primary-light uppercase"
@@ -142,7 +138,6 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Copyright */}
         <div className="pt-8 border-t border-primary-soft flex flex-col sm:flex-row justify-between items-center gap-3 sm:gap-4 text-xs font-light text-center sm:text-left">
           <p className="text-primary-light/80 text-[12px]">
             © {new Date().getFullYear()} {siteConfig.name}. All Rights Reserved.

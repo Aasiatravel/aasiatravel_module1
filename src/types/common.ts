@@ -50,3 +50,10 @@ export interface FooterContactItem {
   iconName: 'Mail' | 'Phone' | 'MapPin';
   text: string;
 }
+
+export interface HeroTimeWidgetConfig {
+  label: string;
+  timeZone: string;
+  fallbackTime: string;
+  fallbackDate: string;
+}

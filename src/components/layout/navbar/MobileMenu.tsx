@@ -30,7 +30,6 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
             onClick={onClose}
           />
 
-          {/* Dropdown Menu Card sliding down from behind the navbar */}
           <motion.div
             initial={{ y: '-100%' }}
             animate={{ y: 0 }}
@@ -38,7 +37,6 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
             transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
             className="absolute top-0 left-0 w-full bg-white border-b border-primary-soft/30 shadow-2xl px-6 pt-[76px] pb-6 flex flex-col gap-5 z-20 overflow-hidden"
           >
-            {/* Links */}
             <div className="flex flex-col">
               {navLinks.map((link) => (
                 <Link
@@ -55,7 +53,6 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
               ))}
             </div>
 
-            {/* Footer info & CTA */}
             <div className="pt-2 flex flex-col gap-3 items-start">
               <span className="text-sm text-secondary">
                 Need help?

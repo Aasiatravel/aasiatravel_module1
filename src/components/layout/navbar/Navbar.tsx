@@ -14,7 +14,7 @@ import { useScrollState, useScrollSpy, useSmoothScrollTo } from '@/hooks';
 
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  
+
   // Use custom reusable hooks
   const isScrolled = useScrollState(50);
   const activeSection = useScrollSpy(['home', 'about', 'packages', 'reviews']);
@@ -31,14 +31,13 @@ export default function Navbar() {
     <>
       <nav
         className={cn(
-          'fixed top-0 left-0 w-full z-[100] transition-all duration-300 py-4 md:py-3 border-b',
+          'fixed top-0 left-0 w-full z-100 transition-all duration-300 py-4 md:py-3 border-b',
           isScrolled
             ? 'bg-white/50 backdrop-blur-lg border-white'
             : 'bg-white/30 backdrop-blur-md border-white'
         )}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
-          {/* Logo or Mobile Title Container */}
           <div className="flex items-center h-[38px] sm:h-[42px] md:h-[46px]">
             {isMobileMenuOpen ? (
               <span className="text-base text-primary font-semibold tracking-wide leading-none">
@@ -59,7 +58,6 @@ export default function Navbar() {
             )}
           </div>
 
-          {/* Desktop Links */}
           <div className="hidden lg:flex items-center gap-10">
             {navLinks.map((link) => {
               const active = isActive(link.href);
@@ -77,7 +75,7 @@ export default function Navbar() {
                   {active && (
                     <motion.div
                       layoutId="navbar-active-underline"
-                      className="absolute bottom-0 -left-2 -right-2 h-[1px] bg-accent-gold"
+                      className="absolute bottom-0 -left-2 -right-2 h-px bg-accent-gold"
                       transition={{ type: 'spring', stiffness: 380, damping: 30 }}
                     />
                   )}
@@ -86,7 +84,6 @@ export default function Navbar() {
             })}
           </div>
 
-          {/* CTA */}
           <div className="hidden lg:block">
             <Button
               variant="primary"
@@ -97,7 +94,6 @@ export default function Navbar() {
             </Button>
           </div>
 
-          {/* Mobile Toggle with center alignment & morph rotation animation */}
           <button
             className="lg:hidden text-primary w-10 h-10 flex items-center justify-center relative focus:outline-none"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -118,7 +114,6 @@ export default function Navbar() {
           </button>
         </div>
 
-        {/* Mobile Menu Overlay Drawer */}
       </nav>
 
       <MobileMenu

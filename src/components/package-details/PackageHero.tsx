@@ -40,7 +40,6 @@ export default function PackageHero({
 
   return (
     <div className="font-sans pt-20 md:pt-24">
-      {/* Breadcrumb */}
       <div className="container-custom py-6 sm:py-8 flex items-center gap-3 text-sm">
         <Link
           href="/#packages"
@@ -53,7 +52,6 @@ export default function PackageHero({
         <span className="text-primary font-medium">{title}</span>
       </div>
 
-      {/* Hero Section */}
       <section className="container-custom pt-4 pb-16 grid lg:grid-cols-[1fr_415px] gap-12 items-start">
         <ScrollReveal direction="up" className="space-y-6">
           <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
@@ -72,7 +70,6 @@ export default function PackageHero({
           </p>
         </ScrollReveal>
 
-        {/* Budget Card */}
         <ScrollReveal direction="up" delay={0.1} className="bg-background-dark rounded-4px p-6 sm:p-8 text-center space-y-6 shadow-xl w-full">
           <div className="space-y-2">
             <span className="text-[11.2px] sm:text-xs font-semibold tracking-[0.2em] text-primary-light/99 uppercase block">

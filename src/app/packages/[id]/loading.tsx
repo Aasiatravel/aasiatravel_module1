@@ -4,10 +4,8 @@ import { Skeleton } from '@/components/ui';
 export default function PackageLoading() {
   return (
     <div className="container-custom py-20 space-y-12 font-sans">
-      {/* Breadcrumb skeleton */}
       <Skeleton className="h-6 w-1/4" />
 
-      {/* Hero layout skeleton */}
       <div className="grid lg:grid-cols-[1fr_415px] gap-12">
         <div className="space-y-6">
           <Skeleton className="h-10 w-2/3" />
@@ -16,7 +14,6 @@ export default function PackageLoading() {
         <Skeleton className="h-64 w-full" />
       </div>
 
-      {/* Grid statistics skeleton */}
       <div className="grid md:grid-cols-3 gap-6">
         <Skeleton className="h-32 w-full" />
         <Skeleton className="h-32 w-full" />

@@ -5,11 +5,11 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui';
-import { pilgrimAvatars } from '@/data/home';
+import { pilgrimAvatars, heroTimeWidgetConfig } from '@/data/home';
 
 export default function HeroSection() {
-  const [makkahTime, setMakkahTime] = useState('1:20:35 pm');
-  const [makkahDate, setMakkahDate] = useState('13th Muharram, 1448 AH');
+  const [makkahTime, setMakkahTime] = useState(heroTimeWidgetConfig.fallbackTime);
+  const [makkahDate, setMakkahDate] = useState(heroTimeWidgetConfig.fallbackDate);
 
   useEffect(() => {
     const updateMakkahTime = () => {
@@ -17,7 +17,7 @@ export default function HeroSection() {
 
       try {
         const timeFormatter = new Intl.DateTimeFormat('en-US', {
-          timeZone: 'Asia/Riyadh',
+          timeZone: heroTimeWidgetConfig.timeZone,
           hour: 'numeric',
           minute: '2-digit',
           second: '2-digit',
@@ -28,7 +28,7 @@ export default function HeroSection() {
         setMakkahTime(timeStr);
 
         const hijriFormatter = new Intl.DateTimeFormat('en-US-u-ca-islamic-umalqura', {
-          timeZone: 'Asia/Riyadh',
+          timeZone: heroTimeWidgetConfig.timeZone,
           day: 'numeric',
           month: 'long',
           year: 'numeric',
@@ -67,8 +67,8 @@ export default function HeroSection() {
           setMakkahDate(hijriStr.includes('AH') ? hijriStr : `${hijriStr} AH`);
         }
       } catch (e) {
-        setMakkahTime('1:20:35 pm');
-        setMakkahDate('13th Muharram, 1448 AH');
+        setMakkahTime(heroTimeWidgetConfig.fallbackTime);
+        setMakkahDate(heroTimeWidgetConfig.fallbackDate);
       }
     };
 
@@ -88,11 +88,9 @@ export default function HeroSection() {
           sizes="100vw"
           className="object-cover object-center"
         />
-        {/* Gradient overlay for text readability on mobile */}
         <div className="absolute inset-0 bg-linear-to-b from-white/95 via-white/90 via-50% to-white/35" />
       </div>
 
-      {/* ── Desktop Background Image (lg and above) ── */}
       <div className="hidden lg:block absolute inset-0 z-0 select-none">
         <Image
           src="/images/hero.png"
@@ -104,7 +102,6 @@ export default function HeroSection() {
         />
       </div>
 
-      {/* ── Content ── */}
       <div className="relative z-20 container-custom min-h-screen flex flex-col pt-24 pb-16 md:pt-28 md:pb-24 lg:pt-32">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
@@ -112,10 +109,9 @@ export default function HeroSection() {
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           className="my-auto flex flex-col items-start max-w-xl lg:max-w-lg xl:max-w-xl w-full"
         >
-          {/* Makkah Time Widget */}
           <div className="bg-background-warm/90 backdrop-blur-sm border border-primary-soft p-3.5 sm:p-4 rounded-4px mb-6 md:mb-8 inline-block">
             <p className="text-[10px] tracking-[0.2em] font-bold text-primary-light mb-1 font-sans">
-              MAKKAH, SAUDI ARABIA
+              {heroTimeWidgetConfig.label}
             </p>
             <p className="font-serif text-xl sm:text-2xl font-bold mb-1 tracking-widest text-primary">
               {makkahTime}
