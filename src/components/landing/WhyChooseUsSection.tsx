@@ -5,7 +5,7 @@ import { features } from '@/data/home';
 
 export default function WhyChooseUsSection() {
   return (
-    <section className="section-padding bg-white">
+    <section className="pt-8 pb-16 md:pt-12 md:pb-24 bg-white">
       <div className="container-custom">
         <div className="mb-10 md:mb-12 lg:mb-16">
           <p className="text-primary-light text-xs sm:text-sm tracking-widest uppercase mb-3 sm:mb-4 font-sans font-semibold">

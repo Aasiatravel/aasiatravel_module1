@@ -16,7 +16,7 @@ export default function PackagesSection() {
   const luxuryPackages = filteredPackages.filter((p) => p.type === 'Luxury');
 
   return (
-    <section id="packages" className="section-padding bg-white">
+    <section id="packages" className="pt-8 pb-8 md:pt-12 md:pb-12 bg-white">
       <div className="container-custom">
         <div className="mb-12">
           <p className="text-primary-light text-sm tracking-widest uppercase mb-4 font-sans">

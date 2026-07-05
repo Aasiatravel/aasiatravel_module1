@@ -6,7 +6,7 @@ import { stats, aboutData } from '@/data/home';
 
 export default function AboutSection() {
   return (
-    <section id="about" className="section-padding bg-white">
+    <section id="about" className="pt-16 pb-8 md:pt-24 md:pb-12 bg-white">
       <div className="container-custom grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-20 items-center">
         <motion.div
           initial={{ opacity: 0, x: -30 }}
