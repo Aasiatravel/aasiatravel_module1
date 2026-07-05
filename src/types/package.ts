@@ -45,14 +45,17 @@ export interface Package {
   rating: number;
   image: string;
   limitedSeats: boolean;
+  
+  // Unified Details Page Properties
+  subtitle: string;
   description: string;
-  highlights: string[];
-  itinerary: ItineraryItem[];
-  inclusions: string[];
-  exclusions: string[];
-  galleryImages: string[];
-  reviews: Review[];
-  location: string;
+  seatsLeft: number;
+  sharingPrices: Record<string, number>;
+  addonPrices: Record<string, number>;
+  steps: StepData[];
+  departureFlight: FlightInfo;
+  returnFlight: FlightInfo;
+  hotels: HotelInfo[];
 }
 
 export interface StepData {
@@ -62,20 +65,4 @@ export interface StepData {
   iconName: 'ClipboardCheck' | 'Plane' | 'Building' | 'Utensils' | 'Droplets' | 'PhoneCall' | string;
 }
 
-export interface PackageDetailData {
-  id: string;
-  title: string;
-  subtitle: string;
-  description: string;
-  duration: string;
-  dates: string;
-  departureCity: string;
-  seatsLeft: number;
-  basePrice: number;
-  sharingPrices: Record<string, number>;
-  addonPrices: Record<string, number>;
-  steps: StepData[];
-  departureFlight: FlightInfo;
-  returnFlight: FlightInfo;
-  hotels: HotelInfo[];
-}
+export type PackageDetailData = Package;

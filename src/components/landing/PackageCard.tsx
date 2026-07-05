@@ -10,7 +10,7 @@ import { formatPrice } from '@/lib/utils';
 import type { Package } from '@/types';
 
 interface PackageCardProps {
-  pkg: Omit<Package, 'description' | 'highlights' | 'itinerary' | 'inclusions' | 'exclusions' | 'galleryImages' | 'reviews' | 'location'>;
+  pkg: Package;
 }
 
 export default function PackageCard({ pkg }: PackageCardProps) {

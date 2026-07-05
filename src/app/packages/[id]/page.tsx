@@ -44,13 +44,13 @@ export default async function PackageDetailPage({ params }: PageProps) {
         subtitle={pkg.subtitle}
         duration={pkg.duration}
         description={pkg.description}
-        basePrice={pkg.basePrice}
+        basePrice={pkg.price}
       />
 
       {/* At a Glance */}
       <AtAGlance
         duration={pkg.duration}
-        dates={pkg.dates}
+        dates={pkg.date}
         departureCity={pkg.departureCity}
         seatsLeft={pkg.seatsLeft}
       />
@@ -101,7 +101,7 @@ export default async function PackageDetailPage({ params }: PageProps) {
           <h2 className="text-3xl sm:text-4xl font-serif text-primary font-semibold">Price calculator.</h2>
         </div>
         <PriceCalculator
-          basePrice={pkg.basePrice}
+          basePrice={pkg.price}
           sharingPrices={pkg.sharingPrices}
           addonPrices={pkg.addonPrices}
         />
