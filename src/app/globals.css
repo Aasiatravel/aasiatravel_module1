@@ -17,9 +17,9 @@
   --color-secondary: #2E385B;
   --color-neutral-gray: #C4C4C4;
 
-  --font-sans: var(--font-inter), sans-serif;
-  --font-serif: var(--font-playfair), serif;
-  --font-poppins: var(--font-poppins), sans-serif;
+  --font-sans: var(--font-inter);
+  --font-serif: var(--font-playfair);
+  --font-poppins: var(--font-poppins);
 
   --tracking-widest: 0.18em;
   --tracking-wider: 0.15em;
@@ -75,7 +75,27 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .btn-base {
-  @apply inline-flex items-center justify-center rounded-[4px] font-sans text-sm tracking-widest uppercase transition-all duration-200 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed;
+  @apply inline-flex items-center justify-center rounded-4px font-sans text-sm tracking-widest uppercase transition-all duration-200 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed;
+}
+
+@utility hover-underline {
+  position: relative;
+  &::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 1px;
+    bottom: -2px;
+    left: 0;
+    background-color: currentColor;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  &:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
 }
 
 .timeline-line {

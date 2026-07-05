@@ -8,7 +8,7 @@ interface ExperienceTimelineProps {
 
 export default function ExperienceTimeline({ steps }: ExperienceTimelineProps) {
   return (
-    <section className="container-custom py-20 bg-background-cream/30 font-sans">
+    <section className="container-custom section-padding bg-background-cream/30 font-sans">
       <div className="mb-16">
         <span className="text-[16px] font-semibold tracking-widest text-primary uppercase block mb-4">
           THE COMPLETE EXPERIENCE

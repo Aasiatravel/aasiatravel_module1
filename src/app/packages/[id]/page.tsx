@@ -1,4 +1,3 @@
-import React from 'react';
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 import { packageDetails } from '@/data/packages';
@@ -56,7 +55,7 @@ export default async function PackageDetailPage({ params }: PageProps) {
       />
 
       {/* Confirmed Flight Details */}
-      <section className="container-custom py-20 font-sans">
+      <section className="container-custom section-padding font-sans">
         <div className="mb-12">
           <span className="text-[16px] font-semibold tracking-widest text-primary uppercase block mb-4">
             CONFIRMED FLIGHT DETAILS
@@ -66,8 +65,9 @@ export default async function PackageDetailPage({ params }: PageProps) {
           </h2>
         </div>
         <div className="grid lg:grid-cols-2 gap-6">
-          <FlightCard {...pkg.departureFlight} />
-          <FlightCard {...pkg.returnFlight} />
+          {[pkg.departureFlight, pkg.returnFlight].map((flight, idx) => (
+            <FlightCard key={idx} {...flight} />
+          ))}
         </div>
       </section>
 
@@ -75,7 +75,7 @@ export default async function PackageDetailPage({ params }: PageProps) {
       <ExperienceTimeline steps={pkg.steps} />
 
       {/* Where You'll Stay */}
-      <section className="container-custom py-20 border-t border-primary-soft/30 font-sans">
+      <section className="container-custom section-padding border-t border-primary-soft/30 font-sans">
         <div className="mb-12">
           <span className="text-[16px] font-semibold tracking-widest text-primary uppercase block mb-4">
             WHERE YOU'LL STAY
@@ -92,7 +92,7 @@ export default async function PackageDetailPage({ params }: PageProps) {
       </section>
 
       {/* Price Calculator */}
-      <section className="container-custom py-20 border-t border-primary-soft/30 font-sans">
+      <section className="container-custom section-padding border-t border-primary-soft/30 font-sans">
         <div className="mb-12">
           <span className="text-[16px] font-semibold tracking-widest text-primary uppercase block mb-4">
             PLAN YOUR COST

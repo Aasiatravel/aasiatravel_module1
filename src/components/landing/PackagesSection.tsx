@@ -51,49 +51,39 @@ export default function PackagesSection() {
           </p>
         </div>
 
-        {/* Economy Section */}
-        {(filter === 'ALL' || filter === 'ECONOMY') && economyPackages.length > 0 && (
-          <div className="mb-20">
-            <div className="flex items-center justify-between mb-8">
-              <h3 className="text-3xl font-serif text-primary">Economy Packages</h3>
-              <div className="flex gap-3">
-                <button className="p-2 border border-primary/20 rounded-md hover:bg-primary/5 text-primary">
-                  <ArrowLeft size={20} />
-                </button>
-                <button className="p-2 border border-primary/20 rounded-md hover:bg-primary/5 text-primary">
-                  <ArrowRight size={20} />
-                </button>
-              </div>
-            </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {economyPackages.map((pkg) => (
-                <PackageCard key={pkg.id} pkg={pkg} />
-              ))}
-            </div>
-          </div>
-        )}
+        {/* Package Sections (Economy & Luxury) */}
+        {[
+          { type: 'Economy' as const, title: 'Economy Packages', list: economyPackages },
+          { type: 'Luxury' as const, title: 'Luxury Packages', list: luxuryPackages },
+        ].map((section, sectionIdx, sectionsArr) => {
+          const showSection = (filter === 'ALL' || filter === section.type.toUpperCase()) && section.list.length > 0;
+          if (!showSection) return null;
 
-        {/* Luxury Section */}
-        {(filter === 'ALL' || filter === 'LUXURY') && luxuryPackages.length > 0 && (
-          <div>
-            <div className="flex items-center justify-between mb-8">
-              <h3 className="text-3xl font-serif text-primary">Luxury Packages</h3>
-              <div className="flex gap-3">
-                <button className="p-2 border border-primary/20 rounded-md hover:bg-primary/5 text-primary">
-                  <ArrowLeft size={20} />
-                </button>
-                <button className="p-2 border border-primary/20 rounded-md hover:bg-primary/5 text-primary">
-                  <ArrowRight size={20} />
-                </button>
+          // Only apply bottom margin on Economy block if both are active
+          const showBoth = filter === 'ALL' && economyPackages.length > 0 && luxuryPackages.length > 0;
+          const hasMb = section.type === 'Economy' && showBoth;
+
+          return (
+            <div key={section.type} className={hasMb ? 'mb-20' : ''}>
+              <div className="flex items-center justify-between mb-8">
+                <h3 className="text-3xl font-serif text-primary">{section.title}</h3>
+                <div className="flex gap-3">
+                  <button className="p-2 border border-primary/20 rounded-md hover:bg-primary/5 text-primary">
+                    <ArrowLeft size={20} />
+                  </button>
+                  <button className="p-2 border border-primary/20 rounded-md hover:bg-primary/5 text-primary">
+                    <ArrowRight size={20} />
+                  </button>
+                </div>
+              </div>
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {section.list.map((pkg) => (
+                  <PackageCard key={pkg.id} pkg={pkg} />
+                ))}
               </div>
             </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {luxuryPackages.map((pkg) => (
-                <PackageCard key={pkg.id} pkg={pkg} />
-              ))}
-            </div>
-          </div>
-        )}
+          );
+        })}
       </div>
     </section>
   );

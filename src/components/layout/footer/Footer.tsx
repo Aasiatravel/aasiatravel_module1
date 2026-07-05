@@ -3,112 +3,115 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Mail, Phone, MapPin, Facebook, Instagram, Youtube } from 'lucide-react';
 import { siteConfig } from '@/config/site';
+import {
+  footerCompanyLinks,
+  footerSupportLinks,
+  footerSocialLinks,
+  footerContactInfo,
+} from '@/data/home';
 
 export default function Footer() {
+  const fontStyle = { fontFamily: 'var(--font-inter), sans-serif' };
+
   return (
-    <footer className="bg-white pt-24 pb-8 border-t border-primary/5">
+    <footer
+      className="bg-white pt-16 pb-8 border-t border-primary-soft/30"
+      style={fontStyle}
+    >
       <div className="container-custom">
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-20">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12 mb-8">
           {/* Brand */}
-          <div className="lg:col-span-1">
+          <div className="flex flex-col items-start">
             <Image
               src={siteConfig.logo}
               alt={siteConfig.name}
-              width={160}
-              height={64}
-              className="h-16 w-auto object-contain mb-8"
+              width={140}
+              height={50}
+              className="h-10 w-auto object-contain mb-5"
               style={{ width: 'auto', height: 'auto' }}
             />
-            <p className="text-primary-light text-sm leading-relaxed mb-8 max-w-xs">
+            <p className="text-primary-muted text-sm leading-relaxed mb-6 max-w-xs font-normal">
               {siteConfig.description}
             </p>
-            <div className="flex gap-6">
-              <a
-                href={siteConfig.social.facebook}
-                aria-label="Facebook"
-                className="text-primary-light hover:text-primary transition-colors"
-              >
-                <Facebook size={20} />
-              </a>
-              <a
-                href={siteConfig.social.instagram}
-                aria-label="Instagram"
-                className="text-primary-light hover:text-primary transition-colors"
-              >
-                <Instagram size={20} />
-              </a>
-              <a
-                href={siteConfig.social.youtube}
-                aria-label="Youtube"
-                className="text-primary-light hover:text-primary transition-colors"
-              >
-                <Youtube size={20} />
-              </a>
+            <div className="flex gap-4">
+              {footerSocialLinks.map((social) => {
+                const Icon = { Facebook, Instagram, Youtube }[social.iconName];
+                return (
+                  <a
+                    key={social.label}
+                    href={social.href}
+                    aria-label={social.label}
+                    className="text-primary-light hover:text-primary transition-colors p-1"
+                  >
+                    <Icon size={16} />
+                  </a>
+                );
+              })}
             </div>
           </div>
 
           {/* Company */}
           <div>
-            <h4 className="text-lg font-bold mb-8 tracking-widest text-primary-light uppercase">
+            <h4
+              className="text-xs font-bold mb-3 tracking-[0.2em] text-primary-light uppercase"
+              style={fontStyle}
+            >
               COMPANY
             </h4>
-            <ul className="space-y-4">
-              <li>
-                <Link href="/" className="text-primary-light hover:text-primary transition-colors">
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link href="/#about" className="text-primary-light hover:text-primary transition-colors">
-                  About
-                </Link>
-              </li>
-              <li>
-                <Link href="/#reviews" className="text-primary-light hover:text-primary transition-colors">
-                  Reviews
-                </Link>
-              </li>
+            <ul className="space-y-3">
+              {footerCompanyLinks.map((link) => (
+                <li key={link.label}>
+                  <Link href={link.href} className="text-sm text-primary-muted hover:text-primary transition-colors font-normal hover-underline pb-0.5">
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
           {/* Support */}
           <div>
-            <h4 className="text-lg font-bold mb-8 tracking-widest text-primary-light uppercase">
+            <h4
+              className="text-xs font-bold mb-3 tracking-[0.2em] text-primary-light uppercase"
+              style={fontStyle}
+            >
               SUPPORT
             </h4>
-            <ul className="space-y-4">
-              <li>
-                <a href="#" className="text-primary-light hover:text-primary transition-colors">
-                  Chat Support
-                </a>
-              </li>
+            <ul className="space-y-3">
+              {footerSupportLinks.map((link) => (
+                <li key={link.label}>
+                  <a href={link.href} className="text-sm text-primary-muted hover:text-primary transition-colors font-normal hover-underline pb-0.5">
+                    {link.label}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
 
           {/* Contact */}
           <div>
-            <h4 className="text-lg font-bold mb-8 tracking-widest text-primary-light uppercase">
+            <h4
+              className="text-xs font-bold mb-3 tracking-[0.2em] text-primary-light uppercase"
+              style={fontStyle}
+            >
               CONTACT US
             </h4>
-            <ul className="space-y-6">
-              <li className="flex items-center gap-3 text-primary-light">
-                <Mail size={18} />
-                <span>{siteConfig.contact.email}</span>
-              </li>
-              <li className="flex items-center gap-3 text-primary-light">
-                <Phone size={18} />
-                <span>{siteConfig.contact.phone}</span>
-              </li>
-              <li className="flex items-center gap-3 text-primary-light">
-                <MapPin size={18} />
-                <span>{siteConfig.contact.address}</span>
-              </li>
+            <ul className="space-y-4">
+              {footerContactInfo.map((item, idx) => {
+                const Icon = { Mail, Phone, MapPin }[item.iconName];
+                return (
+                  <li key={idx} className="flex items-center gap-3 text-sm text-primary-muted font-normal">
+                    <Icon size={16} className="text-primary-light shrink-0" />
+                    <span>{item.text}</span>
+                  </li>
+                );
+              })}
             </ul>
           </div>
         </div>
 
         {/* Copyright */}
-        <div className="pt-8 border-t border-primary/10 flex flex-col md:flex-row justify-between items-center gap-4 text-primary-light text-sm">
+        <div className="pt-8 border-t border-primary-soft flex flex-row justify-between items-center gap-4 text-primary-muted text-xs font-normal">
           <p>Copyright © {new Date().getFullYear()}</p>
           <p>All Rights Reserved</p>
         </div>

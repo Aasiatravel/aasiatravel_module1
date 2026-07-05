@@ -1,9 +1,8 @@
 'use client';
 
-import React from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import { stats } from '@/data/home';
+import { stats, aboutData } from '@/data/home';
 
 export default function AboutSection() {
   return (
@@ -37,19 +36,11 @@ export default function AboutSection() {
           <h2 className="text-5xl mb-8 font-serif text-primary">Guiding pilgrims since 2020</h2>
 
           <div className="space-y-6 text-primary-light leading-relaxed mb-12 font-sans">
-            <p>
-              At Aasia Travel, we are committed to providing genuine, trustworthy, and reliable
-              Umrah services to every guest. Our mission is to make your sacred journey simple and
-              comfortable. We treat every customer with eternal love, care, mercy, and kindness.
-            </p>
-            <p>
-              From the moment you begin planning your Umrah until you safely return home, our
-              experienced team is here to guide and support you every step of the way. We help you
-              perform your Umrah correctly and with ease, ensuring that you can focus on your worship.
-            </p>
+            {aboutData.paragraphs.map((para, idx) => (
+              <p key={idx}>{para}</p>
+            ))}
             <p className="italic font-serif text-primary">
-              May Allah accept your Umrah and make your journey blessed, easy, and full of barakah.
-              Ameen.
+              {aboutData.quote}
             </p>
           </div>
 

@@ -23,3 +23,29 @@ export interface Stat {
   label: string;
   value: string;
 }
+
+export interface PilgrimAvatar {
+  src: string;
+  fallbackBg: string;
+}
+
+export interface AboutData {
+  paragraphs: string[];
+  quote: string;
+}
+
+export interface FooterLink {
+  label: string;
+  href: string;
+}
+
+export interface FooterSocialLink {
+  href: string;
+  label: string;
+  iconName: 'Facebook' | 'Instagram' | 'Youtube';
+}
+
+export interface FooterContactItem {
+  iconName: 'Mail' | 'Phone' | 'MapPin';
+  text: string;
+}
