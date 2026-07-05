@@ -1,4 +1,4 @@
-import React from 'react';
+import { ScrollReveal } from '@/components/ui';
 
 interface AtAGlanceProps {
   duration: string;
@@ -33,11 +33,11 @@ export default function AtAGlance({
 
   return (
     <section className="border-y border-primary-soft/30 section-padding bg-white font-sans">
-      <div className="container-custom">
+      <ScrollReveal className="container-custom">
         <span className="text-[16px] font-semibold tracking-widest text-primary uppercase block mb-6">
           AT A GLANCE
         </span>
-        <div className="grid md:grid-cols-3 border border-primary-soft rounded-[4px] overflow-hidden">
+        <div className="grid md:grid-cols-3 border border-primary-soft rounded-4px overflow-hidden">
           {items.map((item, idx) => (
             <div
               key={idx}
@@ -57,7 +57,7 @@ export default function AtAGlance({
             </div>
           ))}
         </div>
-      </div>
+      </ScrollReveal>
     </section>
   );
 }

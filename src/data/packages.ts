@@ -1,29 +1,4 @@
-import type { FlightInfo, HotelInfo } from '@/types';
-
-export interface StepData {
-  id: string;
-  title: string;
-  description: string;
-  iconName: 'ClipboardCheck' | 'Plane' | 'Building' | 'Utensils' | 'Droplets' | 'PhoneCall';
-}
-
-export interface PackageDetailData {
-  id: string;
-  title: string;
-  subtitle: string;
-  description: string;
-  duration: string;
-  dates: string;
-  departureCity: string;
-  seatsLeft: number;
-  basePrice: number;
-  sharingPrices: Record<string, number>;
-  addonPrices: Record<string, number>;
-  steps: StepData[];
-  departureFlight: FlightInfo;
-  returnFlight: FlightInfo;
-  hotels: HotelInfo[];
-}
+import type { FlightInfo, HotelInfo, StepData, PackageDetailData } from '@/types';
 
 export const packageDetails: Record<string, PackageDetailData> = {
   e1: {

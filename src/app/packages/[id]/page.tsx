@@ -7,6 +7,7 @@ import FlightCard from '@/components/package-details/FlightCard';
 import HotelCard from '@/components/package-details/HotelCard';
 import ExperienceTimeline from '@/components/package-details/ExperienceTimeline';
 import PriceCalculator from '@/components/package-details/PriceCalculator';
+import { ScrollReveal } from '@/components/ui';
 
 interface PageProps {
   params: Promise<{ id: string }>;
@@ -55,7 +56,7 @@ export default async function PackageDetailPage({ params }: PageProps) {
       />
 
       {/* Confirmed Flight Details */}
-      <section className="container-custom section-padding font-sans">
+      <ScrollReveal direction="up" className="container-custom section-padding font-sans">
         <div className="mb-8 md:mb-12">
           <span className="text-[12px] sm:text-[14px] font-normal tracking-widest text-primary uppercase block mb-3 sm:mb-4">
             CONFIRMED FLIGHT DETAILS
@@ -69,13 +70,13 @@ export default async function PackageDetailPage({ params }: PageProps) {
             <FlightCard key={idx} {...flight} />
           ))}
         </div>
-      </section>
+      </ScrollReveal>
 
       {/* Experience Timeline */}
       <ExperienceTimeline steps={pkg.steps} />
 
       {/* Where You'll Stay */}
-      <section className="container-custom section-padding border-t border-primary-soft/30 font-sans">
+      <ScrollReveal direction="up" className="container-custom section-padding border-t border-primary-soft/30 font-sans">
         <div className="mb-8 md:mb-12">
           <span className="text-[12px] sm:text-[14px] font-medium tracking-widest text-primary uppercase block mb-3 sm:mb-4">
             WHERE YOU&apos;LL STAY
@@ -89,10 +90,10 @@ export default async function PackageDetailPage({ params }: PageProps) {
             <HotelCard key={idx} {...hotel} />
           ))}
         </div>
-      </section>
+      </ScrollReveal>
 
       {/* Price Calculator */}
-      <section className="container-custom section-padding border-t border-primary-soft/30 font-sans">
+      <ScrollReveal direction="up" className="container-custom section-padding border-t border-primary-soft/30 font-sans">
         <div className="mb-8 md:mb-12">
           <span className="text-[12px] sm:text-[14px] font-medium tracking-widest text-primary uppercase block mb-3 sm:mb-4">
             PLAN YOUR COST
@@ -104,7 +105,7 @@ export default async function PackageDetailPage({ params }: PageProps) {
           sharingPrices={pkg.sharingPrices}
           addonPrices={pkg.addonPrices}
         />
-      </section>
+      </ScrollReveal>
     </div>
   );
 }

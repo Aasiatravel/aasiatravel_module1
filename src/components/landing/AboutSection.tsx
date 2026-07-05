@@ -1,17 +1,15 @@
 'use client';
 
 import Image from 'next/image';
-import { motion } from 'framer-motion';
 import { stats, aboutData } from '@/data/home';
+import { ScrollReveal } from '@/components/ui';
 
 export default function AboutSection() {
   return (
     <section id="about" className="pt-16 pb-8 md:pt-24 md:pb-12 bg-white">
       <div className="container-custom grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-20 items-center">
-        <motion.div
-          initial={{ opacity: 0, x: -30 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
+        <ScrollReveal
+          direction="right"
           className="relative w-full aspect-3/2 lg:aspect-auto lg:h-[600px] rounded-xl overflow-hidden shadow-xl"
         >
           <Image
@@ -22,13 +20,9 @@ export default function AboutSection() {
             className="object-cover"
             priority
           />
-        </motion.div>
+        </ScrollReveal>
 
-        <motion.div
-          initial={{ opacity: 0, x: 30 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-        >
+        <ScrollReveal direction="left">
           <p className="text-primary-light text-xs sm:text-sm tracking-widest uppercase mb-3 sm:mb-4 font-sans">
             WHO WE ARE
           </p>
@@ -57,7 +51,7 @@ export default function AboutSection() {
               </div>
             ))}
           </div>
-        </motion.div>
+        </ScrollReveal>
       </div>
     </section>
   );

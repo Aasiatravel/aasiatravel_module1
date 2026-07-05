@@ -54,3 +54,28 @@ export interface Package {
   reviews: Review[];
   location: string;
 }
+
+export interface StepData {
+  id: string;
+  title: string;
+  description: string;
+  iconName: 'ClipboardCheck' | 'Plane' | 'Building' | 'Utensils' | 'Droplets' | 'PhoneCall' | string;
+}
+
+export interface PackageDetailData {
+  id: string;
+  title: string;
+  subtitle: string;
+  description: string;
+  duration: string;
+  dates: string;
+  departureCity: string;
+  seatsLeft: number;
+  basePrice: number;
+  sharingPrices: Record<string, number>;
+  addonPrices: Record<string, number>;
+  steps: StepData[];
+  departureFlight: FlightInfo;
+  returnFlight: FlightInfo;
+  hotels: HotelInfo[];
+}

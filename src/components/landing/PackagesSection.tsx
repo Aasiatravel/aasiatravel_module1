@@ -1,27 +1,18 @@
 'use client';
 
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
 import { packages } from '@/data/home';
 import { ArrowRight, ArrowLeft, X } from 'lucide-react';
 import PackageCard from './PackageCard';
+import { useScrollContainer } from '@/hooks';
+import { ScrollReveal } from '@/components/ui';
 
 export default function PackagesSection() {
   const [filter, setFilter] = useState<'ALL' | 'ECONOMY' | 'LUXURY'>('ALL');
-  const scrollRefs = useRef<Record<string, HTMLDivElement | null>>({});
-
-  const scroll = (type: 'Economy' | 'Luxury', direction: 'left' | 'right') => {
-    const container = scrollRefs.current[type];
-    if (container) {
-      const cardWidth = container.firstElementChild?.getBoundingClientRect().width || 350;
-      const gap = 24;
-      const scrollAmount = cardWidth + gap;
-
-      container.scrollTo({
-        left: container.scrollLeft + (direction === 'left' ? -scrollAmount : scrollAmount),
-        behavior: 'smooth',
-      });
-    }
-  };
+  
+  // Use scroll container hook for Economy and Luxury sections
+  const economyScroll = useScrollContainer();
+  const luxuryScroll = useScrollContainer();
 
   const filteredPackages = packages.filter(
     (p) => filter === 'ALL' || p.type.toUpperCase() === filter
@@ -32,7 +23,7 @@ export default function PackagesSection() {
 
   return (
     <section id="packages" className="pt-12 pb-12 md:pt-20 md:pb-20 bg-white">
-      <div className="container-custom">
+      <ScrollReveal className="container-custom">
         <div className="mb-8 md:mb-12">
           <p className="text-primary-light text-xs md:text-sm tracking-widest uppercase mb-2 md:mb-4 font-sans">
             Featured Packages
@@ -90,12 +81,13 @@ export default function PackagesSection() {
                 CLEAR
               </button>
             )}
+
           </div>
         </div>
 
         {[
-          { type: 'Economy' as const, title: 'Economy Packages', list: economyPackages },
-          { type: 'Luxury' as const, title: 'Luxury Packages', list: luxuryPackages },
+          { type: 'Economy' as const, title: 'Economy Packages', list: economyPackages, scrollState: economyScroll },
+          { type: 'Luxury' as const, title: 'Luxury Packages', list: luxuryPackages, scrollState: luxuryScroll },
         ].map((section) => {
           const showSection = (filter === 'ALL' || filter === section.type.toUpperCase()) && section.list.length > 0;
           if (!showSection) return null;
@@ -109,14 +101,14 @@ export default function PackagesSection() {
                 <h3 className="text-2xl md:text-3xl font-semibold text-primary">{section.title}</h3>
                 <div className="flex gap-2 sm:gap-3">
                   <button
-                    onClick={() => scroll(section.type, 'left')}
+                    onClick={() => section.scrollState.scroll('left')}
                     className="p-1.5 sm:p-2 border border-primary/20 rounded-full hover:bg-primary/5 text-primary cursor-pointer transition-all active:scale-95 duration-200 lg:hover:bg-primary lg:hover:text-white lg:hover:border-primary"
                     aria-label="Scroll left"
                   >
                     <ArrowLeft size={18} className="sm:w-5 sm:h-5" />
                   </button>
                   <button
-                    onClick={() => scroll(section.type, 'right')}
+                    onClick={() => section.scrollState.scroll('right')}
                     className="p-1.5 sm:p-2 border border-primary/20 rounded-full hover:bg-primary/5 text-primary cursor-pointer transition-all active:scale-95 duration-200 lg:hover:bg-primary lg:hover:text-white lg:hover:border-primary"
                     aria-label="Scroll right"
                   >
@@ -126,9 +118,7 @@ export default function PackagesSection() {
               </div>
 
               <div
-                ref={(el) => {
-                  scrollRefs.current[section.type] = el;
-                }}
+                ref={section.scrollState.containerRef}
                 className="flex gap-6 overflow-x-auto hide-scrollbar pb-6 -mx-4 pl-4 pr-0 sm:-mx-6 sm:pl-6 lg:-mx-8 lg:pl-8 after:content-[''] after:block after:w-0 lg:after:w-2 after:shrink-0"
                 style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
               >
@@ -144,7 +134,7 @@ export default function PackagesSection() {
             </div>
           );
         })}
-      </div>
+      </ScrollReveal>
     </section>
   );
 }

@@ -107,9 +107,9 @@ export default function HeroSection() {
       {/* ── Content ── */}
       <div className="relative z-20 container-custom min-h-screen flex flex-col pt-24 pb-16 md:pt-28 md:pb-24 lg:pt-32">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           className="my-auto flex flex-col items-start max-w-xl lg:max-w-lg xl:max-w-xl w-full"
         >
           {/* Makkah Time Widget */}

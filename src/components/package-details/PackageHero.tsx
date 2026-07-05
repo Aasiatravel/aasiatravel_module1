@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { ChevronLeft } from 'lucide-react';
-import { Button } from '@/components/ui';
+import { Button, ScrollReveal } from '@/components/ui';
 
 interface PackageHeroProps {
   title: string;
@@ -34,7 +34,7 @@ export default function PackageHero({
 
       {/* Hero Section */}
       <section className="container-custom pt-4 pb-16 grid lg:grid-cols-[1fr_415px] gap-12 items-start">
-        <div className="space-y-6">
+        <ScrollReveal direction="up" className="space-y-6">
           <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
             <span className="text-[11.2px] sm:text-xs font-semibold tracking-[0.2em] text-primary-muted uppercase">
               {subtitle}
@@ -49,10 +49,10 @@ export default function PackageHero({
           <p className="text-sm sm:text-base text-primary-light/90 leading-relaxed max-w-[709px] font-normal font-sans">
             {description}
           </p>
-        </div>
+        </ScrollReveal>
 
         {/* Budget Card */}
-        <div className="bg-background-dark rounded-[4px] p-6 sm:p-8 text-center space-y-6 shadow-xl">
+        <ScrollReveal direction="up" delay={0.1} className="bg-background-dark rounded-[4px] p-6 sm:p-8 text-center space-y-6 shadow-xl w-full">
           <div className="space-y-2">
             <span className="text-[11.2px] sm:text-xs font-semibold tracking-[0.2em] text-primary-light/99 uppercase block">
               CURRENT JOURNEY BUDGET
@@ -68,7 +68,7 @@ export default function PackageHero({
           <Button variant="secondary" fullWidth className="text-primary text-xs sm:text-[13px] font-bold tracking-[0.2em] py-4">
             BOOK JOURNEY
           </Button>
-        </div>
+        </ScrollReveal>
       </section>
     </div>
   );

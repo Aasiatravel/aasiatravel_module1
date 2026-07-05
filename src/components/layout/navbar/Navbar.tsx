@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { navLinks, siteConfig } from '@/config/site';
@@ -9,78 +9,21 @@ import { cn } from '@/lib/utils';
 import { AnimatePresence, motion } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
 import MobileMenu from './MobileMenu';
+import { useScrollState, useScrollSpy, useSmoothScrollTo } from '@/hooks';
 
 export default function Navbar() {
-  const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [activeSection, setActiveSection] = useState('home');
-
-  useEffect(() => {
-    const handleScroll = () => setIsScrolled(window.scrollY > 50);
-    window.addEventListener('scroll', handleScroll);
-
-    // Setup scroll spy observer
-    const sections = ['home', 'about', 'packages', 'reviews'];
-    const observers = sections.map((id) => {
-      const el = document.getElementById(id);
-      if (!el) return null;
-
-      const observer = new IntersectionObserver(
-        ([entry]) => {
-          if (entry.isIntersecting) {
-            setActiveSection(id);
-          }
-        },
-        {
-          rootMargin: '-30% 0px -40% 0px',
-        }
-      );
-      observer.observe(el);
-      return { observer, el };
-    });
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-      observers.forEach((obs) => {
-        if (obs) obs.observer.unobserve(obs.el);
-      });
-    };
-  }, []);
+  
+  // Use custom reusable hooks
+  const isScrolled = useScrollState(50);
+  const activeSection = useScrollSpy(['home', 'about', 'packages', 'reviews']);
+  const handleScrollToSection = useSmoothScrollTo();
 
   const isActive = (href: string) => {
     if (href === '/') {
       return activeSection === 'home';
     }
     return href.endsWith(`#${activeSection}`);
-  };
-
-  const handleScrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
-    if (href === '/') {
-      if (typeof window !== 'undefined' && window.location.pathname === '/') {
-        e.preventDefault();
-        const lenis = (window as any).lenis;
-        if (lenis && typeof lenis.scrollTo === 'function') {
-          lenis.scrollTo(0, { offset: 0 });
-        } else {
-          window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
-      }
-      return;
-    }
-
-    if (href.startsWith('/#') || href.startsWith('#')) {
-      const id = href.replace('/#', '').replace('#', '');
-      const element = document.getElementById(id);
-      if (element) {
-        e.preventDefault();
-        const lenis = typeof window !== 'undefined' ? (window as any).lenis : undefined;
-        if (lenis && typeof lenis.scrollTo === 'function') {
-          lenis.scrollTo(element, { offset: -70 });
-        } else {
-          element.scrollIntoView({ behavior: 'smooth' });
-        }
-      }
-    }
   };
 
   return (
@@ -183,4 +126,3 @@ export default function Navbar() {
     </>
   );
 }
-
