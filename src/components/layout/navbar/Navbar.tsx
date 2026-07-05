@@ -102,10 +102,14 @@ export default function Navbar() {
               </span>
             ) : (
               <Link href="/" className="flex items-center">
-                <img
+                <Image
                   src={siteConfig.logo}
                   alt={siteConfig.name}
+                  width={150}
+                  height={40}
                   className="h-[38px] sm:h-[42px] md:h-[46px] w-auto object-contain"
+                  style={{ width: '85%', height: '85%' }}
+                  priority
                 />
               </Link>
             )}

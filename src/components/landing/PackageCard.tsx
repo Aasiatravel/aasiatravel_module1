@@ -16,16 +16,15 @@ interface PackageCardProps {
 export default function PackageCard({ pkg }: PackageCardProps) {
   return (
     <motion.div
-      whileHover={{ y: -10 }}
-      className="bg-primary-light/5 border border-primary/5 rounded-sm overflow-hidden flex flex-col h-full shadow-sm"
+      className="group bg-primary-light/5 border border-primary/5 rounded-sm overflow-hidden flex flex-col h-full"
     >
-      <div className="relative aspect-4/3 w-full">
+      <div className="relative aspect-4/3 w-full overflow-hidden">
         <Image
           src={pkg.image}
           alt={pkg.title}
           fill
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-          className="object-cover"
+          className="object-cover transition-transform duration-500 group-hover:scale-105"
         />
         {pkg.limitedSeats && (
           <div className="absolute top-4 right-4 z-10">
@@ -33,8 +32,8 @@ export default function PackageCard({ pkg }: PackageCardProps) {
           </div>
         )}
       </div>
-      <div className="p-6 flex flex-col grow">
-        <div className="flex items-center justify-between mb-4 font-sans">
+      <div className="p-4 sm:p-6 flex flex-col grow">
+        <div className="flex items-center justify-between mb-3 sm:mb-4 font-sans">
           <span className="text-[10px] tracking-widest text-primary-light uppercase font-semibold">
             {pkg.category} · {pkg.type}
           </span>
@@ -44,18 +43,22 @@ export default function PackageCard({ pkg }: PackageCardProps) {
           </div>
         </div>
 
-        <h4 className="text-lg font-serif mb-4 grow text-primary font-bold">{pkg.title}</h4>
+        <h4 className="text-base sm:text-lg font-serif mb-3 sm:mb-4 grow text-primary font-bold">{pkg.title}</h4>
 
-        <div className="flex items-center gap-2 text-primary-light text-xs mb-6 font-sans">
-          <Calendar size={14} className="text-primary-light" />
-          <span>
-            {pkg.date} | From {pkg.departureCity}
+        <div className="flex flex-wrap items-center gap-x-2 gap-y-1.5 text-primary-light text-xs mb-5 sm:mb-6 font-sans">
+          <div className="flex items-center gap-1.5">
+            <Calendar size={13} className="text-primary-light shrink-0" />
+            <span>{pkg.date}</span>
+          </div>
+          <span className="text-primary-light/40 hidden xs:inline">•</span>
+          <span>From {pkg.departureCity}</span>
+          <span className="ml-auto shrink-0 font-medium text-primary text-[10px] sm:text-[11px] bg-primary-soft/60 px-2 py-0.5 rounded-sm">
+            {pkg.duration}
           </span>
-          <span className="ml-auto font-medium">{pkg.duration}</span>
         </div>
 
-        <div className="pt-6 border-t border-primary/10 flex items-center justify-between font-sans">
-          <p className="text-sm text-primary">
+        <div className="pt-4 sm:pt-6 border-t border-primary/10 flex items-center justify-between font-sans">
+          <p className="text-xs sm:text-sm text-primary">
             <span className="font-bold">{formatPrice(pkg.price)}</span>
             <span className="text-[10px] text-primary-light ml-1 font-normal">/ person</span>
           </p>

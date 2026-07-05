@@ -33,7 +33,7 @@ export default function Footer() {
             <p className="text-primary-muted text-sm leading-relaxed mb-6 max-w-xs font-normal">
               {siteConfig.description}
             </p>
-            <div className="flex gap-4">
+            <div className="flex gap-3">
               {footerSocialLinks.map((social) => {
                 const Icon = { Facebook, Instagram, Youtube }[social.iconName];
                 return (
@@ -41,9 +41,9 @@ export default function Footer() {
                     key={social.label}
                     href={social.href}
                     aria-label={social.label}
-                    className="text-primary-light hover:text-primary transition-colors p-1"
+                    className="flex items-center justify-center w-8 h-8 rounded-full border border-primary-light/50 text-primary-light/80 hover:bg-primary hover:text-white hover:border-primary transition-all duration-300"
                   >
-                    <Icon size={16} />
+                    <Icon size={14} />
                   </a>
                 );
               })}
@@ -111,9 +111,18 @@ export default function Footer() {
         </div>
 
         {/* Copyright */}
-        <div className="pt-8 border-t border-primary-soft flex flex-row justify-between items-center gap-4 text-primary-muted text-xs font-normal">
-          <p>Copyright © {new Date().getFullYear()}</p>
-          <p>All Rights Reserved</p>
+        <div className="pt-8 border-t border-primary-soft flex flex-col sm:flex-row justify-between items-center gap-3 sm:gap-4 text-xs font-light text-center sm:text-left">
+          <p className="text-primary-light/80 text-[12px]">
+            © {new Date().getFullYear()} {siteConfig.name}. All Rights Reserved.
+          </p>
+          <a
+            href="https://aadityag975pf.netlify.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-primary-light/80 text-[12px] hover:text-primary hover:underline transition-colors"
+          >
+            Developed by Aaditya Gunjal
+          </a>
         </div>
       </div>
     </footer>

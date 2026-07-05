@@ -36,7 +36,7 @@ export default function TestimonialsSection() {
       </div>
 
       {/* Content Container */}
-      <div className="relative z-10 -mt-6 bg-white rounded-t-[28px] p-5 md:p-6 pt-[68px] md:pt-[84px] flex flex-col grow justify-between">
+      <div className="relative z-10 -mt-6 bg-white rounded-t-[28px] p-5 md:p-6 pt-[62px] md:pt-[68px] flex flex-col grow justify-between">
         <div>
           <div className="flex items-start justify-between mb-3">
             <div className="flex flex-col font-sans">

@@ -166,4 +166,27 @@ html.lenis body {
   animation-play-state: paused;
 }
 
+/* Custom Scrollbar Styles */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #FAF7F2;
+}
+::-webkit-scrollbar-thumb {
+  background: #9C7B5E;
+  border-radius: 10px;
+  border: 2px solid #FAF7F2;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #362017;
+}
+
+/* For Firefox */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: #9C7B5E #FAF7F2;
+}
+
 
