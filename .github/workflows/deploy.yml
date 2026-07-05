@@ -1,0 +1,58 @@
+name: Deploy Next.js to Hostinger VPS
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  check-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v3
+        with:
+          version: 9
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'pnpm'
+
+      - name: Install Dependencies
+        run: pnpm install
+
+      - name: Run Verification Checks
+        run: |
+          pnpm run lint || echo "Lint warning or error, continuing compile verification"
+          pnpm run build
+
+      - name: Deploy to Hostinger VPS via SSH
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          port: 22
+          script: |
+            # Source bash profile for NVM and Node environment paths
+            export NVM_DIR="$HOME/.nvm"
+            [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+            
+            # Navigate to application folder on VPS
+            cd /var/www/aasiatravel
+            
+            # Fetch latest changes
+            git pull origin main
+            
+            # Install and rebuild
+            pnpm install
+            pnpm build
+            
+            # Reload PM2 process manager daemon
+            pm2 reload aasia-travel || pm2 start npm --name "aasia-travel" -- start
