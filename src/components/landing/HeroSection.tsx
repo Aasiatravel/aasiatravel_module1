@@ -1,93 +1,171 @@
 'use client';
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui';
 
 export default function HeroSection() {
+  const [makkahTime, setMakkahTime] = useState('1:20:35 pm');
+  const [makkahDate, setMakkahDate] = useState('13th Muharram, 1448 AH');
+
+  useEffect(() => {
+    const updateMakkahTime = () => {
+      const now = new Date();
+
+      try {
+        // Time in Makkah (UTC+3 / Asia/Riyadh)
+        const timeFormatter = new Intl.DateTimeFormat('en-US', {
+          timeZone: 'Asia/Riyadh',
+          hour: 'numeric',
+          minute: '2-digit',
+          second: '2-digit',
+          hour12: true,
+        });
+
+        // Formats as "1:20:35 PM" -> convert to lowercase "1:20:35 pm"
+        const timeStr = timeFormatter.format(now).toLowerCase();
+        setMakkahTime(timeStr);
+
+        // Hijri Date in Makkah
+        const hijriFormatter = new Intl.DateTimeFormat('en-US-u-ca-islamic-umalqura', {
+          timeZone: 'Asia/Riyadh',
+          day: 'numeric',
+          month: 'long',
+          year: 'numeric',
+        });
+
+        const hijriStr = hijriFormatter.format(now);
+
+        // Parse and format into "20th Muharram, 1448 AH" style
+        const dayMatch = hijriStr.match(/\b\d{1,2}\b/);
+        const yearMatch = hijriStr.match(/\b\d{4}\b/);
+
+        const months = [
+          'Muharram', 'Safar', "Rabi' al-Awwal", "Rabi' al-Thani",
+          'Jumada al-Awwal', 'Jumada al-Thani', 'Rajab', "Sha'ban",
+          'Ramadan', 'Shawwal', 'Dhu al-Qadah', 'Dhu al-Hijjah'
+        ];
+
+        let monthName = 'Muharram';
+        for (const m of months) {
+          if (hijriStr.includes(m) || hijriStr.toLowerCase().includes(m.toLowerCase().replace("'", ""))) {
+            monthName = m;
+            break;
+          }
+        }
+
+        if (dayMatch && yearMatch) {
+          const dayNum = parseInt(dayMatch[0]);
+          const yearNum = yearMatch[0];
+
+          let suffix = 'th';
+          if (dayNum % 10 === 1 && dayNum !== 11) suffix = 'st';
+          else if (dayNum % 10 === 2 && dayNum !== 12) suffix = 'nd';
+          else if (dayNum % 10 === 3 && dayNum !== 13) suffix = 'rd';
+
+          setMakkahDate(`${dayNum}${suffix} ${monthName}, ${yearNum} AH`);
+        } else {
+          setMakkahDate(hijriStr.includes('AH') ? hijriStr : `${hijriStr} AH`);
+        }
+      } catch (e) {
+        // Fallback to static time if formatting fails
+        setMakkahTime('1:20:35 pm');
+        setMakkahDate('13th Muharram, 1448 AH');
+      }
+    };
+
+    updateMakkahTime();
+    const interval = setInterval(updateMakkahTime, 1000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
-    <section className="relative min-h-screen pt-32 pb-16 overflow-hidden">
-      <div className="container-custom grid lg:grid-cols-2 gap-12 items-center">
-        {/* Left Content */}
+    <section className="relative min-h-screen overflow-hidden bg-white">
+      {/* ── Mobile/Tablet Background Image (below lg) ── */}
+      <div className="absolute inset-0 lg:hidden z-0">
+        <Image
+          src="/images/hero-2.png"
+          alt="Pilgrims at Kaaba"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-center"
+        />
+        {/* Gradient overlay for text readability on mobile */}
+        <div className="absolute inset-0 bg-gradient-to-b from-white/90 via-white/70 via-60% to-white/20" />
+      </div>
+
+      {/* ── Desktop Background Image (lg and above) ── */}
+      <div className="hidden lg:block absolute inset-0 z-0 select-none">
+        <Image
+          src="/images/hero.png"
+          alt="Pilgrims at Kaaba Desktop"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-right"
+        />
+      </div>
+
+      {/* ── Content ── */}
+      <div className="relative z-20 container-custom min-h-screen flex items-start lg:items-center pt-24 pb-8 lg:pt-0 lg:pb-0">
         <motion.div
-          initial={{ opacity: 0, x: -50 }}
-          animate={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="z-10"
+          className="flex flex-col items-start max-w-xl lg:max-w-lg xl:max-w-xl"
         >
           {/* Makkah Time Widget */}
-          <div className="bg-primary-light/10 border border-primary/20 p-4 rounded-sm mb-8 inline-block">
-            <p className="text-[10px] tracking-widest text-primary-light mb-1">MAKKAH, SAUDI ARABIA</p>
-            <p className="font-serif text-xl font-semibold mb-1 tracking-widest text-primary">1:20:35 pm</p>
-            <p className="text-[10px] tracking-widest text-primary-light">13th Muharram, 1448 AH</p>
+          <div className="bg-[#FAF7F2]/90 backdrop-blur-sm border border-primary-soft p-4 rounded-[4px] mb-8 inline-block shadow-sm">
+            <p className="text-[10px] tracking-[0.2em] font-bold text-primary-light mb-1 font-sans">
+              MAKKAH, SAUDI ARABIA
+            </p>
+            <p className="font-serif text-2xl font-bold mb-1 tracking-widest text-primary">
+              {makkahTime}
+            </p>
+            <p className="text-[10px] tracking-[0.2em] font-semibold text-primary-light font-sans">
+              {makkahDate}
+            </p>
           </div>
 
-          <p className="text-primary-light text-sm tracking-widest uppercase mb-4 font-sans">
+          <p className="text-accent-gold text-xs sm:text-sm tracking-[0.22em] uppercase mb-4 font-semibold font-sans">
             Trusted Hajj & Umrah Specialists
           </p>
 
-          <h1 className="text-5xl md:text-7xl leading-tight mb-8 font-serif text-primary">
-            <span className="italic">Guiding Every Step</span> of Your Sacred Journey.
+          <h1 className="text-4xl sm:text-5xl lg:text-[56px] leading-[1.15] font-serif text-primary mb-6">
+            <span className="italic">Guiding Every Step</span> of Your{' '}
+            Sacred Journey.
           </h1>
 
-          <p className="text-primary-light text-lg max-w-md mb-10 leading-relaxed font-sans">
-            Thoughtfully guided pilgrimages for those who seek more than just a trip — a transformation.
+          <p className="text-primary-muted text-sm sm:text-base max-w-md mb-8 leading-relaxed font-sans">
+            Thoughtfully Guided Pilgrimages For Those Who Seek More Than Just A Trip — A Transformation.
           </p>
 
           <Link href="/#packages">
-            <Button className="bg-primary text-sm tracking-widest py-4 px-8">
+            <Button className="bg-primary text-white text-xs font-semibold tracking-widest py-4 px-8 rounded-[4px] hover:bg-primary/95 transition-colors">
               EXPLORE PACKAGES
             </Button>
           </Link>
 
           {/* Trust Indicator */}
-          <div className="mt-12 flex items-center gap-4">
-            <div className="flex -space-x-4">
-              {[1, 2, 3].map((i) => (
-                <div key={i} className="w-12 h-12 rounded-full border-2 border-white bg-primary-light overflow-hidden relative">
-                  <Image
-                    src="/images/review.png"
-                    alt="Pilgrim Avatar"
-                    fill
-                    sizes="48px"
-                    className="object-cover"
-                  />
-                </div>
-              ))}
-              <div className="w-12 h-12 rounded-full border-2 border-white bg-secondary flex items-center justify-center text-white text-xs font-bold z-10">
+          <div className="mt-10 flex items-center gap-4">
+            <div className="flex -space-x-3">
+              <div className="w-10 h-10 rounded-full bg-[#84593D] border-2 border-white" />
+              <div className="w-10 h-10 rounded-full bg-[#9C7B5E] border-2 border-white" />
+              <div className="w-10 h-10 rounded-full bg-[#C5855C] border-2 border-white" />
+              <div className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center text-white text-xs font-bold border-2 border-white z-10">
                 +
               </div>
             </div>
-            <p className="text-sm font-bold text-primary font-sans">
-              Trusted By <span className="text-primary-light">1329</span> Happy Pilgrims
+            <p className="text-xs sm:text-sm text-primary font-sans font-semibold tracking-wide">
+              Trusted By <span className="text-[#84593D] font-bold">1329</span> Happy Pilgrims
             </p>
           </div>
-        </motion.div>
-
-        {/* Right Image */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1 }}
-          className="relative flex justify-center lg:justify-end"
-        >
-          <div className="relative w-full max-w-[450px] aspect-square rounded-full overflow-hidden border-12 border-background-cream shadow-2xl">
-            <Image
-              src="/images/hero.png"
-              alt="Pilgrims at Kaaba"
-              fill
-              sizes="(max-width: 768px) 100vw, 450px"
-              className="object-cover"
-              priority
-            />
-          </div>
-          {/* Decorative Elements */}
-          <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-accent/20 rounded-full blur-3xl -z-10" />
-          <div className="absolute -top-10 -right-10 w-40 h-40 bg-secondary/10 rounded-full blur-3xl -z-10" />
         </motion.div>
       </div>
     </section>
   );
 }
+

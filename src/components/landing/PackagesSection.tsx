@@ -26,17 +26,17 @@ export default function PackagesSection() {
         </div>
 
         {/* Filters */}
-        <div className="flex flex-wrap items-center justify-between gap-6 mb-16 bg-primary-light/5 p-4 rounded-sm border border-primary/5">
-          <div className="flex items-center gap-4">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 sm:gap-6 mb-16 bg-primary-light/5 p-4 rounded-sm border border-primary/5">
+          <div className="flex items-center gap-3 flex-wrap">
             <span className="text-sm font-medium tracking-widest text-primary-light font-sans">
               FILTER:
             </span>
-            <div className="flex gap-2">
+            <div className="flex gap-2 flex-wrap">
               {(['ALL', 'ECONOMY', 'LUXURY'] as const).map((f) => (
                 <button
                   key={f}
                   onClick={() => setFilter(f)}
-                  className={`px-8 py-2 rounded-full text-xs font-semibold tracking-widest transition-all font-sans cursor-pointer ${filter === f
+                  className={`px-4 sm:px-8 py-2 rounded-full text-xs font-semibold tracking-widest transition-all font-sans cursor-pointer ${filter === f
                     ? 'bg-primary text-white'
                     : 'border border-primary text-primary hover:bg-primary/5'
                     }`}
