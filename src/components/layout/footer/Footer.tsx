@@ -146,7 +146,7 @@ export default function Footer() {
 
         <div className="pt-8 border-t border-primary-soft flex flex-col sm:flex-row justify-between items-center gap-3 sm:gap-4 text-xs font-light text-center sm:text-left">
           <p className="text-primary-light/80 text-[12px]">
-            © {new Date().getFullYear()} {siteConfig.name}. All Rights Reserved.
+            © {new Date().getFullYear()} {siteConfig.name}. All Rights Reserved. test
           </p>
           <a
             href="https://aadityag975pf.netlify.app/"
