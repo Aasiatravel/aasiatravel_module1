@@ -19,7 +19,7 @@ export default function PackageCard({ pkg }: PackageCardProps) {
       whileHover={{ y: -10 }}
       className="bg-primary-light/5 border border-primary/5 rounded-sm overflow-hidden flex flex-col h-full shadow-sm"
     >
-      <div className="relative aspect-[4/3] w-full">
+      <div className="relative aspect-4/3 w-full">
         <Image
           src={pkg.image}
           alt={pkg.title}
@@ -33,7 +33,7 @@ export default function PackageCard({ pkg }: PackageCardProps) {
           </div>
         )}
       </div>
-      <div className="p-6 flex flex-col flex-grow">
+      <div className="p-6 flex flex-col grow">
         <div className="flex items-center justify-between mb-4 font-sans">
           <span className="text-[10px] tracking-widest text-primary-light uppercase font-semibold">
             {pkg.category} · {pkg.type}
@@ -44,7 +44,7 @@ export default function PackageCard({ pkg }: PackageCardProps) {
           </div>
         </div>
 
-        <h4 className="text-lg font-serif mb-4 flex-grow text-primary font-bold">{pkg.title}</h4>
+        <h4 className="text-lg font-serif mb-4 grow text-primary font-bold">{pkg.title}</h4>
 
         <div className="flex items-center gap-2 text-primary-light text-xs mb-6 font-sans">
           <Calendar size={14} className="text-primary-light" />

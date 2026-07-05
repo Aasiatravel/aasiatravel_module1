@@ -70,11 +70,15 @@ export default function RootLayout({
     <html
       lang="en"
       className={`${inter.variable} ${playfair.variable} ${poppins.variable} h-full antialiased`}
+      suppressHydrationWarning
     >
-      <body className="min-h-full flex flex-col bg-white selection:bg-primary-soft selection:text-primary">
+      <body
+        className="min-h-full flex flex-col bg-white selection:bg-primary-soft selection:text-primary"
+        suppressHydrationWarning
+      >
         <Providers>
           <Navbar />
-          <main className="flex-grow">{children}</main>
+          <main className="grow">{children}</main>
           <Footer />
         </Providers>
       </body>

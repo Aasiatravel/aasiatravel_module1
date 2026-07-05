@@ -19,7 +19,7 @@ export default function PackagesSection() {
     <section id="packages" className="section-padding bg-white">
       <div className="container-custom">
         <div className="mb-12">
-          <p className="text-primary-light text-sm tracking-[0.18em] uppercase mb-4 font-sans">
+          <p className="text-primary-light text-sm tracking-widest uppercase mb-4 font-sans">
             Featured Packages
           </p>
           <h2 className="text-5xl font-serif text-primary">Choose your journey</h2>
@@ -36,11 +36,10 @@ export default function PackagesSection() {
                 <button
                   key={f}
                   onClick={() => setFilter(f)}
-                  className={`px-8 py-2 rounded-full text-xs font-semibold tracking-widest transition-all font-sans cursor-pointer ${
-                    filter === f
-                      ? 'bg-primary text-white'
-                      : 'border border-primary text-primary hover:bg-primary/5'
-                  }`}
+                  className={`px-8 py-2 rounded-full text-xs font-semibold tracking-widest transition-all font-sans cursor-pointer ${filter === f
+                    ? 'bg-primary text-white'
+                    : 'border border-primary text-primary hover:bg-primary/5'
+                    }`}
                 >
                   {f}
                 </button>

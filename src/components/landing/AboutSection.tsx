@@ -31,7 +31,7 @@ export default function AboutSection() {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
         >
-          <p className="text-primary-light text-sm tracking-[0.18em] uppercase mb-4 font-sans">
+          <p className="text-primary-light text-sm tracking-widest uppercase mb-4 font-sans">
             WHO WE ARE
           </p>
           <h2 className="text-5xl mb-8 font-serif text-primary">Guiding pilgrims since 2020</h2>

@@ -11,7 +11,7 @@ export default function TestimonialsSection() {
     <section id="reviews" className="section-padding bg-background-dark text-white overflow-hidden">
       <div className="container-custom">
         <div className="mb-16">
-          <p className="text-accent text-sm tracking-[0.18em] uppercase mb-4 font-sans">
+          <p className="text-accent text-sm tracking-widest uppercase mb-4 font-sans">
             Pilgrim Stories
           </p>
           <h2 className="text-5xl font-serif">What our pilgrims say</h2>
@@ -35,7 +35,7 @@ export default function TestimonialsSection() {
                 </div>
               </div>
 
-              <p className="text-background-dark text-base leading-relaxed mb-10 flex-grow font-sans italic text-primary-light">
+              <p className="text-background-dark text-base leading-relaxed mb-10 grow font-sans italic text-primary-light">
                 "{t.quote}"
               </p>
 

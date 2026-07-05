@@ -122,7 +122,7 @@ export const testimonials: Testimonial[] = [
     avatar: '/images/review.png',
   },
   {
-    id: '3',
+    id: '4',
     name: 'Ali K.',
     location: 'Delhi, India',
     quote: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.",
@@ -130,7 +130,7 @@ export const testimonials: Testimonial[] = [
     avatar: '/images/review.png',
   },
   {
-    id: '3',
+    id: '5',
     name: 'Ali K.',
     location: 'Delhi, India',
     quote: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.",
@@ -138,7 +138,7 @@ export const testimonials: Testimonial[] = [
     avatar: '/images/review.png',
   },
   {
-    id: '3',
+    id: '6',
     name: 'Ali K.',
     location: 'Delhi, India',
     quote: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.",
@@ -146,7 +146,7 @@ export const testimonials: Testimonial[] = [
     avatar: '/images/review.png',
   },
   {
-    id: '3',
+    id: '7',
     name: 'Ali K.',
     location: 'Delhi, India',
     quote: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.",
@@ -154,7 +154,7 @@ export const testimonials: Testimonial[] = [
     avatar: '/images/review.png',
   },
   {
-    id: '3',
+    id: '8',
     name: 'Ali K.',
     location: 'Delhi, India',
     quote: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.",

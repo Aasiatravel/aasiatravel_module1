@@ -17,6 +17,7 @@ export default function Footer() {
               width={160}
               height={64}
               className="h-16 w-auto object-contain mb-8"
+              style={{ width: 'auto', height: 'auto' }}
             />
             <p className="text-primary-light text-sm leading-relaxed mb-8 max-w-xs">
               {siteConfig.description}

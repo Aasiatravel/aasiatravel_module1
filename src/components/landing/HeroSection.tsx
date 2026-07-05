@@ -24,7 +24,7 @@ export default function HeroSection() {
             <p className="text-[10px] tracking-widest text-primary-light">13th Muharram, 1448 AH</p>
           </div>
 
-          <p className="text-primary-light text-sm tracking-[0.18em] uppercase mb-4 font-sans">
+          <p className="text-primary-light text-sm tracking-widest uppercase mb-4 font-sans">
             Trusted Hajj & Umrah Specialists
           </p>
 
@@ -73,7 +73,7 @@ export default function HeroSection() {
           transition={{ duration: 1 }}
           className="relative flex justify-center lg:justify-end"
         >
-          <div className="relative w-full max-w-[450px] aspect-square rounded-full overflow-hidden border-[12px] border-[#F2EEEB] shadow-2xl">
+          <div className="relative w-full max-w-[450px] aspect-square rounded-full overflow-hidden border-12 border-background-cream shadow-2xl">
             <Image
               src="/images/hero.png"
               alt="Pilgrims at Kaaba"

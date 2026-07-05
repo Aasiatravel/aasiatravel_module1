@@ -35,7 +35,9 @@ export default function Navbar() {
             width={160}
             height={56}
             className="h-12 md:h-14 w-auto object-contain"
+            style={{ width: 'auto', height: 'auto' }}
             priority
+            loading="eager"
           />
         </Link>
 

@@ -9,7 +9,7 @@ export default function WhyChooseUsSection() {
     <section className="section-padding bg-white">
       <div className="container-custom">
         <div className="mb-16">
-          <p className="text-primary-light text-sm tracking-[0.18em] uppercase mb-4 font-sans font-semibold">
+          <p className="text-primary-light text-sm tracking-widest uppercase mb-4 font-sans font-semibold">
             Why Choose Us
           </p>
           <h2 className="text-5xl font-serif text-primary">What sets us apart</h2>
