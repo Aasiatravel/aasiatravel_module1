@@ -87,7 +87,7 @@ export default function Navbar() {
             <Button
               variant="primary"
               onClick={() => window.open(getWhatsAppGetInTouchLink(), '_blank')}
-              className="bg-secondary text-white text-xs font-semibold tracking-widest px-6 py-3 rounded-4px hover:bg-secondary/90 transition-colors shadow-sm"
+              className="bg-primary text-white text-xs font-semibold tracking-widest px-6 py-3 rounded-4px hover:bg-secondary/90 transition-colors shadow-sm"
             >
               GET IN TOUCH
             </Button>

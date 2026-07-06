@@ -148,14 +148,6 @@ export default function Footer() {
           <p className="text-primary-light/80 text-[12px]">
             © {new Date().getFullYear()} {siteConfig.name}. All Rights Reserved.
           </p>
-          <a
-            href="https://aadityag975pf.netlify.app/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-primary-light/80 text-[12px] hover:text-primary hover:underline transition-colors"
-          >
-            Developed by Aaditya Gunjal
-          </a>
         </div>
       </div>
     </footer>

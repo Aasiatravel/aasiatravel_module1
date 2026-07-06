@@ -7,7 +7,7 @@ export const siteConfig = {
   ogImage: '/images/hero.png',
   logo: '/images/logo.png',
   contact: {
-    email: 'aasiatravel@gmail.com',
+    email: 'aasiatravel0@gmail.com',
     phone: '+91 8800665701',
     address: 'New Delhi',
   },

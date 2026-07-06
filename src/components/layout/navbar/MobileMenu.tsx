@@ -54,10 +54,10 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
             </div>
 
             <div className="pt-2 flex flex-col gap-3 items-start">
-              <span className="text-sm text-secondary">Need help?</span>
+              <span className="text-sm text-[#362017]">Need help?</span>
               <Button
                 variant="primary"
-                className="bg-secondary hover:bg-secondary/90 text-white text-xs tracking-widest px-8 py-3.5 rounded-4px transition-colors"
+                className="bg-primary  hover:bg-secondary/90 text-white text-xs tracking-widest px-8 py-3.5 rounded-4px transition-colors"
                 onClick={() => {
                   onClose();
                   window.open(getWhatsAppGetInTouchLink(), '_blank');

@@ -62,40 +62,40 @@ export const packages = packagesList;
 export const testimonials: Testimonial[] = [
   {
     id: '1',
-    name: 'Fatima Shaikh',
+    name: 'Fatima ',
     location: 'Mumbai, India',
     quote:
-      'Alhamdulillah, our family had a blessed and seamless Umrah journey with Aasia Travel. The hotels were very close to the Haram, and all transport was perfectly arranged door to door.',
+      'The love and care and hospitality shown by their team was exceptional. Our transport was always on time, and the local guides were knowledgeable and kind.',
     rating: 5,
-    avatar: '/images/avatar-1.png',
+    avatar: '/images/avatar-2.png',
     coverImage: '/images/about.png',
   },
   {
     id: '2',
-    name: 'Umar. R',
-    location: 'Rajasthan, India',
+    name: 'Maryam',
+    location: 'delhi, India',
     quote:
-      'Excellent organization and support throughout our trip. The guidance provided was extremely helpful, and everything was handled with the utmost care and respect.',
+      'The love and care and hospitality shown by their team was exceptional. Our transport was always on time, and the local guides were knowledgeable and kind.',
     rating: 5,
     avatar: '/images/avatar-2.png',
     coverImage: '/images/about.png',
   },
   {
     id: '3',
-    name: 'Ali K.',
+    name: 'Ibrahim.',
     location: 'Delhi, India',
     quote:
-      'Aasia Travel made our dream a reality. The window view of Al-Masjid an-Nabawi from our room was breathtaking, and the team checked on us daily to ensure our comfort.',
+      'The love and care and hospitality shown by their team was exceptional. Our transport was always on time, and the local guides were knowledgeable and kind.',
     rating: 5,
     avatar: '/images/avatar-3.png',
     coverImage: '/images/review.png',
   },
   {
     id: '4',
-    name: 'Aisha M.',
+    name: 'Adam.',
     location: 'Hyderabad, India',
     quote:
-      'Truly a reliable and professional service. The visa processing was quick and hassle-free. I highly recommend Aasia Travel for anyone planning their sacred journey.',
+      'The love and care and hospitality shown by their team was exceptional. Our transport was always on time, and the local guides were knowledgeable and kind.',
     rating: 5,
     avatar: '/images/avatar-1.png',
     coverImage: '/images/card-1.png',
@@ -105,60 +105,52 @@ export const testimonials: Testimonial[] = [
     name: 'Zainab H.',
     location: 'Bangalore, India',
     quote:
-      'The level of care and hospitality shown by their team was exceptional. Our transport was always on time, and the local guides were knowledgeable and polite.',
+      'The love and care and hospitality shown by their team was exceptional. Our transport was always on time, and the local guides were knowledgeable and kind.',
     rating: 5,
     avatar: '/images/avatar-2.png',
     coverImage: '/images/card-2.png',
   },
+
   {
     id: '6',
-    name: 'Bilal A.',
-    location: 'Chennai, India',
-    quote:
-      'From booking to completion, the entire process was transparent and simple. They delivered exactly what they promised. Jazakum Allahu Khairan to the whole team.',
-    rating: 5,
-    avatar: '/images/avatar-3.png',
-    coverImage: '/images/about.png',
-  },
-  {
-    id: '7',
-    name: 'Tariq S.',
-    location: 'Lucknow, India',
-    quote:
-      'We had an amazing experience with their VIP packages. The luxury hotels and private transport made our pilgrimage very comfortable, especially for our elderly parents.',
-    rating: 5,
-    avatar: '/images/avatar-1.png',
-    coverImage: '/images/review.png',
-  },
-  {
-    id: '8',
     name: 'Sarah F.',
     location: 'Srinagar, India',
     quote:
-      'Everything was well-coordinated and the communication was superb. We were provided with all necessary guidance prior to departure which made a big difference.',
+      'The love and care and hospitality shown by their team was exceptional. Our transport was always on time, and the local guides were knowledgeable and kind.',
     rating: 5,
     avatar: '/images/avatar-2.png',
     coverImage: '/images/card-1.png',
   },
   {
-    id: '9',
-    name: 'Mohammed Y.',
-    location: 'Kolkata, India',
+    id: '7',
+    name: 'Ibrahim.',
+    location: 'Delhi, India',
     quote:
-      'Highly professional tour operators. Their attention to detail and dedication to ensuring a spiritual, stress-free journey is commendable.',
+      'The love and care and hospitality shown by their team was exceptional. Our transport was always on time, and the local guides were knowledgeable and kind.',
     rating: 5,
     avatar: '/images/avatar-3.png',
-    coverImage: '/images/card-2.png',
+    coverImage: '/images/review.png',
   },
   {
-    id: '10',
-    name: 'Yasmin A.',
-    location: 'Ahmedabad, India',
+    id: '8',
+    name: 'Maryam',
+    location: 'delhi, India',
     quote:
-      'A wonderful, spiritually fulfilling journey made easy by Aasia Travel. The 24/7 helpline was very responsive whenever we had questions during our stay.',
+      'The love and care and hospitality shown by their team was exceptional. Our transport was always on time, and the local guides were knowledgeable and kind.',
+    rating: 5,
+    avatar: '/images/avatar-2.png',
+    coverImage: '/images/about.png',
+  },
+
+  {
+    id: '9',
+    name: 'Adam.',
+    location: 'Hyderabad, India',
+    quote:
+      'The love and care and hospitality shown by their team was exceptional. Our transport was always on time, and the local guides were knowledgeable and kind.',
     rating: 5,
     avatar: '/images/avatar-1.png',
-    coverImage: '/images/review.png',
+    coverImage: '/images/card-1.png',
   },
 ];
 
