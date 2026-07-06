@@ -17,6 +17,7 @@ A detailed technical breakdown of the system architecture, component pipelines, 
 | **Client Physics** | Component imports             | Framer Motion & Lenis     | Smooth viewport animations, exponential ease scroll physics         |
 | **Checkout API**   | `src/lib/whatsapp.ts`         | WhatsApp API Link Builder | Serverless order communication via query parameter payloads         |
 | **Data Layer**     | `src/data/`                   | TypeScript Static Data    | Decoupled local data files without CMS or SQL overhead              |
+| **CI/CD Pipeline** | `.github/workflows/`          | GitHub Actions            | Automatic lint, format, typecheck, and test checks on push/PR       |
 
 ---
 

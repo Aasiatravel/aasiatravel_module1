@@ -15,6 +15,8 @@ Welcome to the Aasia Travel repository! This document contains context, standard
 | **Modify Packages**  | [packages.ts](file:///c:/SharedData/Projects/Aasia Travel/aasiatravel_module1/src/data/packages.ts) | Core array database containing flight codes, hotel stays, steps, and pricing keys |
 | **Change Recipient** | [site.ts](file:///c:/SharedData/Projects/Aasia Travel/aasiatravel_module1/src/config/site.ts)       | Site metadata profile outlining email, phone, and address                         |
 | **Update Templates** | [whatsapp.ts](file:///c:/SharedData/Projects/Aasia Travel/aasiatravel_module1/src/data/whatsapp.ts) | Static message constants and text formatter layouts                               |
+| **Configure CI**     | [ci.yml](file:///c:/SharedData/Projects/Aasia Travel/aasiatravel_module1/.github/workflows/ci.yml)  | GitHub Actions continuous integration workflow file                               |
+| **Pin Node Version** | [.nvmrc](file:///c:/SharedData/Projects/Aasia Travel/aasiatravel_module1/.nvmrc)                    | Pinned Node runtime version for development and build runner validation           |
 
 ---
 
@@ -29,6 +31,7 @@ Welcome to the Aasia Travel repository! This document contains context, standard
 | `pnpm lint`      | Run ESLint checks          | Analyzes syntax rules and React hooks boundaries           |
 | `pnpm format`    | Run Prettier formatter     | Formats code in-place                                      |
 | `pnpm typecheck` | Run tsc check              | Performs dry-run static type checks without emitting files |
+| `pnpm test`      | Run validation test script | Run test suite smoke check                                 |
 
 ---
 

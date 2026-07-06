@@ -36,12 +36,12 @@ A production-grade, consolidated Hajj & Umrah pilgrimage platform built with Nex
 
 ### Core Framework & Runtime
 
-| Technology | Version | Purpose                                               |
-| ---------- | ------- | ----------------------------------------------------- |
-| Next.js    | 16.2.10 | App Router, SSR/SSG, Metadata API, Image Optimization |
-| React      | 19.2.4  | UI Component Library with server-side components      |
-| TypeScript | 5.x     | Strict Type Safety                                    |
-| Node.js    | 20+     | Runtime Environment                                   |
+| Technology | Version | Purpose                                          |
+| ---------- | ------- | ------------------------------------------------ |
+| Next.js    | 16.2.10 | App Router, SSR/SSG, Metadata API                |
+| React      | 19.2.4  | UI Component Library with server-side components |
+| TypeScript | 5.x     | Strict Type Safety                               |
+| Node.js    | 22      | Runtime Environment (pinned via .nvmrc)          |
 
 ### Styling & Animation
 
@@ -215,6 +215,9 @@ pnpm start
 | `build`     | `pnpm build`     | Create optimized production build        |
 | `start`     | `pnpm start`     | Serve production build locally           |
 | `lint`      | `pnpm lint`      | Run ESLint checks                        |
+| `format`    | `pnpm format`    | Format code in-place using Prettier      |
+| `check`     | `pnpm check`     | Run all checks (lint, format, typecheck) |
+| `test`      | `pnpm test`      | Run test suite smoke check               |
 
 ---
 
@@ -272,7 +275,7 @@ pnpm start
 
 ### Performance Architecture
 
-- **Asset Compression & Delivery:** Preconnect optimization hints and Next.js Image component optimization to enforce AVIF/WebP image caching.
+- **Asset Delivery & Offloading:** Employs Next.js `unoptimized` image configurations to serve assets directly without server-side CPU/memory resizing overhead, paired with preconnect optimization hints.
 - **Layout Shift Prevention:** Employs explicit skeleton templates matching layout hierarchies to maintain visual stability while loading resources.
 - **RAF Scroll Loops:** Hooks Lenis smooth scrolling inside `requestAnimationFrame` loops for high performance rendering.
 
@@ -374,7 +377,7 @@ Overwrite color hex definitions within the CSS variables of the `@theme` block i
 
 ## Roadmap
 
-- **Interactive WhatsApp Templates:** Build a direct message compiler string that formats cost choices (Sharing + Add-ons) from the PriceCalculator to send directly.
+- **Continuous Integration Pipeline:** Configure testing frameworks and coverage reporting in the automated validation checks.
 - **Pilgrim Reviews Sync:** Sync Google Business Profile customer ratings.
 - **Interactive Makkah/Madina Map Widgets:** Embed interactive markers of Makkah and Madina hotels relative to the holy sites.
 - **PWA Manifest Integration:** Configure web manifests for offline installation support.

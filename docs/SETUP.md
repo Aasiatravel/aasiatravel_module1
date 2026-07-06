@@ -2,7 +2,7 @@
 
 ![Setup Status](https://img.shields.io/badge/Setup-Production--Ready-22C55E?style=for-the-badge)
 ![Target Web](https://img.shields.io/badge/Deploy-Vercel--Cloudflare-000000?style=for-the-badge&logo=vercel&logoColor=white)
-![Node Version](https://img.shields.io/badge/Node-20%2B-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
+![Node Version](https://img.shields.io/badge/Node-22-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
 
 This guide details the step-by-step procedures required to customize, build, and deploy the Aasia Travel web application.
 
@@ -64,4 +64,4 @@ For maximum edge network caching and fast loading times, deploy the built static
 - **Framework Preset**: `Next.js (Static HTML Export)`
 - **Build Command**: `pnpm build`
 - **Build Output Directory**: `out`
-- **Node.js Version**: `20` or higher
+- **Node.js Version**: `22` or higher
