@@ -23,8 +23,8 @@ export default function Footer() {
               alt={siteConfig.name}
               width={140}
               height={50}
-              className="h-10 w-auto object-contain mb-5"
-              style={{ width: 'auto', height: 'auto' }}
+              className="w-auto object-contain mb-5"
+              style={{ height: '50px', width: 'auto' }}
             />
             <p className="text-primary-muted text-sm leading-relaxed mb-6 max-w-xs font-normal">
               {siteConfig.description}

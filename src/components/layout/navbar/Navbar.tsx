@@ -43,14 +43,14 @@ export default function Navbar() {
                 Begin your Blessed journey!
               </span>
             ) : (
-              <Link href="/" className="flex items-center">
+              <Link href="/" className="flex items-center h-full">
                 <Image
                   src={siteConfig.logo}
                   alt={siteConfig.name}
                   width={150}
                   height={40}
-                  className="h-[38px] sm:h-[42px] md:h-[46px] w-auto object-contain"
-                  style={{ width: '85%', height: '85%' }}
+                  className="w-auto object-contain"
+                  style={{ height: '100%', width: 'auto' }}
                   priority
                 />
               </Link>
