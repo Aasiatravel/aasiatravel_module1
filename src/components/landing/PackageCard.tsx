@@ -1,10 +1,10 @@
 'use client';
 
-import Image from 'next/image';
+import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Star, Calendar } from 'lucide-react';
-import { Badge } from '@/components/ui';
+import { Badge, ImageSlideshow } from '@/components/ui';
 import { formatPrice } from '@/lib/utils';
 import type { Package } from '@/types';
 
@@ -13,16 +13,17 @@ interface PackageCardProps {
 }
 
 export default function PackageCard({ pkg }: PackageCardProps) {
+  const images = pkg.images && pkg.images.length > 0 ? pkg.images : [pkg.image];
+
   return (
     <motion.div className="group bg-primary-light/5 border border-primary/5 rounded-sm overflow-hidden flex flex-col h-full">
-      <div className="relative aspect-4/3 w-full overflow-hidden">
-        <Image
-          src={pkg.image}
+      <div className="relative aspect-4/3 w-full overflow-hidden bg-primary-soft/10">
+        <ImageSlideshow
+          images={images}
           alt={pkg.title}
-          fill
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-          className="object-cover transition-transform duration-500 group-hover:scale-105"
+          imageClassName="transition-transform duration-500 group-hover:scale-105"
         />
+
         {pkg.limitedSeats && (
           <div className="absolute top-4 right-4 z-10">
             <Badge variant="danger">Limited seats</Badge>

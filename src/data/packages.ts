@@ -14,6 +14,7 @@ export const packages: Package[] = [
     departureCity: 'Delhi',
     rating: 4.8,
     image: '/images/card-1.png',
+    images: ['/images/card-1.png', '/images/card-2.png', '/images/about.png'],
     limitedSeats: true,
     subtitle: 'Policies & Pilgrim Safety',
     description:
@@ -117,6 +118,7 @@ export const packages: Package[] = [
     departureCity: 'Mumbai',
     rating: 4.8,
     image: '/images/card-2.png',
+    images: ['/images/card-2.png', '/images/about.png', '/images/review.png'],
     limitedSeats: true,
     subtitle: 'Policies & Pilgrim Safety',
     description:
@@ -220,6 +222,7 @@ export const packages: Package[] = [
     departureCity: 'Delhi',
     rating: 4.5,
     image: '/images/card-1.png',
+    images: ['/images/card-1.png', '/images/review.png', '/images/card-2.png'],
     limitedSeats: false,
     subtitle: 'Budget-Friendly Pilgrim Package',
     description:
@@ -322,6 +325,7 @@ export const packages: Package[] = [
     departureCity: 'Bangalore',
     rating: 4.6,
     image: '/images/card-2.png',
+    images: ['/images/card-2.png', '/images/card-1.png', '/images/about.png'],
     limitedSeats: true,
     subtitle: 'Standard Economy Package',
     description: 'An economy-oriented pilgrimage starting from Bangalore with group-guided visits.',
@@ -424,6 +428,7 @@ export const packages: Package[] = [
     departureCity: 'Hyderabad',
     rating: 4.4,
     image: '/images/card-1.png',
+    images: ['/images/card-1.png', '/images/about.png', '/images/review.png'],
     limitedSeats: false,
     subtitle: 'Short Saver Pilgrimage',
     description:
@@ -526,6 +531,7 @@ export const packages: Package[] = [
     departureCity: 'Kolkata',
     rating: 4.3,
     image: '/images/card-2.png',
+    images: ['/images/card-2.png', '/images/review.png', '/images/card-1.png'],
     limitedSeats: true,
     subtitle: 'Essential Basic Package',
     description:
@@ -628,6 +634,7 @@ export const packages: Package[] = [
     departureCity: 'Ahmedabad',
     rating: 4.6,
     image: '/images/card-1.png',
+    images: ['/images/card-1.png', '/images/card-2.png', '/images/about.png'],
     limitedSeats: true,
     subtitle: 'Gujarat Saver Package',
     description:
@@ -731,6 +738,7 @@ export const packages: Package[] = [
     departureCity: 'Chennai',
     rating: 4.5,
     image: '/images/card-2.png',
+    images: ['/images/card-2.png', '/images/about.png', '/images/review.png'],
     limitedSeats: false,
     subtitle: 'Southern India Special',
     description:
@@ -835,6 +843,7 @@ export const packages: Package[] = [
     departureCity: 'Delhi',
     rating: 4.9,
     image: '/images/card-1.png',
+    images: ['/images/card-2.png', '/images/card-1.png', '/images/review.png'],
     limitedSeats: true,
     subtitle: 'VIP Royal Experience',
     description:
@@ -946,6 +955,7 @@ export const packages: Package[] = [
     departureCity: 'Mumbai',
     rating: 4.8,
     image: '/images/card-2.png',
+    images: ['/images/card-1.png', '/images/review.png', '/images/about.png'],
     limitedSeats: true,
     subtitle: 'Elite VIP Experience',
     description:
@@ -1057,6 +1067,7 @@ export const packages: Package[] = [
     departureCity: 'Bangalore',
     rating: 4.9,
     image: '/images/card-1.png',
+    images: ['/images/card-2.png', '/images/about.png', '/images/card-1.png'],
     limitedSeats: true,
     subtitle: 'Premium Gold Standard',
     description:
@@ -1168,6 +1179,7 @@ export const packages: Package[] = [
     departureCity: 'Delhi',
     rating: 4.7,
     image: '/images/card-2.png',
+    images: ['/images/card-1.png', '/images/card-2.png', '/images/review.png'],
     limitedSeats: false,
     subtitle: 'Executive Business Package',
     description:
@@ -1279,6 +1291,7 @@ export const packages: Package[] = [
     departureCity: 'Hyderabad',
     rating: 4.8,
     image: '/images/card-1.png',
+    images: ['/images/card-2.png', '/images/review.png', '/images/about.png'],
     limitedSeats: true,
     subtitle: 'Special Premium Selection',
     description:
@@ -1390,6 +1403,7 @@ export const packages: Package[] = [
     departureCity: 'Kolkata',
     rating: 5.0,
     image: '/images/card-2.png',
+    images: ['/images/card-1.png', '/images/about.png', '/images/card-2.png'],
     limitedSeats: true,
     subtitle: 'Majestic Ultra-Deluxe VIP',
     description:
@@ -1501,6 +1515,7 @@ export const packages: Package[] = [
     departureCity: 'Ahmedabad',
     rating: 4.8,
     image: '/images/card-1.png',
+    images: ['/images/card-2.png', '/images/card-1.png', '/images/about.png'],
     limitedSeats: true,
     subtitle: 'Gujarat Elite Selection',
     description:
@@ -1612,6 +1627,7 @@ export const packages: Package[] = [
     departureCity: 'Chennai',
     rating: 4.9,
     image: '/images/card-2.png',
+    images: ['/images/card-1.png', '/images/review.png', '/images/card-2.png'],
     limitedSeats: true,
     subtitle: 'Royal Southern Selection',
     description:
