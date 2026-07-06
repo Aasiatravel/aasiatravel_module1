@@ -12,6 +12,7 @@
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "typecheck": "tsc --noEmit",
+    "test": "echo \"No tests configured\" && exit 0",
     "check": "pnpm lint && pnpm format:check && pnpm typecheck"
   },
   "dependencies": {
