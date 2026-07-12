@@ -34,7 +34,7 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
             initial={{ y: '-100%' }}
             animate={{ y: 0 }}
             exit={{ y: '-100%' }}
-            transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
+            transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
             className="absolute top-0 left-0 w-full bg-white border-b border-primary-soft/30 shadow-2xl px-6 pt-[76px] pb-6 flex flex-col gap-5 z-20 overflow-hidden"
           >
             <div className="flex flex-col">
