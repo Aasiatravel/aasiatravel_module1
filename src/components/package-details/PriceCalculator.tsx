@@ -94,7 +94,7 @@ export default function PriceCalculator({
           </div>
         </div>
 
-        <div>
+        {/* <div>
           <label className="text-[11.2px] font-semibold tracking-wide text-primary-muted uppercase mb-3 block">
             Add-ons
           </label>
@@ -116,7 +116,7 @@ export default function PriceCalculator({
               );
             })}
           </div>
-        </div>
+        </div> */}
       </div>
 
       <div className="lg:w-[458px] bg-background-dark rounded-4px p-6 sm:p-8 text-white flex flex-col justify-between shadow-lg">
