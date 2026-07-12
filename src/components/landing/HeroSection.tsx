@@ -17,7 +17,7 @@ export default function HeroSection() {
           sizes="100vw"
           className="object-cover object-center"
         />
-        <div className="absolute inset-0 bg-linear-to-b from-white/95 via-white/90 via-50% to-white/35" />
+        <div className="absolute inset-0 bg-linear-to-b from-white/95 via-white/50 via-50% to-white/35" />
       </div>
 
       <div className="hidden lg:block absolute inset-0 z-0 select-none">
