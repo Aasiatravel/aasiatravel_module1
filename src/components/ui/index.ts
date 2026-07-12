@@ -3,3 +3,8 @@ export { default as Badge } from './Badge';
 export { default as Skeleton } from './Skeleton';
 export { default as TestimonialCard } from './TestimonialCard';
 export { default as ScrollReveal } from './ScrollReveal';
+export { default as ImageSlideshow } from './ImageSlideshow';
+export { default as TimeWidget } from './TimeWidget';
+export { default as FadeIn } from './FadeIn';
+export { default as BlurReveal } from './BlurReveal';
+export { default as SlideReveal } from './SlideReveal';

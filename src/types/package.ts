@@ -44,6 +44,7 @@ export interface Package {
   departureCity: string;
   rating: number;
   image: string;
+  images?: string[];
   limitedSeats: boolean;
 
   subtitle: string;

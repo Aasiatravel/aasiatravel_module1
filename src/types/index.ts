@@ -25,3 +25,11 @@ export type {
   CalculatorBookingDetails,
   HotelDirectionsDetails,
 } from './whatsapp';
+
+export type {
+  ImageSlideshowProps,
+  TimeWidgetProps,
+  FadeInProps,
+  BlurRevealProps,
+  SlideRevealProps,
+} from './ui';
