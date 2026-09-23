@@ -2,13 +2,13 @@ import type { NavLink } from '@/types';
 
 export const siteConfig = {
   name: 'Aasia Travel',
-  description: 'Your trusted partner for Hajj, Umrah, and Islamic travel',
+  description: 'Your trusted partner for Hajj and Umrah',
   url: process.env.NEXT_PUBLIC_SITE_URL || 'https://aasiatravel.com',
   ogImage: '/images/hero.png',
   logo: '/images/logo.png',
   contact: {
     email: 'aasiatravel0@gmail.com',
-    phone: '+91 8800665701',
+    phone: '+91 8796895341',
     address: 'New Delhi',
   },
   social: {

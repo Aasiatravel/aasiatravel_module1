@@ -78,7 +78,7 @@ export const testimonials: Testimonial[] = [
       'The love and care and hospitality shown by their team was exceptional. Our transport was always on time, and the local guides were knowledgeable and kind.',
     rating: 5,
     avatar: '/images/avatar-2.png',
-    coverImage: '/images/about.png',
+    coverImage: '/images/review.png',
   },
   {
     id: '3',
@@ -98,7 +98,7 @@ export const testimonials: Testimonial[] = [
       'The love and care and hospitality shown by their team was exceptional. Our transport was always on time, and the local guides were knowledgeable and kind.',
     rating: 5,
     avatar: '/images/avatar-1.png',
-    coverImage: '/images/card-1.png',
+    coverImage: '/images/review.png',
   },
   {
     id: '5',
@@ -108,7 +108,7 @@ export const testimonials: Testimonial[] = [
       'The love and care and hospitality shown by their team was exceptional. Our transport was always on time, and the local guides were knowledgeable and kind.',
     rating: 5,
     avatar: '/images/avatar-2.png',
-    coverImage: '/images/card-2.png',
+    coverImage: '/images/about.png',
   },
 
   {
@@ -119,7 +119,7 @@ export const testimonials: Testimonial[] = [
       'The love and care and hospitality shown by their team was exceptional. Our transport was always on time, and the local guides were knowledgeable and kind.',
     rating: 5,
     avatar: '/images/avatar-2.png',
-    coverImage: '/images/card-1.png',
+    coverImage: '/images/review.png',
   },
   {
     id: '7',
@@ -150,7 +150,7 @@ export const testimonials: Testimonial[] = [
       'The love and care and hospitality shown by their team was exceptional. Our transport was always on time, and the local guides were knowledgeable and kind.',
     rating: 5,
     avatar: '/images/avatar-1.png',
-    coverImage: '/images/card-1.png',
+    coverImage: '/images/review.png',
   },
 ];
 
